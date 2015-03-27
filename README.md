@@ -19,7 +19,7 @@ Install Homebrew:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Install Ruby:
+Install latest Ruby:
 ```
 brew install ruby
 ```
@@ -46,7 +46,7 @@ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
 Clone the repository:
 ```
-git clone https://github.com/shescoding/shes-coding.git
+git clone https://github.com/shescoding/shescoding-dot-org.git
 ```
 
 Load all the gems: 
