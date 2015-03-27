@@ -32,7 +32,7 @@ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
 Clone the repository:
 ```
-https://github.com/shescoding/shes-coding.git
+git clone https://github.com/shescoding/shes-coding.git
 ```
 
 Load all the gems: 
