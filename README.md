@@ -1,4 +1,18 @@
-# Welcome to She's Coding, the website for the new documentary CODE. 
+# [She's Coding](http://shescoding.org)
+
+This is the code for the [shescoding.org](http://shescoding.org) website.
+
+### About *She's Coding*
+
+*She's Coding* is an open-source website project currently under development in cooperation with the documentary film [CODE: Debugging the Gender Gap](http://www.codedoc.co/). She’s Coding is meant to serve as the destination for anyone who wants to learn more about the gender gap problem in computer science and become part of the solution.
+
+**Open-source?**
+
+Yes! *She's Coding* is build by the community, for the community. We currently have a small group of volunteers bootstrapping the project, and we are in the process of defining some simple rules on how to contribute for the wider community.
+
+[Let us know](mailto:nathalie@joltlabs.com) if you want to join our team! 
+
+### Installation
 
 Install Homebrew:
 ```
