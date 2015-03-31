@@ -12,3 +12,58 @@
     color: #86BD8A;
   }
 }
+
+.mio{
+  width: 1170px;
+}
+
+.rectangle-box{
+    position: relative;
+    // width: 120%;
+    overflow: hidden;
+    background: #4679BD;
+    padding-right: 10px;
+    align: left;
+}
+.rectangle-box:before{
+    content: "";
+    display: inline-block;
+    padding-top: 80%;
+}
+.rectangle-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+.rectangle-content div {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.rectangle-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 26px;
+}
+
+.rectangle-1{
+    background: #DB2C38;
+}
+
+.rectangle-2{
+    background: #83C057;
+}
+
+.rectangle-3{
+    background: #00A0BE;
+}
+
+.ui-shecodes-mission{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
