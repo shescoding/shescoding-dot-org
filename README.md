@@ -21,7 +21,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 Install rvm:
 ```
-\curl -sSL https://get.rvm.io | bash
+\curl -sSL https://get.rvm.io | bash -s stable
 ```
 
 Install Ruby:
