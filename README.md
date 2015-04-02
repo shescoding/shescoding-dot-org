@@ -54,6 +54,13 @@ Start the postgres server:
 pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 ```
 
+Set up the database:
+```
+$ createdb shescoding
+$ psql -d shescoding -c "CREATE USER shescoding WITH PASSWORD 'shescoding'"
+$ psql -d shescoding -c "GRANT ALL PRIVILEGES ON DATABASE shescoding to shescoding"
+```
+
 Clone the repository:
 ```
 git clone https://github.com/shescoding/shescoding-dot-org.git
