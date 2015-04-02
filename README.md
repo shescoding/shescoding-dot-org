@@ -19,9 +19,19 @@ Install Homebrew:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Install latest Ruby:
+Install rvm:
 ```
-brew install ruby
+\curl -sSL https://get.rvm.io | bash -s stable
+```
+
+Install Ruby:
+```
+rvm install 2.2.1
+```
+
+Select this version for use:
+```
+rvm use 2.2.1
 ```
 
 Install Rails:
