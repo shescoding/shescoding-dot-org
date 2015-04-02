@@ -56,9 +56,9 @@ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
 Set up the database:
 ```
-$ createdb shescoding
-$ psql -d shescoding -c "CREATE USER shescoding WITH PASSWORD 'shescoding'"
-$ psql -d shescoding -c "GRANT ALL PRIVILEGES ON DATABASE shescoding to shescoding"
+$ createdb shescoding_development
+$ psql -d shescoding_development -c "CREATE USER shescoding WITH PASSWORD 'shescoding'"
+$ psql -d shescoding_development -c "GRANT ALL PRIVILEGES ON DATABASE shescoding_development to shescoding"
 ```
 
 Clone the repository:
