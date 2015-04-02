@@ -1,36 +1,20 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.logo{
-  text-align: center;
-}
-
-.home-page-links{
-  font-size: 20px;
-  > a{
-    text-decoration: none;
-    color: #86BD8A;
-  }
-}
-
-.mio{
-  width: 1170px;
-}
-
-.rectangle-box{
+.ui-rectangle-box{
     position: relative;
-    // width: 120%;
+    width: 100%;
     overflow: hidden;
     background: #4679BD;
-    padding-right: 10px;
+    padding-right: 20px;
     align: left;
 }
-.rectangle-box:before{
+.ui-rectangle-box:before{
     content: "";
     display: inline-block;
     padding-top: 80%;
 }
-.rectangle-content{
+.ui-rectangle-content{
     position:  absolute;
     top: 0;
     left: 0;
@@ -38,32 +22,52 @@
     right: 0;
     color: white;
 }
-.rectangle-content div {
-   display: table;
-   width: 100%;
-   height: 100%;
-}
-.rectangle-content span {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    font-size: 26px;
+.ui-rectangle-content{
+  div {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.rectangle-1{
+.ui-rectangle-content {
+  font-size: 30px;
+  padding-top:30%;
+  p {
+    vertical-align: middle;
+    color: white;
+    padding-left: 30%;
+    margin-bottom: 0px;
+    line-height: 100%;
+  }
+}
+
+.ui-rectangle-woman{
     background: #DB2C38;
 }
 
-.rectangle-2{
+.ui-rectangle-supporter{
     background: #83C057;
 }
 
-.rectangle-3{
+.ui-rectangle-company{
     background: #00A0BE;
 }
 
 .ui-shecodes-mission{
     font-size: 30px;
     margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.ui-persona-row{
+    margin-right: -45px;
+    margin-left: -45px;
+}
+
+.ui-persona-col{
+    padding-right: 5px !important;
+}
+
+.ui-persona{
+    font-size: 40px;
 }
