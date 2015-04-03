@@ -82,6 +82,13 @@ rails s
 ```
 The project should be running on port 3000
 
+### Pre-commit hook
+
+Please do not commit and push directly to the master branch! The hooks/pre-commit file in this repository contains a pre-commit hook that warns you if you are checking directly into master. In order to enable this hook, from the root of the repo do:
+```
+cp hooks/pre-commit .git/hooks/
+chmod +x .git/hooks/pre-commit
+```
 
 
 
