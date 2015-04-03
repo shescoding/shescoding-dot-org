@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$ALLOW_MASTER" == "" ]; then
+    branch=$(git rev-parse --abbrev-ref HEAD)
+    if [ "$branch" == "master" ]; then
+    echo "Please do not commit directly to master, unless you are sure this is what you want to do."
+	echo "If so, re-run this command with ALLOW_MASTER set, e.g. ALLOW_MASTER=1 git commit ..."
+	echo " "
+	echo "Otherwise (recommended way):"
+	echo "Stash you changes and apply them to another branch as follows:"
+	echo "git stash"
+	echo "git checkout -b branch (this will create a new branch)"
+	echo "git stash apply"
+	exit 1
+    fi
+fi
