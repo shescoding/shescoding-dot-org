@@ -5,10 +5,17 @@
             <div class="row">
                 <div class="team-list">
                     <% @team_members.each_with_index do |name, i| %>
-                        <div class="team-member col-md-<%= i>=@last_row ? 12/(@team_members.length % 4) : 3%> col-sm-6">
+                        <div class="team-member tooltips col-md-<%= i>=@last_row ? 12/(@team_members.length % 4) : 3%> col-sm-6">
                             <div class="circle green"></div>
                             <div class="team-member-name"><%= name %></div>
                             <div class="team-member-title">Developer, JOLT Labs</div>
+                            <div class="the-tooltip">
+                                <div class="team-member-name"><%= name %></div>
+                                <div class="team-member-title">Developer, JOLT Labs</div>
+                                <div class="tooltip-description">
+                                    It's been so long so long so long so long. America's tortured brow. Screaming let me out. Gets me higher. But her friend is nowhere to be. On what to say to people when they pick on you. And these children that you spit on. People on streets.
+                                </div>
+                            </div>
                         </div>
                     <% end %>
                 </div><!-- /team-list -->
@@ -20,12 +27,12 @@
         <div class="advisor-section-title"><h2>Advisors</h2></div>
         <div class="container">
             <div class="row">
-                <div class="team-list">
+                <div class="advisor-list">
                     <% @team_members.each_with_index do |name, i| %>
-                        <div class="team-member col-md-<%= i>=@last_row ? 12/(@team_members.length % 4) : 3%> col-sm-6">
+                        <div class="advisor col-md-<%= i>=@last_row ? 12/(@team_members.length % 4) : 3%> col-sm-6">
                             <div class="circle white"></div>
-                            <div class="team-member-name"><%= name %></div>
-                            <div class="team-member-title">Developer, JOLT Labs</div>
+                            <div class="advisor-name"><%= name %></div>
+                            <div class="advisor-title">Developer, JOLT Labs</div>
                         </div>
                     <% end %>
                 </div><!-- /team-list -->
