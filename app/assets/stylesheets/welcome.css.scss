@@ -1,6 +1,11 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$black: #1E2028;
+$red: #DB2C38;
+$green: #83C057;
+$blue: #00A0BE;
+
 .ui-rectangle-box{
     position: relative;
     width: 100%;
@@ -70,4 +75,75 @@
 
 .ui-persona{
     font-size: 40px;
+}
+
+// team page
+
+.team-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.team-member {
+    padding-top: 30px;
+}
+
+.circle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* for IE8, as far as I know */
+    width: 170px;
+    height: 170px;
+    margin: 0 auto;
+}
+
+.green {
+    border: 10px solid $green;
+    background-image: url(http://placekitten.com/g/150/150);
+}
+
+.team-member-name {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.team-member-title {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.team-section-title {
+    text-align: center;
+}
+
+.advisor-section-title {
+    text-align: center;
+    color: white;
+}
+
+.advisor-section {
+    padding: 100px 0;
+    background: $green;
+}
+
+.white {
+    border: 10px solid white;
+    background-image: url(http://placekitten.com/g/150/150);
+}
+
+.partner-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.partner-section-title {
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
 }

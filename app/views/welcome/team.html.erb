@@ -1,0 +1,48 @@
+
+    <div class="team-section">
+        <div class="container">
+            <div class="team-section-title"><h2>Team</h2></div>
+            <div class="row">
+                <div class="team-list">
+                    <% @team_members.each_with_index do |name, i| %>
+                        <div class="team-member col-md-<%= i>=@last_row ? 12/(@team_members.length % 4) : 3%> col-sm-6">
+                            <div class="circle green"></div>
+                            <div class="team-member-name"><%= name %></div>
+                            <div class="team-member-title">Developer, JOLT Labs</div>
+                        </div>
+                    <% end %>
+                </div><!-- /team-list -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </div><!-- /team-section -->
+
+    <div class="advisor-section">
+        <div class="advisor-section-title"><h2>Advisors</h2></div>
+        <div class="container">
+            <div class="row">
+                <div class="team-list">
+                    <% @team_members.each_with_index do |name, i| %>
+                        <div class="team-member col-md-<%= i>=@last_row ? 12/(@team_members.length % 4) : 3%> col-sm-6">
+                            <div class="circle white"></div>
+                            <div class="team-member-name"><%= name %></div>
+                            <div class="team-member-title">Developer, JOLT Labs</div>
+                        </div>
+                    <% end %>
+                </div><!-- /team-list -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </div><!-- /advisor-section -->
+
+    <div class="partner-section">
+        <div class="partner-section-title"><h2>Partners</h2></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="logo" src="http://placekitten.com/g/400/200">
+                </div>
+                <div class="col-md-6">
+                    <img class="logo" src="http://placekitten.com/g/400/200">
+                </div>
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </div>
