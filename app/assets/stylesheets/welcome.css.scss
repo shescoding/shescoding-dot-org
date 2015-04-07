@@ -73,21 +73,24 @@
     font-size: 40px;
 }
 
+.about{
+  font-family: 'ArcherLight'
+}
+
 .about-body {
   position: center;
-  padding: 10px;
   h2{
     text-align: center;
+    font-family: 'ArcherBold' !important;
   }
 }
 
 .about-nav{
+  font-family: 'ArcherBold';
   text-align: center;
   word-spacing: 10px;
-}
-
-.about-title{
-  h2{
-    text-align: center;
-  }
+  padding-top: 80px;
+  a
+  {color: black;
+   }
 }
