@@ -1,0 +1,145 @@
+$font-path: "../../fonts";
+
+@font-face {
+  font-family: 'ArcherBold';
+  src: font-url('Archer-Bold-Pro.eot');
+  src: font-url('Archer-Bold-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-Bold-Pro.woff') format('woff'),
+       font-url('Archer-Bold-Pro.ttf') format('truetype'),
+       font-url('Archer-Bold-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherBoldItal';
+  src: font-url('Archer-BoldItal-Pro.eot');
+  src: font-url('Archer-BoldItal-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-BoldItal-Pro.woff') format('woff'),
+       font-url('Archer-BoldItal-Pro.ttf') format('truetype'),
+       font-url('Archer-BoldItal-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherBook';
+  src: font-url('Archer-Book-Pro.eot');
+  src: font-url('Archer-Book-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-Book-Pro.woff') format('woff'),
+       font-url('Archer-Book-Pro.ttf') format('truetype'),
+       font-url('Archer-Book-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherBookItal';
+  src: font-url('Archer-BookItal-Pro.eot');
+  src: font-url('Archer-BookItal-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-BookItal-Pro.woff') format('woff'),
+       font-url('Archer-BookItal-Pro.ttf') format('truetype'),
+       font-url('Archer-BookItal-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherHairline';
+  src: font-url('Archer-Hairline-Pro.eot');
+  src: font-url('Archer-Hairline-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-Hairline-Pro.woff') format('woff'),
+       font-url('Archer-Hairline-Pro.ttf') format('truetype'),
+       font-url('Archer-Hairline-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherHairlineItal';
+  src: font-url('Archer-HairlineItal-Pro.eot');
+  src: font-url('Archer-HairlineItal-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-HairlineItal-Pro.woff') format('woff'),
+       font-url('Archer-HairlineItal-Pro.ttf') format('truetype'),
+       font-url('Archer-HairlineItal-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherLight';
+  src: font-url('Archer-Light-Pro.eot');
+  src: font-url('Archer-Light-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-Light-Pro.woff') format('woff'),
+       font-url('Archer-Light-Pro.ttf') format('truetype'),
+       font-url('Archer-Light-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherLightItal';
+  src: font-url('Archer-LightItal-Pro.eot');
+  src: font-url('Archer-LightItal-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-LightItal-Pro.woff') format('woff'),
+       font-url('Archer-LightItal-Pro.ttf') format('truetype'),
+       font-url('Archer-LightItal-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherMedium';
+  src: font-url('Archer-Medium-Pro.eot');
+  src: font-url('Archer-Medium-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-Medium-Pro.woff') format('woff'),
+       font-url('Archer-Medium-Pro.ttf') format('truetype'),
+       font-url('Archer-Medium-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherMediumItal';
+  src: font-url('Archer-MediumItal-Pro.eot');
+  src: font-url('Archer-MediumItal-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-MediumItal-Pro.woff') format('woff'),
+       font-url('Archer-MediumItal-Pro.ttf') format('truetype'),
+       font-url('Archer-MediumItal-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherSembdItal';
+  src: font-url('Archer-SembdItal-Pro.eot');
+  src: font-url('Archer-SembdItal-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-SembdItal-Pro.woff') format('woff'),
+       font-url('Archer-SembdItal-Pro.ttf') format('truetype'),
+       font-url('Archer-SembdItal-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherSemibold';
+  src: font-url('Archer-Semibold-Pro.eot');
+  src: font-url('Archer-Semibold-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-Semibold-Pro.woff') format('woff'),
+       font-url('Archer-Semibold-Pro.ttf') format('truetype'),
+       font-url('Archer-Semibold-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherThin';
+  src: font-url('Archer-Thin-Pro.eot');
+  src: font-url('Archer-Thin-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-Thin-Pro.woff') format('woff'),
+       font-url('Archer-Thin-Pro.ttf') format('truetype'),
+       font-url('Archer-Thin-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherThinItal';
+  src: font-url('Archer-ThinItal-Pro.eot');
+  src: font-url('Archer-ThinItal-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-ThinItal-Pro.woff') format('woff'),
+       font-url('Archer-ThinItal-Pro.ttf') format('truetype'),
+       font-url('Archer-ThinItal-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherXLight';
+  src: font-url('Archer-XLight-Pro.eot');
+  src: font-url('Archer-XLight-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-XLight-Pro.woff') format('woff'),
+       font-url('Archer-XLight-Pro.ttf') format('truetype'),
+       font-url('Archer-XLight-Pro.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'ArcherXLightItal';
+  src: font-url('Archer-XLightItal-Pro.eot');
+  src: font-url('Archer-XLightItal-Pro.eot?#iefix') format('embedded-opentype'),
+       font-url('Archer-XLightItal-Pro.woff') format('woff'),
+       font-url('Archer-XLightItal-Pro.ttf') format('truetype'),
+       font-url('Archer-XLightItal-Pro.svg') format('svg');
+}
