@@ -11,18 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150325031240) do
+ActiveRecord::Schema.define(version: 20150408062122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "resource_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["resource_id"], name: "index_categories_on_resource_id", using: :btree
+
   create_table "guides", force: true do |t|
     t.string   "title"
     t.string   "description"
-    t.integer  "tag_id"
     t.string   "url"
-    t.string   "asset_url"
-    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "likes"
+    t.integer  "step_id"
+  end
+
+  add_index "guides", ["step_id"], name: "index_guides_on_step_id", using: :btree
+
+  create_table "personas", force: true do |t|
+    t.string   "name"
+    t.string   "color"
+    t.text     "description"
+    t.json     "questions"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,11 +50,23 @@ ActiveRecord::Schema.define(version: 20150325031240) do
   create_table "resources", force: true do |t|
     t.string   "title"
     t.string   "description"
-    t.string   "category"
-    t.integer  "tag_id"
     t.string   "url"
-    t.string   "asset_url"
     t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "source"
+    t.integer  "likes"
+    t.boolean  "public"
+  end
+
+  add_index "resources", ["category_id"], name: "index_resources_on_category_id", using: :btree
+
+  create_table "steps", force: true do |t|
+    t.string   "type"
+    t.text     "content"
+    t.string   "level"
+    t.integer  "like"
+    t.integer  "guide_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
