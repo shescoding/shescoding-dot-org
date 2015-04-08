@@ -3,9 +3,21 @@
 }
 
 #footer {
-  margin-top: 200px;
+  margin-top: 70px;
   padding: 25px;
-  font-size: 18px;
+  font-size: 14px;
   color: #FFFFFF;     /* white text */
-  background: #1E2028 /* black background */
+  background: #1E2028; /* black background */
+
 }
+
+.clearfix {
+  a {
+    color: #FFFFFF;
+  }
+}
+
+.ui-ul {
+	margin-bottom: 0px;
+}
+
