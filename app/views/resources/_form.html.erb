@@ -28,16 +28,12 @@
         <%= f.text_field :url, :class => "form-control" %>
       </div>
       <div class="field form-group">
-        <%= f.label :asset_url %><br>
-        <%= f.text_field :asset_url, :class => "form-control" %>
+        <%= f.label :source %><br>
+        <%= f.text_field :source, :class => "form-control" %>
       </div>
-      <div class="field form-group">
-        <%= f.label :tag_id %><br>
-        <%= f.number_field :tag_id, :class => "form-control" %>
-      </div>
-      <div class="field form-group">
-        <%= f.label :category_id %><br>
-        <%= f.number_field :category_id, :class => "form-control" %>
+      <!-- Add some form of dynamic nested form group for categories, as one resource can have several categories. -->
+      <div class="field form_group">
+        <%= f.check_box :public, label: "Resource is public" %>
       </div>
       <div class="actions">
         <%= f.submit %>
