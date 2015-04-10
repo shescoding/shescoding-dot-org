@@ -5,6 +5,7 @@ class CreateResourcesAndCategories < ActiveRecord::Migration
       t.string :url
       t.string :description
       t.string :source
+      t.datetime :date
       t.boolean :public
       t.integer :likes  
 
