@@ -4,4 +4,8 @@ module ResourcesHelper
       "resources-nav"
     end
   end
+
+  def format_date(date)
+    date.strftime("%B %-d, %Y")
+  end
 end
