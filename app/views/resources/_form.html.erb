@@ -12,34 +12,38 @@
       </div>
     <% end %>
 
-    <form>
-      <div class="field form-group">
-        <%= f.label :title %><br>
-        <%= f.text_field :title, :class => "form-control" %>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <form>
+          <div class="field form-group">
+            <%= f.label :title %><br>
+            <%= f.text_field :title, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :description %><br>
+            <%= f.text_field :description, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :url %><br>
+            <%= f.text_field :url, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :category_id %><br>
+            <%= f.number_field :category_id, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :source %><br>
+            <%= f.text_field :source, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :public %><br>
+            <%= f.text_field :public, :class => "form-control" %>
+          </div>
+          <div class="actions">
+            <%= f.button :class => "btn btn-default" %>
+          </div>
+        </form>
       </div>
-      <div class="field form-group">
-        <%= f.label :description %><br>
-        <%= f.text_field :description, :class => "form-control" %>
-      </div>
-      <div class="field form-group">
-        <%= f.label :url %><br>
-        <%= f.text_field :url, :class => "form-control" %>
-      </div>
-      <div class="field form-group">
-        <%= f.label :category_id %><br>
-        <%= f.number_field :category_id, :class => "form-control" %>
-      </div>
-      <div class="field form-group">
-        <%= f.label :source %><br>
-        <%= f.text_field :source, :class => "form-control" %>
-      </div>
-      <div class="field form-group">
-        <%= f.label :public %><br>
-        <%= f.text_field :public, :class => "form-control" %>
-      </div>
-      <div class="actions">
-        <%= f.button :class => "btn btn-default" %>
-      </div>
-    </form>
+    </div>
   <% end %>
 </div>
