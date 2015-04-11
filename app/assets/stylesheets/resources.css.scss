@@ -19,10 +19,34 @@ $darkgray: grey;
       font-size: 1.05em;
       line-height: 2.5;
       color: $black;
+    }
 
-      .selected {
-        background: $yellow;
+    li.selected {
+      position: relative;
+      background-color: $yellow;
+      width: 90%;
+      margin-left: -80px;
+
+      a {
+        width: 100%;
+        margin-left: 80px;
+        color: white;
       }
+    }
+
+    li.selected:after {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(251, 204, 59, 0);
+      border-left-color: #FBCC3B;
+      border-width: 18.5px;
+      margin-top: -18.5px;
     }
   }
 
