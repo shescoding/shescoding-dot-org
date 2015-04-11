@@ -12,11 +12,19 @@
       </div>
     <% end %>
 
+    <!-- t.string   "title"
+    t.string   "description"
+    t.string   "url"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "source"
+    t.integer  "likes"
+    t.boolean  "public" -->
+
     <form>
-      <!-- <div class="field"> -->
       <div class="field form-group">
         <%= f.label :title %><br>
-        <!-- <%= f.text_field :title %> -->
         <%= f.text_field :title, :class => "form-control" %>
       </div>
       <div class="field form-group">
@@ -28,16 +36,16 @@
         <%= f.text_field :url, :class => "form-control" %>
       </div>
       <div class="field form-group">
-        <%= f.label :asset_url %><br>
-        <%= f.text_field :asset_url, :class => "form-control" %>
-      </div>
-      <div class="field form-group">
-        <%= f.label :tag_id %><br>
-        <%= f.number_field :tag_id, :class => "form-control" %>
-      </div>
-      <div class="field form-group">
         <%= f.label :category_id %><br>
         <%= f.number_field :category_id, :class => "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :source %><br>
+        <%= f.text_field :source, :class => "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :public %><br>
+        <%= f.text_field :public, :class => "form-control" %>
       </div>
       <div class="actions">
         <%= f.submit %>
