@@ -1,3 +1,128 @@
-// Place all the styles related to the resources controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// resources page
+$black: #1E2028;
+$yellow: #FBCC3B;
+$lightgray: #F2F2F2;
+// $darkgray: #CCCCCC;
+$darkgray: grey;
+
+.resources-section {
+  margin-top: 9em;
+  font-family: ArcherBook;
+
+  .resources-sidebar {
+    ul {
+      list-style: none;
+      padding-left: 0.5em;
+    }
+
+    li a {
+      font-size: 1.05em;
+      line-height: 2.5;
+      color: $black;
+
+      .selected {
+        background: $yellow;
+      }
+    }
+  }
+
+  .resources-grid {
+    padding: 0;
+
+    .panel {
+      display: inline-block;
+      width: 32%;
+      margin: 0.25em;
+      border-radius: 0;
+      border: $darkgray solid 0.2em;
+      border-top: $darkgray solid 0.5em;
+    }
+
+    .panel-header {
+      h3 {
+        font-family: ArcherSemiBold;
+        font-size: 1.15em;
+        line-height: 1.4;
+        margin-top: 0.6em;
+      }
+
+      h4 {
+        text-transform: uppercase;
+        color: $darkgray;
+        font-size: 0.65em;
+        margin: 0.7em 0;
+      }
+    }
+
+    .panel-preview {
+      .text {
+        color: $darkgray;
+        margin: 0.5em 0;
+      }
+
+      a.next {
+        color: $black;
+        font-family: ArcherSemiBold;
+      }
+    }
+
+    .panel-tags {
+      margin: 1.2em 0;
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      li a {
+        padding: 0.5em 0.7em;
+        margin-right: 0.2em;
+        font-size: 0.75em;
+        background-color: $lightgray;
+        color: $darkgray;
+      }
+
+      li a:hover, li a:focus {
+        background-color: $yellow;
+        text-decoration: none;
+      }
+    }
+
+    .panel-data {
+      font-size: 0.75em;
+      color: $darkgray;
+
+      & > div {
+        display: inline-block;
+      }
+
+      .date {
+        float: left;
+      }
+
+      .likes {
+        float: right;
+        margin-right: 2em;
+
+        .heart {
+          font-size: 1.5em;
+          text-decoration: none;
+          color: $darkgray;
+          vertical-align: baseline;
+        }
+
+        .heart:hover, .heart:focus {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+.resources-nav {
+  background: $yellow;
+}
