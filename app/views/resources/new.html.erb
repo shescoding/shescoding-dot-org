@@ -1,12 +1,15 @@
 <div class="container">
+
   <h1>New resource</h1>
 
   <%= render 'form' %>
 
   <br>
 
-  <div class="container">
-    <%= link_to 'Back', resources_path %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-2">
+      <%= link_to 'Back', resources_path, :class => "resource-back" %>
+    </div>
   </div>
 
 </div>
