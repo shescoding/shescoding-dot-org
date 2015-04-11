@@ -1,5 +1,15 @@
-<h1>New guide</h1>
+<div class="container">
 
-<%= render 'form' %>
+  <h1>New guide</h1>
 
-<%= link_to 'Back', guides_path %>
+  <%= render 'form' %>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-4 col-md-offset-2">
+      <%= link_to 'Back', guides_path, :class => "guide-back" %>
+    </div>
+  </div>
+
+</div>
