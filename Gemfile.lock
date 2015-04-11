@@ -27,14 +27,24 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
     arel (5.0.1.20140414130214)
     autoprefixer-rails (5.1.8)
       execjs
       json
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.4.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
+    bootstrap_form (2.3.0)
     builder (3.2.2)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -42,6 +52,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.4.0)
     hike (1.2.3)
@@ -119,7 +130,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 3.4)
+  better_errors
+  binding_of_caller
   bootstrap-sass (~> 3.3.4)
+  bootstrap_form
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
