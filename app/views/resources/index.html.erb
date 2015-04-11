@@ -21,8 +21,8 @@
               <h3><%= resource.title %></h3>
             </div>
             <div class="panel-preview">
-              <div class="text">"<%= truncate(resource.description, length: 280) %></div>
-              <%= link_to "Read More >>", resource, class: "next" %>
+              <div class="text">"<%= resource.description %></div>
+              <%= link_to "Read More >>", resource.url, class: "next", target: "_blank" %>
             </div>
             <div class="panel-tags">
               <ul>
