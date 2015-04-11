@@ -1,41 +1,41 @@
-<%= form_for(@guide) do |f| %>
-  <% if @guide.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@guide.errors.count, "error") %> prohibited this guide from being saved:</h2>
+<div class="container">
+  <%= form_for(@guide) do |f| %>
+    <% if @guide.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@guide.errors.count, "error") %> prohibited this guide from being saved:</h2>
 
-      <ul>
-      <% @guide.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @guide.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <form>
+          <div class="field form-group">
+            <%= f.label :title %><br>
+            <%= f.text_field :title, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :description %><br>
+            <%= f.text_field :description, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :url %><br>
+            <%= f.text_field :url, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :step_id %><br>
+            <%= f.number_field :step_id, :class => "form-control" %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        </form>
+      </div>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
-  </div>
-  <div class="field">
-    <%= f.label :asset_url %><br>
-    <%= f.text_field :asset_url %>
-  </div>
-  <div class="field">
-    <%= f.label :tag_id %><br>
-    <%= f.number_field :tag_id %>
-  </div>
-  <div class="field">
-    <%= f.label :category_id %><br>
-    <%= f.number_field :category_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
