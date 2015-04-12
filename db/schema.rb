@@ -16,16 +16,37 @@ ActiveRecord::Schema.define(version: 20150409053441) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "guides", force: true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.integer  "tag_id"
-    t.string   "url"
-    t.string   "asset_url"
-    t.integer  "category_id"
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "categories_resources", id: false, force: true do |t|
+    t.integer "resource_id"
+    t.integer "category_id"
+  end
+
+  add_index "categories_resources", ["category_id"], name: "index_categories_resources_on_category_id", using: :btree
+  add_index "categories_resources", ["resource_id"], name: "index_categories_resources_on_resource_id", using: :btree
+
+  create_table "guides", force: true do |t|
+    t.string   "title"
+    t.string   "alias"
+    t.string   "description"
+    t.integer  "likes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "guides_steps", id: false, force: true do |t|
+    t.integer "guide_id"
+    t.integer "step_id"
+  end
+
+  add_index "guides_steps", ["guide_id"], name: "index_guides_steps_on_guide_id", using: :btree
+  add_index "guides_steps", ["step_id"], name: "index_guides_steps_on_step_id", using: :btree
 
   create_table "personas", force: true do |t|
     t.string   "name"
@@ -38,12 +59,21 @@ ActiveRecord::Schema.define(version: 20150409053441) do
 
   create_table "resources", force: true do |t|
     t.string   "title"
-    t.string   "description"
-    t.string   "category"
-    t.integer  "tag_id"
     t.string   "url"
-    t.string   "asset_url"
-    t.integer  "category_id"
+    t.string   "description"
+    t.string   "source"
+    t.datetime "date"
+    t.boolean  "public"
+    t.integer  "likes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "steps", force: true do |t|
+    t.string   "type"
+    t.text     "content"
+    t.string   "level"
+    t.integer  "likes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
