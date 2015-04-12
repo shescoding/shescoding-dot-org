@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   resources :guides
   resources :resources
 
+
+  get 'about',            to: "welcome#about"
+  get 'how',              to: "welcome#how"
+
   get 'tags/:tag', to: 'resources#index', as: :tag
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

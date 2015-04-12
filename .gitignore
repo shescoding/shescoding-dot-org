@@ -15,8 +15,12 @@
 logfile
 /log/*.log
 /tmp
+<<<<<<< HEAD
+.DS_Store
+=======
 
 # Ignore DS_Store
 .DS_Store
 app/.DS_Store
 app/assets/.DS_Store
+>>>>>>> 98f1459d67600cb2cb7d59a2756bef4d67b86e3b
