@@ -1,9 +1,9 @@
 // resources page
 $black: #1E2028;
 $yellow: #FBCC3B;
-$lightgray: #F2F2F2;
-// $darkgray: #CCCCCC;
-$darkgray: grey;
+$light_grey: #F2F2F2;
+$dark_grey: #CCCCCC;
+$tag_grey: #808080;
 
 .resources-nav {
   background: $yellow;
@@ -24,7 +24,9 @@ $darkgray: grey;
     }
 
     li a {
-      font-size: 15px;
+      font-family: ArcherBook;
+      // font-size: 15px;
+      font-size: 12px;
       color: $black;
     }
 
@@ -50,7 +52,7 @@ $darkgray: grey;
       position: absolute;
       pointer-events: none;
       border-color: rgba(251, 204, 59, 0);
-      border-left-color: #FBCC3B;
+      border-left-color: $yellow;
       border-width: 19px;
       margin-top: -18.1px;
     }
@@ -64,35 +66,45 @@ $darkgray: grey;
       width: 32%;
       margin: 5px;
       border-radius: 0;
-      border: $darkgray solid 2px;
-      border-top: $darkgray solid 7px;
+      border: $dark_grey solid 2px;
+      border-top: $dark_grey solid 7px;
     }
 
     .panel-header {
       h3 {
-        font-family: ArcherSemiBold;
-        font-size: 16px;
+        font-family: ArcherBold;
+        color: $black;
+        // font-size: 16px;
+        font-size: 12px;
         line-height: 1.4;
         margin-top: 10px;
       }
 
       h4 {
+        font-family: ArcherLight;
         text-transform: uppercase;
-        color: $darkgray;
-        font-size: 10px;
+        color: $black;
+        // font-size: 10px;
+        font-size: 7px;
         margin: 7px 0;
+
       }
     }
 
     .panel-preview {
       .text {
-        color: $darkgray;
-        margin: 7px 0;
+        font-family: ArcherLight;
+        color: $black;
+        // previously no font-size
+        font-size: 9px;
+        margin: 7px 0 2px 0;
       }
 
       a.next {
+        font-family: ArcherBold;
         color: $black;
-        font-family: ArcherSemiBold;
+        // previously no font-size
+        font-size: 9px;
       }
     }
 
@@ -109,11 +121,13 @@ $darkgray: grey;
       }
 
       li a {
+        font-family: ArcherLight;
         padding: 5px;
         margin-right: 2px;
-        font-size: 10.5px;
-        background-color: $lightgray;
-        color: $darkgray;
+        // font-size: 10.5px;
+        font-size: 7px;
+        background-color: $light_grey;
+        color: $tag_grey;
       }
 
       li a:hover, li a:focus {
@@ -123,8 +137,10 @@ $darkgray: grey;
     }
 
     .panel-data {
-      font-size: 10.5px;
-      color: $darkgray;
+      font-family: ArcherLight;
+      // font-size: 10.5px;
+      font-size: 7px;
+      color: $black;
 
       & > div {
         display: inline-block;
@@ -141,7 +157,7 @@ $darkgray: grey;
         .heart {
           font-size: 15px;
           text-decoration: none;
-          color: $darkgray;
+          color: $dark_grey;
           vertical-align: baseline;
         }
 
@@ -187,7 +203,7 @@ $darkgray: grey;
         margin: 0 5px 10px 0;
         display: inline-block;
         padding: 8px;
-        border: 1px solid $lightgray;
+        border: 1px solid $light_grey;
       }
 
       li.selected:after {
