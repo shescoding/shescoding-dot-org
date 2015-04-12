@@ -43,17 +43,21 @@
 </div>
 
 <script>
-  // Script for Masonry Tiles
-  var $container = $('.resources-grid');
-  $container.masonry({
-    columnWidth: '.panel',
-    itemSelector: '.panel'
-  });
+  $(document).ready(function() {
+    // Initialize Masonry Layout
+    var $container = $('.resources-grid').isotope({
+      itemSelector: '.panel',
+      layoutMode: 'masonry',
+      masonry: {
+        columnWidth: '.panel'
+      }
+    });
 
-  // Toggle Selected Category Class
-  $('.resources-sidebar li').click(function(e) {
-    e.preventDefault();
-    $('.selected').toggleClass('selected');
-    $(this).toggleClass('selected');
+    // Toggle Selected Category Class
+    $('.resources-sidebar li').click(function(e) {
+      e.preventDefault();
+      $('.selected').toggleClass('selected');
+      $(this).toggleClass('selected');
+    });
   });
 </script>
