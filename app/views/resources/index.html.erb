@@ -2,15 +2,15 @@
   <div class="row">
     <div class="resources-sidebar col-md-3">
       <ul>
-        <li class="selected"><%= link_to "All Resources", "" %></li>
+        <li class="selected" data-category="*"><%= link_to "All Resources", "" %></li>
         <% @categories.each do |category| %>
-          <li><%= link_to category.name, "#" %></li>
+          <li data-category="<%= create_filter(category.id) %>"><%= link_to category.name, "#" %></li>
         <% end %>
       </ul>
     </div>
     <div class="resources-grid col-md-9">
       <% @resources.each do |resource| %>
-        <div class="panel panel-default">
+        <div class="panel panel-default <%= resource.stringify_categories %>">
           <div class="panel-body">
             <div class="panel-header">
               <h4><%= resource.source %></h4>
@@ -22,9 +22,9 @@
             </div>
             <div class="panel-tags">
               <ul>
-                <li><%= link_to "Category 1", "" %></li>
-                <li><%= link_to "Category 1", "" %></li>
-                <li><%= link_to "Category 1", "" %></li>
+                <li><%= link_to "Tag 1", "" %></li>
+                <li><%= link_to "Tag 1", "" %></li>
+                <li><%= link_to "Tag 1", "" %></li>
               </ul>
             </div>
             <div class="panel-data">
@@ -44,7 +44,7 @@
 
 <script>
   $(document).ready(function() {
-    // Initialize Masonry Layout
+    // Initialize Layout
     var $container = $('.resources-grid').isotope({
       itemSelector: '.panel',
       layoutMode: 'masonry',
@@ -53,11 +53,12 @@
       }
     });
 
-    // Toggle Selected Category Class
+    // Filter Selected Category
     $('.resources-sidebar li').click(function(e) {
       e.preventDefault();
       $('.selected').toggleClass('selected');
       $(this).toggleClass('selected');
+      $container.isotope({filter: this.dataset.category});
     });
   });
 </script>

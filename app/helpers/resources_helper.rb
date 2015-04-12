@@ -8,4 +8,8 @@ module ResourcesHelper
   def format_date(date)
     date.strftime("%B %-d, %Y")
   end
+
+  def create_filter(id)
+    ".#{id}"
+  end
 end
