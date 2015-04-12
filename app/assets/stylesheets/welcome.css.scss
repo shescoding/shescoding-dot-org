@@ -73,26 +73,29 @@
     font-size: 40px;
 }
 
-.about{
-  font-family: 'ArcherLight'
-}
-
 .about-body {
+  font-family: 'ArcherLight';
   position: center;
   h2{
     text-align: center;
-    font-family: 'ArcherBold' !important;
+    font-family: 'ArcherBold'
   }
 }
 
 .about-nav{
-  font-family: 'ArcherBold';
+  font-family: 'ArcherBook';
   text-align: center;
   word-spacing: 10px;
   padding-top: 80px;
-  a
-  {color: black;
-   }
+  a, a:link, a:hover {
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .active {
+    text-decoration: underline;
+  }
 }
 
 .about-header-image{
