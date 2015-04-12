@@ -2,16 +2,36 @@
     <div class="container-fluid">
       <div class="row ui-shescoding-nav">
           <div class="col-sm-4">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="/">
                   <%= image_tag('navbar-logo.png') %>
               </a>
           </div>
+
           <div class="col-sm-7  col-sm-offset-1">
               <ul class="nav navbar-nav navbar-right">
-                  <li>About</li>
-                  <li>Resources</li>
-                  <li>Team</li>
-                  <li>Contact</li>
+                <% if page == "About" %>
+                  <li class="active"><%= link_to "About", "/about" %></li>
+                <% else %>
+                  <li><%= link_to "About", "/about" %></li>
+                <% end %>
+
+                <% if page == "Resources" %>
+                  <li class="active"><%= link_to "Resources", "/resources" %></li>
+                <% else %>
+                  <li><%= link_to "Resources", "/resources" %></li>
+                <% end %>
+
+                <% if page == "Team" %>
+                  <li class="active"><%= link_to "Team", "/team" %></li>
+                <% else %>
+                  <li><%= link_to "Team", "/team" %></li>
+                <% end %>
+
+                <% if page == "Contact" %>
+                  <li class="active"><%= link_to "Contact", "/contact" %></li>
+                <% else %>
+                  <li><%= link_to "Contact", "/contact" %></li>
+                <% end %>
               <ul>
           </div>
       </div>
