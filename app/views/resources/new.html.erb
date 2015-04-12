@@ -1,7 +1,17 @@
 <%= render "layouts/navbar", page: "Resources" %>
 
-<h1>New resource</h1>
+<div class="container">
 
-<%= render 'form' %>
+  <h1 class="ui-shescoding-crud">New resource</h1>
 
-<%= link_to 'Back', resources_path %>
+  <%= render 'form' %>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-4 col-md-offset-2">
+      <%= link_to 'Back', resources_path, :class => "resource-back" %>
+    </div>
+  </div>
+
+</div>
