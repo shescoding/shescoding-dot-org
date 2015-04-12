@@ -6,6 +6,7 @@ class ResourcesController < ApplicationController
   # GET /resources.json
   def index
     @resources = Resource.all
+    @categories = Category.all
   end
 
   # GET /resources/1

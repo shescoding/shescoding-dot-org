@@ -3,13 +3,9 @@
     <div class="resources-sidebar col-md-3">
       <ul>
         <li class="selected"><%= link_to "All Resources", "" %></li>
-        <li><%= link_to "Category 1", "" %></li>
-        <li><%= link_to "Category 1", "" %></li>
-        <li><%= link_to "Category 1", "" %></li>
-        <li><%= link_to "Category 1", "" %></li>
-        <li><%= link_to "Category 1", "" %></li>
-        <li><%= link_to "Category 1", "" %></li>
-        <li><%= link_to "Category 1", "" %></li>
+        <% @categories.each do |category| %>
+          <li><%= link_to category.name, "#" %></li>
+        <% end %>
       </ul>
     </div>
     <div class="resources-grid col-md-9">
