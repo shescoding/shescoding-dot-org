@@ -1,8 +1,14 @@
 <%= render "layouts/navbar", page: "" %>
 
-<h1>Editing guide</h1>
+<div class="container">
 
-<%= render 'form' %>
+	<h1 class="ui-shescoding-crud">Editing guide</h1>
 
-<%= link_to 'Show', @guide %> |
-<%= link_to 'Back', guides_path %>
+	<%= render 'form' %>
+
+	<br>
+
+	<%= link_to 'Show', @guide %> |
+	<%= link_to 'Back', guides_path %>
+
+</div>

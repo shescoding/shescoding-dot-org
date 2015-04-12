@@ -1,8 +1,14 @@
 <%= render "layouts/navbar", page: "Resources" %>
 
-<h1>Editing resource</h1>
+<div class="container">
 
-<%= render 'form' %>
+	<h1 class="ui-shescoding-crud">Editing resource</h1>
 
-<%= link_to 'Show', @resource %> |
-<%= link_to 'Back', resources_path %>
+	<%= render 'form' %>
+
+	<br>
+
+	<%= link_to 'Show', @resource %> |
+	<%= link_to 'Back', resources_path %>
+
+</div>
