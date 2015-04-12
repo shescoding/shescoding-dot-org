@@ -37,7 +37,7 @@
           </div>
         </div>
       <% end %>
-      <button class="clear-category btn btn-lg btn-default">Clear Selection</button>
+      <button id="return-to-top" class="btn btn-lg btn-default">Return to Top</button>
     </div>
   </div>
 </div>
@@ -60,5 +60,11 @@
       $(this).toggleClass('selected');
       $container.isotope({filter: this.dataset.category});
     });
+
+    // Return To Top
+    $('#return-to-top').click(function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 0}, 'slow');
+    })
   });
 </script>
