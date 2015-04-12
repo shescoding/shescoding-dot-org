@@ -42,11 +42,18 @@
   </div>
 </div>
 
-<!-- Script for Masonry Tiles -->
 <script>
+  // Script for Masonry Tiles
   var $container = $('.resources-grid');
   $container.masonry({
     columnWidth: '.panel',
     itemSelector: '.panel'
+  });
+
+  // Toggle Selected Category Class
+  $('.resources-sidebar li').click(function(e) {
+    e.preventDefault();
+    $('.selected').toggleClass('selected');
+    $(this).toggleClass('selected');
   });
 </script>

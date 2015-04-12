@@ -31,11 +31,11 @@ $darkgray: grey;
     li.selected {
       position: relative;
       background-color: $yellow;
-      width: 90%;
-      margin-left: -80px;
+      width: 100%;
+      margin-left: -75px;
 
       a {
-        margin-left: 80px;
+        margin-left: 75px;
         color: white;
       }
     }
@@ -109,7 +109,7 @@ $darkgray: grey;
       }
 
       li a {
-        padding: 0.5px 0.75px;
+        padding: 5px;
         margin-right: 2px;
         font-size: 10.5px;
         background-color: $lightgray;
