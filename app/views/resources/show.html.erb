@@ -1,13 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/navbar", page: "Resources" %>
 
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
 <p>
   <strong>Title:</strong>
   <%= @resource.title %>
 </p>
-
 <p>
   <strong>Description:</strong>
   <%= @resource.description %>
+</p>
+<p>
+  <strong>URL:</strong>
+  <%= @resource.url %>
+</p>
+<p>
+  <strong>Source:</strong>
+  <%= @resource.source %>
+</p>
+<p>
+  <strong>Tags:</strong>
+  <%= @resource.tag_list %>
 </p>
 
 <%= link_to 'Edit', edit_resource_path(@resource) %> |

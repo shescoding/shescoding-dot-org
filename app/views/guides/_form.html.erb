@@ -24,13 +24,10 @@
             <%= f.text_field :description, :class => "form-control" %>
           </div>
           <div class="field form-group">
-            <%= f.label :url %><br>
-            <%= f.text_field :url, :class => "form-control" %>
+            <%= f.label :alias %><br>
+            <%= f.text_field :alias, :class => "form-control" %>
           </div>
-          <div class="field form-group">
-            <%= f.label :step_id %><br>
-            <%= f.number_field :step_id, :class => "form-control" %>
-          </div>
+          <!-- TODO: Add some form of dynamic nested form group for steps, as one guide will have several steps. -->
           <div class="actions">
             <%= f.button :class => "btn btn-default" %>
           </div>
@@ -39,3 +36,4 @@
     </div>
   <% end %>
 </div>
+

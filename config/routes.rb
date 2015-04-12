@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+
   get 'welcome/index'
 
   resources :guides
-
   resources :resources
+
+
+  get 'about',            to: "welcome#about"
+  get 'how',              to: "welcome#how"
+
+  get 'tags/:tag', to: 'resources#index', as: :tag
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,7 +18,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   get 'team'            => 'welcome#team',      as: :team_page
-
+  get 'contact'         => 'welcome#contact',   as: :contact_page
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

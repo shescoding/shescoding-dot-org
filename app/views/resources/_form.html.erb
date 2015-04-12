@@ -27,17 +27,22 @@
             <%= f.label :url %><br>
             <%= f.text_field :url, :class => "form-control" %>
           </div>
-          <div class="field form-group">
-            <%= f.label :category_id %><br>
-            <%= f.number_field :category_id, :class => "form-control" %>
-          </div>
+          <!-- TODO: Add some form of dynamic nested form group for categories, as one resource can have several categories. -->
           <div class="field form-group">
             <%= f.label :source %><br>
             <%= f.text_field :source, :class => "form-control" %>
           </div>
           <div class="field form-group">
-            <%= f.label :public %><br>
-            <%= f.text_field :public, :class => "form-control" %>
+            <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+            <%= f.text_field :tag_list %>
+          </div>
+          <!-- TODO: The date field/select needs to be updated to only accept month and year -->
+          <div class="field form-group">
+            <%= f.label :date %><br>
+            <%= f.date_select :date, :class => "form-control" %>
+          </div>
+          <div class="field form_group">
+            <%= f.check_box :public, label: "Resource is public" %>
           </div>
           <div class="actions">
             <%= f.button :class => "btn btn-default" %>

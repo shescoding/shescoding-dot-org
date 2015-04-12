@@ -5,7 +5,11 @@ class ResourcesController < ApplicationController
   # GET /resources
   # GET /resources.json
   def index
-    @resources = Resource.all
+    if params[:tag]
+      @resources = Resource.tagged_with(params[:tag])
+    else
+      @resources = Resource.all
+    end
   end
 
   # GET /resources/1
@@ -70,6 +74,6 @@ class ResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
-      params.require(:resource).permit(:title, :description, :tag_id, :url, :asset_url, :category_id)
+      params.require(:resource).permit(:title, :description, :url, :source, :date, :public, :tag_list)
     end
 end
