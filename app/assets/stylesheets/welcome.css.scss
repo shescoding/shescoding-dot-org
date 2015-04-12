@@ -72,3 +72,29 @@
 .ui-persona{
     font-size: 40px;
 }
+
+.about{
+  font-family: 'ArcherLight'
+}
+
+.about-body {
+  position: center;
+  h2{
+    text-align: center;
+    font-family: 'ArcherBold' !important;
+  }
+}
+
+.about-nav{
+  font-family: 'ArcherBold';
+  text-align: center;
+  word-spacing: 10px;
+  padding-top: 80px;
+  a
+  {color: black;
+   }
+}
+
+.about-header-image{
+  padding-top: 200px;
+}

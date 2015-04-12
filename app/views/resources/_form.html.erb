@@ -31,6 +31,10 @@
         <%= f.label :source %><br>
         <%= f.text_field :source, :class => "form-control" %>
       </div>
+      <div class="field">
+        <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+        <%= f.text_field :tag_list %>
+      </div>
       <!-- TODO: The date field/select needs to be updated to only accept month and year -->
       <div class="field form-group">
         <%= f.label :date %><br>
