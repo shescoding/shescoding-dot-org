@@ -30,7 +30,7 @@
             <div class="panel-data">
               <div class="date"><%= format_date(resource.date) %></div>
               <div class="likes">
-                <%= link_to "&#9825;".html_safe, "", class: "heart" %>
+                <%= link_to image_tag("Heart-Asset-Yellow-16.png"), "", class: "heart" %>
                 <%= resource.likes || 0 %>
               </div>
             </div>
