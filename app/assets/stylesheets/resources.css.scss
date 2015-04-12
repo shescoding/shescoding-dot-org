@@ -73,11 +73,14 @@ $tag_grey: #808080;
     .panel-header {
       h3 {
         font-family: ArcherBold;
-        color: $black;
         // font-size: 16px;
         font-size: 12px;
         line-height: 1.4;
         margin-top: 10px;
+
+        a {
+          color: $black;
+        }
       }
 
       h4 {

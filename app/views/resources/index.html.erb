@@ -14,7 +14,7 @@
           <div class="panel-body">
             <div class="panel-header">
               <h4><%= resource.source %></h4>
-              <h3><%= resource.title %></h3>
+              <h3><%= link_to resource.title, resource.url, target: "_blank" %></h3>
             </div>
             <div class="panel-preview">
               <div class="text">"<%= resource.description %></div>
@@ -22,9 +22,9 @@
             </div>
             <div class="panel-tags">
               <ul>
-                <li><%= link_to "Tag 1", "" %></li>
-                <li><%= link_to "Tag 1", "" %></li>
-                <li><%= link_to "Tag 1", "" %></li>
+                <% resource.tag_list.each do |tag| %>
+                  <li><%= link_to tag, tag_path(tag) %></li>
+                <% end %>
               </ul>
             </div>
             <div class="panel-data">
