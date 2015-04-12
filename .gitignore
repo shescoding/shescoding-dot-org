@@ -22,6 +22,6 @@ app/.DS_Store
 app/assets/.DS_Store
 
 #Ignore other dot-files
-.Gueardfile.swp
+.Guardfile.swp
 .rspec
 
