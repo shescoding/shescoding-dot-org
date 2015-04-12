@@ -6,17 +6,17 @@ $lightgray: #F2F2F2;
 $darkgray: grey;
 
 .resources-section {
-  margin-top: 9em;
+  margin-top: 125px;
   font-family: ArcherBook;
 
   .resources-sidebar {
     ul {
       list-style: none;
-      padding-left: 0.5em;
+      padding-left: 5px;
     }
 
     li a {
-      font-size: 1.05em;
+      font-size: 15px;
       line-height: 2.5;
       color: $black;
     }
@@ -28,7 +28,6 @@ $darkgray: grey;
       margin-left: -80px;
 
       a {
-        width: 100%;
         margin-left: 80px;
         color: white;
       }
@@ -56,32 +55,32 @@ $darkgray: grey;
     .panel {
       display: inline-block;
       width: 32%;
-      margin: 0.3em;
+      margin: 5px;
       border-radius: 0;
-      border: $darkgray solid 0.2em;
-      border-top: $darkgray solid 0.5em;
+      border: $darkgray solid 2px;
+      border-top: $darkgray solid 7px;
     }
 
     .panel-header {
       h3 {
         font-family: ArcherSemiBold;
-        font-size: 1.15em;
+        font-size: 16px;
         line-height: 1.4;
-        margin-top: 0.6em;
+        margin-top: 10px;
       }
 
       h4 {
         text-transform: uppercase;
         color: $darkgray;
-        font-size: 0.65em;
-        margin: 0.7em 0;
+        font-size: 10px;
+        margin: 7px 0;
       }
     }
 
     .panel-preview {
       .text {
         color: $darkgray;
-        margin: 0.5em 0;
+        margin: 7px 0;
       }
 
       a.next {
@@ -91,7 +90,7 @@ $darkgray: grey;
     }
 
     .panel-tags {
-      margin: 1.2em 0;
+      margin: 17px 0;
 
       ul {
         list-style: none;
@@ -103,9 +102,9 @@ $darkgray: grey;
       }
 
       li a {
-        padding: 0.5em 0.7em;
-        margin-right: 0.2em;
-        font-size: 0.75em;
+        padding: 0.5px 0.75px;
+        margin-right: 2px;
+        font-size: 10.5px;
         background-color: $lightgray;
         color: $darkgray;
       }
@@ -117,7 +116,7 @@ $darkgray: grey;
     }
 
     .panel-data {
-      font-size: 0.75em;
+      font-size: 10.5px;
       color: $darkgray;
 
       & > div {
@@ -130,10 +129,10 @@ $darkgray: grey;
 
       .likes {
         float: right;
-        margin-right: 2em;
+        margin-right: 20px;
 
         .heart {
-          font-size: 1.5em;
+          font-size: 15px;
           text-decoration: none;
           color: $darkgray;
           vertical-align: baseline;
