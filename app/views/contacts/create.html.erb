@@ -1,0 +1,11 @@
+<div>
+  <!-- put alerts into flash messages -->
+  <% flash.each do |key, value| %>
+    <div>
+      <a href="#" data-dismiss="alert">×</a>
+        <%= value %>
+        <h3> Thank you for your message.</h3>
+        <p> We'll get back to you as soon as possible.</p>
+    </div>
+  <% end %>
+</div>

@@ -1,6 +1,8 @@
 // contact page
 $black: #1E2028;
+$red: #DB2C38;
 $green: #83C057;
+$blue: #00A0BE;
 
 .contact-section-title {
     padding: 100px 0;
@@ -16,6 +18,57 @@ $green: #83C057;
 }
 
 .contact-button{
-  font-family: ArcherBook;
+    font-family: ArcherBook;
 
+}
+
+.hidden { display: none; }
+
+/*flash*/
+
+.alert-error {
+    background-color: #f2dede;
+    border-color: #DB2C38;
+    color: #DB2C38;
+    text-align: left;
+}
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #DB2C38;
+    color: #DB2C38;
+    text-align: left;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #83C057;
+    color: #83C057;
+    text-align: left;
+}
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #83C057;
+    color: #83C057;
+    text-align: left;
+}
+
+.contact-form {
+    color: #83C057;
+    text-align: left;
+}
+
+.textareastyle {
+    size: 30x10;
+    border: solid #83C057;
+    font-family: ArcherLight;
+    color: #c4c4c4;  /* grey text */
+    text-align: left;
+}
+
+.btn, btn-primary {
+    background-color: #83C057;
+    color: #FFFFFF;     /* white text */
+    text-align: center;
 }

@@ -5,13 +5,16 @@ Rails.application.routes.draw do
 
   resources :resources
 
+  match '/contact',     to: 'contacts#new',             via: 'get'
+  resources :contacts, only: [:new, :create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   get 'team'            => 'welcome#team',      as: :team_page
-  get 'contact'         => 'welcome#contact',   as: :contact_page
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

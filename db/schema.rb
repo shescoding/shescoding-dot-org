@@ -71,4 +71,6 @@ ActiveRecord::Schema.define(version: 20150408062122) do
     t.datetime "updated_at"
   end
 
+  add_index "steps", ["guide_id"], name: "index_steps_on_guide_id", using: :btree
+
 end
