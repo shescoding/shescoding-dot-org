@@ -10,6 +10,11 @@ module ResourcesHelper
   end
 
   def create_filter(id)
-    ".#{id}"
+    ".filter_#{id}"
+  end
+
+  def create_filter_targets(resource)
+    ids = resource.categories.pluck(:id)
+    ids.map {|i| "filter_#{i}"}.join(' ')
   end
 end

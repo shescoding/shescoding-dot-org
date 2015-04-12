@@ -10,7 +10,7 @@
     </div>
     <div class="resources-grid col-md-9">
       <% @resources.each do |resource| %>
-        <div class="panel panel-default <%= resource.stringify_categories %>">
+        <div class="panel panel-default <%= create_filter_targets(resource) %>">
           <div class="panel-body">
             <div class="panel-header">
               <h4><%= resource.source %></h4>
