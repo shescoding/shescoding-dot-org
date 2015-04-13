@@ -21,7 +21,8 @@ logfile
 app/.DS_Store
 app/assets/.DS_Store
 
-#Ignore other dot-files
-.Guardfile.swp
-.rspec
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
 

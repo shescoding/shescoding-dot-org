@@ -1,11 +1,16 @@
 class ResourcesController < ApplicationController
 
-  before_action :set_resource, only: [:show, :edit, :update, :destroy]
+  before_action :set_resource, only: [:show, :edit, :update, :like, :destroy]
 
   # GET /resources
   # GET /resources.json
   def index
-    @resources = Resource.all
+    if params[:tag]
+      @resources = Resource.tagged_with(params[:tag]).public_and_sorted
+    else
+      @resources = Resource.public_and_sorted
+    end
+    @categories = Category.all
   end
 
   # GET /resources/1
@@ -52,6 +57,12 @@ class ResourcesController < ApplicationController
     end
   end
 
+  def like
+    @resource.likes += 1
+    @resource.save
+    redirect_to resources_path
+  end
+
   # DELETE /resources/1
   # DELETE /resources/1.json
   def destroy
@@ -70,6 +81,6 @@ class ResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
-      params.require(:resource).permit(:title, :description, :tag_id, :url, :asset_url, :category_id)
+      params.require(:resource).permit(:title, :description, :url, :source, :date, :public, :tag_list)
     end
 end

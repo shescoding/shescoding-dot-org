@@ -1,3 +1,234 @@
-// Place all the styles related to the resources controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// resources page
+$black: #1E2028;
+$yellow: #FBCC3B;
+$light_grey: #F2F2F2;
+$dark_grey: #CCCCCC;
+$tag_grey: #808080;
+
+.resources-nav {
+  background: $yellow;
+}
+
+.resources-section {
+  margin-top: 125px;
+  font-family: ArcherBook;
+
+  .resources-sidebar {
+    ul {
+      list-style: none;
+      padding-left: 5px;
+    }
+
+    li {
+      padding: 8px 0;
+    }
+
+    li a {
+      font-family: ArcherBook;
+      font-size: 15px;
+      color: $black;
+    }
+
+    li.selected {
+      position: relative;
+      background-color: $yellow;
+      width: 100%;
+      margin-left: -75px;
+
+      a {
+        margin-left: 75px;
+        color: white;
+      }
+    }
+
+    li.selected:after {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(251, 204, 59, 0);
+      border-left-color: $yellow;
+      border-width: 19px;
+      margin-top: -18.1px;
+    }
+  }
+
+  .resources-grid {
+    padding: 0;
+
+    .panel {
+      display: inline-block;
+      width: 32%;
+      margin: 5px;
+      border-radius: 0;
+      border: $dark_grey solid 2px;
+      border-top: $dark_grey solid 7px;
+    }
+
+    .panel-header {
+      h3 {
+        font-family: ArcherBold;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-top: 10px;
+
+        a {
+          color: $black;
+        }
+      }
+
+      h4 {
+        font-family: ArcherLight;
+        text-transform: uppercase;
+        color: $black;
+        font-size: 12px;
+        margin: 7px 0;
+
+      }
+    }
+
+    .panel-preview {
+      color: $black;
+      font-size: 13px;
+
+      .text {
+        font-family: ArcherLight;
+        margin: 7px 0 2px 0;
+      }
+
+      a.next {
+        font-family: ArcherBold;
+        color: $black;
+      }
+    }
+
+    .panel-tags {
+      margin: 17px 0;
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      li a {
+        font-family: ArcherLight;
+        padding: 5px;
+        margin-right: 2px;
+        font-size: 12px;
+        background-color: $light_grey;
+        color: $tag_grey;
+      }
+
+      li a:hover, li a:focus {
+        background-color: $yellow;
+        text-decoration: none;
+      }
+    }
+
+    .panel-data {
+      font-family: ArcherLight;
+      font-size: 12px;
+      color: $black;
+
+      & > div {
+        display: inline-block;
+      }
+
+      .date {
+        float: left;
+      }
+
+      .likes {
+        float: right;
+        margin-right: 10px;
+
+        .heart {
+          border: transparent;
+          background-color: transparent;
+        }
+
+        .heart:hover, .heart:focus {
+          color: $yellow;
+        }
+      }
+    }
+
+    #return-to-top {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1090px) and (max-width: 1200px) {
+    .resources-sidebar {
+      li.selected {
+        width: 132%;
+        margin-left: -132px;
+
+        a {
+          margin-left: 132px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 990px) {
+    margin-top: 100px;
+
+    .resources-sidebar {
+      ul {
+        padding: 0;
+      }
+
+      li.selected a {
+        margin: 0;
+        width: inherit;
+      }
+
+      li, li.selected {
+        width: inherit;
+        margin: 0 5px 10px 0;
+        display: inline-block;
+        padding: 8px;
+        border: 1px solid $light_grey;
+      }
+
+      li.selected:after {
+        content: none;
+      }
+    }    
+
+    .resources-grid {
+      .panel {
+        width: 48%;
+      }
+
+      #return-to-top {
+        display: block;
+        position: absolute;
+        bottom: -50px;
+        width: 97%;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .resources-grid {
+      .panel {
+        width: 97%;
+      }
+    }
+  }
+}
+
+.resource-back {
+  padding-left: 15px;
+}
