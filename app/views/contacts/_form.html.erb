@@ -1,15 +1,14 @@
 <%= simple_form_for @contact, :html => {:class => 'contact-form' } do |f| %>
 
-      <%= f.text_area(:self_summary, :value => "Name", :class => "textareastyle", :size => "40x2") %><br>
-       <%= f.text_area(:self_summary, :value => "Email", :class => "textareastyle", :size => "40x2") %><br>
-        <%= f.text_area(:self_summary, :value => "Message", :class => "textareastyle", :size => "60x10") %><br>
-      <div class= "hidden">
-        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+  <%= f.text_area(:self_summary, :value => "Name", :class => "textareastyle", :size => "40x2") %><br>
+  <%= f.text_area(:self_summary, :value => "Email", :class => "textareastyle", :size => "40x2") %><br>
+  <%= f.text_area(:self_summary, :value => "Message", :class => "textareastyle", :size => "60x10") %><br>
+  <div class= "hidden">
+    <%= f.input :nickname, :hint => 'Leave this field blank!' %>
       <!-- nickname attribute will be hidden so that no one can fill it out but computers will fill it out. This will determine whether the message is coming from a computer or not.-->
-      </div>
-      <br>
-      <%= f.button :submit, 'Submit', :class=> "btn btn-primary" %>
-    </div>
-    </br>
+  </div>
+  <br>
+    <%= f.button :submit, 'Submit', :class=> "btn btn-primary"%>
+  </br>
   <% end %>
-</div>
+
