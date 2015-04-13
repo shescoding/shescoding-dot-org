@@ -1,8 +1,8 @@
 // contact page
+
 $black: #1E2028;
 $red: #DB2C38;
 $green: #83C057;
-$blue: #00A0BE;
 
 .contact-section-title {
     padding: 100px 0;
@@ -27,48 +27,49 @@ $blue: #00A0BE;
 /*flash*/
 
 .alert-error {
-    background-color: #f2dede;
-    border-color: #DB2C38;
-    color: #DB2C38;
+    background-color: white;
+    border-color: $red;
+    color: $red;
     text-align: left;
 }
 
 .alert-alert {
-    background-color: #f2dede;
-    border-color: #DB2C38;
-    color: #DB2C38;
+    background-color: white;
+    border-color: $red;
+    color: $red;
     text-align: left;
 }
 
 .alert-success {
-    background-color: #dff0d8;
-    border-color: #83C057;
-    color: #83C057;
+    background-color: #dff0d8; /* lt green bkgd */
+    border-color: $green;
+    color: $green;
     text-align: left;
 }
 
 .alert-notice {
-    background-color: #dff0d8;
-    border-color: #83C057;
-    color: #83C057;
+    background-color: #dff0d8; /* lt green bkgd */
+    border-color: $green;
+    color: $green;
     text-align: left;
 }
 
 .contact-form {
-    color: #83C057;
+    color: $green;
     text-align: left;
 }
 
 .textareastyle {
     size: 30x10;
-    border: solid #83C057;
+    border: solid $green;
     font-family: ArcherLight;
     color: #c4c4c4;  /* grey text */
     text-align: left;
 }
 
-.btn, btn-primary {
-    background-color: #83C057;
+.input .button .btn .btn-primary {
+    background-color: $green;
+    font-family: ArcherBold;
     color: #FFFFFF;     /* white text */
     text-align: center;
 }
