@@ -32,7 +32,7 @@
               <div class="likes">
                 <%= button_to like_path(resource.id), method: :post, class: "heart" do %>
                   <%= image_tag "Heart-Asset-Yellow-16.png" %>
-                  <%= resource.likes %>
+                  <span><%= resource.likes %></span>
                 <% end %>
               </div>
             </div>
@@ -68,5 +68,24 @@
       e.preventDefault();
       $('html, body').animate({scrollTop: 0}, 'slow');
     })
+
+    // Ajax Like
+    $(".heart").click(function(e){
+      e.preventDefault();
+      var form = $(this).parents("form");
+
+      var counterEl = $(this).children()[1];
+      var newCount = 1 + parseInt(counterEl.innerText, 10);
+
+      $.ajax(form.attr("action"), {
+        type: "POST",
+        success: function() {
+          counterEl.innerText = newCount;
+        },
+        error: function() {
+          console.log('Number of likes failed to increment :(');
+        }
+      });
+    });
   });
 </script>
