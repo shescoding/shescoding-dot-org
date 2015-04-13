@@ -1,37 +1,86 @@
 <%= render "layouts/navbar", page: "Resources" %>
 
-<div class="container">
-    <h1 class="ui-shescoding-crud">Resources</h1>
-    <div class="col-sm-12">
-        <div class="row">
-            <div class="ui-shecodes-mission">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Tags</th>
-                    <th colspan="3"></th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <% @resources.each do |resource| %>
-                    <tr>
-                      <td><%= resource.title %> |</td>
-                      <td>| <%= resource.description %></td>
-                      <td>| <%= raw resource.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
-                      <td>| <%= link_to 'Show', resource %></td>
-                      <td>| <%= link_to 'Edit', edit_resource_path(resource) %></td>
-                      <td>| <%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                    </tr>
-                  <% end %>
-                </tbody>
-              </table>
-
-              <p><%= link_to 'New Resource', new_resource_path %></p>
-
-            </div>
-        </div>
+<div class="resources-section container">
+  <div class="row">
+    <div class="resources-sidebar col-md-3">
+      <ul>
+        <li class="selected" data-category="*">
+          <%= link_to "All Resources", resources_path %>
+        </li>
+        <% @categories.each do |category| %>
+          <li data-category="<%= create_filter(category.id) %>">
+            <%= link_to category.name, resources_path(anchor: category.id) %>
+          </li>
+        <% end %>
+      </ul>
     </div>
+    <div class="resources-grid col-md-9">
+      <% @resources.each do |resource| %>
+        <div class="panel panel-default <%= create_filter_targets(resource) %>">
+          <div class="panel-body">
+            <div class="panel-header">
+              <h4><%= resource.source %></h4>
+              <h3><%= link_to resource.title, resource.url, target: "_blank" %></h3>
+            </div>
+            <div class="panel-preview">
+              <div class="text">"<%= resource.description %></div>
+              <%= link_to "Read More >>", resource.url, class: "next", target: "_blank" %>
+            </div>
+            <div class="panel-tags">
+              <ul>
+                <% resource.tag_list.each do |tag| %>
+                  <li><%= link_to tag, tag_path(tag) %></li>
+                <% end %>
+              </ul>
+            </div>
+            <div class="panel-data">
+              <div class="date"><%= format_date(resource.date) %></div>
+              <div class="likes">
+                <%= button_to like_path(resource.id), method: :post, class: "heart" do %>
+                  <%= image_tag "Heart-Asset-Yellow-16.png" %>
+                  <span><%= resource.likes %></span>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <button id="return-to-top" class="btn btn-lg btn-default">Return to Top</button>
+    </div>
+  </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    // Get Current URL
+    var currentUrl = window.location.href;
+
+    // Initialize Layout
+    var isotopeSettings = {
+      itemSelector: '.panel',
+      layoutMode: 'masonry',
+      masonry: {
+        columnWidth: '.panel'
+      }
+    }
+    var $container = $('.resources-grid').isotope(isotopeSettings);
+
+    // Initialize Selected Category
+    initializeSelectedCategory(currentUrl, $container);
+
+    // Filter Selected Category
+    $('.resources-sidebar li').click(function(e) {
+      filterSelectedCategory(e, currentUrl, this, $container);
+    });
+
+    // Return To Top
+    $('#return-to-top').click(function(e) {
+      scrollToTop(e);
+    })
+
+    // Ajax Like
+    $(".heart").click(function(e){
+      incrementLike(e, this);
+    });
+  });
+</script>

@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   get 'about',            to: "welcome#about"
   get 'how',              to: "welcome#how"
 
-  get 'tags/:tag', to: 'resources#index', as: :tag
-
+  get 'resources/tags/:tag', to: 'resources#index', as: :tag
+  post 'resources/:id/like', to: 'resources#like', as: :like
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
