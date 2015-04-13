@@ -76,15 +76,10 @@
 
       var counterEl = $(this).children()[1];
       var newCount = 1 + parseInt(counterEl.innerText, 10);
+      counterEl.innerText = newCount;
 
       $.ajax(form.attr("action"), {
-        type: "POST",
-        success: function() {
-          counterEl.innerText = newCount;
-        },
-        error: function() {
-          console.log('Number of likes failed to increment :(');
-        }
+        type: "POST"
       });
     });
   });
