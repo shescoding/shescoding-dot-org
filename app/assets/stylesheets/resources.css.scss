@@ -25,8 +25,7 @@ $tag_grey: #808080;
 
     li a {
       font-family: ArcherBook;
-      // font-size: 15px;
-      font-size: 12px;
+      font-size: 15px;
       color: $black;
     }
 
@@ -73,8 +72,7 @@ $tag_grey: #808080;
     .panel-header {
       h3 {
         font-family: ArcherBold;
-        // font-size: 16px;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1.4;
         margin-top: 10px;
 
@@ -87,27 +85,24 @@ $tag_grey: #808080;
         font-family: ArcherLight;
         text-transform: uppercase;
         color: $black;
-        // font-size: 10px;
-        font-size: 7px;
+        font-size: 12px;
         margin: 7px 0;
 
       }
     }
 
     .panel-preview {
+      color: $black;
+      font-size: 13px;
+
       .text {
         font-family: ArcherLight;
-        color: $black;
-        // previously no font-size
-        font-size: 9px;
         margin: 7px 0 2px 0;
       }
 
       a.next {
         font-family: ArcherBold;
         color: $black;
-        // previously no font-size
-        font-size: 9px;
       }
     }
 
@@ -127,8 +122,7 @@ $tag_grey: #808080;
         font-family: ArcherLight;
         padding: 5px;
         margin-right: 2px;
-        // font-size: 10.5px;
-        font-size: 7px;
+        font-size: 12px;
         background-color: $light_grey;
         color: $tag_grey;
       }
@@ -141,8 +135,7 @@ $tag_grey: #808080;
 
     .panel-data {
       font-family: ArcherLight;
-      // font-size: 10.5px;
-      font-size: 7px;
+      font-size: 12px;
       color: $black;
 
       & > div {
