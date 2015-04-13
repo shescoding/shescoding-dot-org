@@ -2,28 +2,15 @@
 
 <h1 class="ui-shescoding-crud">Listing guides</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @guides.each do |guide| %>
-      <tr>
-        <td><%= guide.title %></td>
-        <td><%= guide.description %></td>
-        <td><%= link_to 'Show', guide %></td>
-        <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
-        <td><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Guide', new_guide_path %>
+<% @guides.each do |guide| %>
+<div class="container">
+    <div class="row ui-guide-row">
+        <div class="col-sm-3 col-sm-offset-1">
+            <h3 class="ui-guide-title"><%= guide.title %></h3>
+        </div>
+        <div class="col-sm-6">
+            <p class="ui-guide-description"><%= guide.description %></p>
+        </div>
+    </div>
+</div>
+<% end %>
