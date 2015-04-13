@@ -6,9 +6,9 @@ class ResourcesController < ApplicationController
   # GET /resources.json
   def index
     if params[:tag]
-      @resources = Resource.tagged_with(params[:tag]).order(date: :desc, created_at: :desc)
+      @resources = Resource.tagged_with(params[:tag]).public_and_sorted
     else
-      @resources = Resource.order(date: :desc, created_at: :desc)
+      @resources = Resource.public_and_sorted
     end
     @categories = Category.all
   end
