@@ -1,0 +1,42 @@
+<div class="container">
+  <%= form_for(@persona) do |f| %>
+    <% if @persona.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@persona.errors.count, "error") %> prohibited this guide from being saved:</h2>
+
+        <ul>
+        <% @persona.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <form>
+          <div class="field form-group">
+            <%= f.label :name %><br>
+            <%= f.text_field :name, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :description %><br>
+            <%= f.text_field :description, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :color %><br>
+            <%= f.text_field :color, :class => "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :questions %><br>
+            <%= f.text_field :questions, :class => "form-control" %>
+          </div>
+          <!-- TODO: Add some form of dynamic nested form group for steps, as one guide will have several steps. -->
+          <div class="actions">
+            <%= f.button :class => "btn btn-default" %>
+          </div>
+        </form>
+      </div>
+    </div>
+  <% end %>
+</div>

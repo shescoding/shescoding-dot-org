@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :guides
   resources :resources
+  resources :personas
 
 
   get 'about',            to: "welcome#about"
