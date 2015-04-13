@@ -30,10 +30,10 @@
             <div class="panel-data">
               <div class="date"><%= format_date(resource.date) %></div>
               <div class="likes">
-                <%= button_to "like", like_path(resource.id), method: :post %>
-
-                <%= link_to image_tag("Heart-Asset-Yellow-16.png"), "", class: "heart" %>
-                <%= resource.likes %>
+                <%= button_to like_path(resource.id), method: :post, class: "heart" do %>
+                  <%= image_tag "Heart-Asset-Yellow-16.png" %>
+                  <%= resource.likes %>
+                <% end %>
               </div>
             </div>
           </div>

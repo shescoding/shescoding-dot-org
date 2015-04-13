@@ -155,13 +155,11 @@ $tag_grey: #808080;
 
       .likes {
         float: right;
-        margin-right: 20px;
+        margin-right: 10px;
 
         .heart {
-          font-size: 15px;
-          text-decoration: none;
-          color: $dark_grey;
-          vertical-align: baseline;
+          border: transparent;
+          background-color: transparent;
         }
 
         .heart:hover, .heart:focus {
