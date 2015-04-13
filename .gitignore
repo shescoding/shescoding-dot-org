@@ -20,3 +20,8 @@ logfile
 .DS_Store
 app/.DS_Store
 app/assets/.DS_Store
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
