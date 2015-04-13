@@ -4,9 +4,13 @@
   <div class="row">
     <div class="resources-sidebar col-md-3">
       <ul>
-        <li class="selected" data-category="*"><%= link_to "All Resources", "" %></li>
+        <li class="selected" data-category="*">
+          <%= link_to "All Resources", resources_path %>
+        </li>
         <% @categories.each do |category| %>
-          <li data-category="<%= create_filter(category.id) %>"><%= link_to category.name, "#" %></li>
+          <li data-category="<%= create_filter(category.id) %>">
+            <%= link_to category.name, resources_path(anchor: category.id) %>
+          </li>
         <% end %>
       </ul>
     </div>
@@ -48,41 +52,35 @@
 
 <script>
   $(document).ready(function() {
+    // Get Current URL
+    var currentUrl = window.location.href;
+
     // Initialize Layout
-    var $container = $('.resources-grid').isotope({
+    var isotopeSettings = {
       itemSelector: '.panel',
       layoutMode: 'masonry',
       masonry: {
         columnWidth: '.panel'
       }
-    });
+    }
+    var $container = $('.resources-grid').isotope(isotopeSettings);
+
+    // Initialize Selected Category
+    initializeSelectedCategory(currentUrl, $container);
 
     // Filter Selected Category
     $('.resources-sidebar li').click(function(e) {
-      e.preventDefault();
-      $('.selected').toggleClass('selected');
-      $(this).toggleClass('selected');
-      $container.isotope({filter: this.dataset.category});
+      filterSelectedCategory(e, currentUrl, this, $container);
     });
 
     // Return To Top
     $('#return-to-top').click(function(e) {
-      e.preventDefault();
-      $('html, body').animate({scrollTop: 0}, 'slow');
+      scrollToTop(e);
     })
 
     // Ajax Like
     $(".heart").click(function(e){
-      e.preventDefault();
-      var form = $(this).parents("form");
-
-      var counterEl = $(this).children()[1];
-      var newCount = 1 + parseInt(counterEl.innerText, 10);
-      counterEl.innerText = newCount;
-
-      $.ajax(form.attr("action"), {
-        type: "POST"
-      });
+      incrementLike(e, this);
     });
   });
 </script>
