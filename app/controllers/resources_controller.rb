@@ -1,14 +1,14 @@
 class ResourcesController < ApplicationController
 
-  before_action :set_resource, only: [:show, :edit, :update, :destroy]
+  before_action :set_resource, only: [:show, :edit, :update, :like, :destroy]
 
   # GET /resources
   # GET /resources.json
   def index
     if params[:tag]
-      @resources = Resource.tagged_with(params[:tag])
+      @resources = Resource.tagged_with(params[:tag]).order(date: :desc, created_at: :desc)
     else
-      @resources = Resource.all
+      @resources = Resource.order(date: :desc, created_at: :desc)
     end
     @categories = Category.all
   end
@@ -55,6 +55,12 @@ class ResourcesController < ApplicationController
         format.json { render json: @resource.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def like
+    @resource.likes += 1
+    @resource.save
+    redirect_to resources_path
   end
 
   # DELETE /resources/1
