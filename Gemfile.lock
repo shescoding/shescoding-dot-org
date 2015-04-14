@@ -33,6 +33,7 @@ GEM
     autoprefixer-rails (5.1.8)
       execjs
       json
+    bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -53,6 +54,13 @@ GEM
       execjs
     coffee-script-source (1.9.1)
     debug_inspector (0.0.2)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.4.0)
     hike (1.2.3)
@@ -66,10 +74,18 @@ GEM
     json (1.8.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.4.3)
     minitest (5.5.1)
     multi_json (1.11.0)
+    orm_adapter (0.5.0)
     pg (0.18.1)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     rack (1.5.2)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -96,6 +112,8 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -105,6 +123,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    slop (3.6.0)
     spring (1.3.3)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -125,6 +144,8 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -136,9 +157,11 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.4)
   bootstrap_form
   coffee-rails (~> 4.0.0)
+  devise
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  pry-rails
   rails (= 4.1.7)
   rails_12factor
   sass-rails (~> 4.0.3)

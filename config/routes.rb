@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'team'            => 'welcome#team',      as: :team_page
   get 'contact'         => 'welcome#contact',   as: :contact_page
+
+  devise_for :users
+  resources :users
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
