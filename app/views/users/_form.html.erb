@@ -16,6 +16,14 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+<div class="field">
+  <%= f.label :password %><br>
+  <%= f.password_field :password, placeholder: "Leave blank if unchanged" %>
+</div>
+  <div class="field">
     <%= f.label :admin %><br>
     <%= f.check_box :admin %>
   </div>
