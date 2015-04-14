@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   get 'about',            to: "welcome#about"
   get 'how',              to: "welcome#how"
+  get 'woman',            to: "personas#woman_wizard"
+  get 'company',          to: "personas#company_wizard"
+  get 'supporter',         to: "personas#supporter_wizard"
 
   get 'tags/:tag', to: 'resources#index', as: :tag
 

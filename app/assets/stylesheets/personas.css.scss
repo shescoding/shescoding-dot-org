@@ -1,13 +1,19 @@
-.woman-nav{
-  background: #DB2C38;
+.ui-woman-wizard{
+  .ui-shescoding-nav, #footer{
+    background: #DB2C38;
+  }
 }
 
-.ally-nav{
-  background: #83C057;
+.ui-supporter-wizard{
+  .ui-shescoding-nav, #footer{
+    background: #83C057;
+  }
 }
 
-.company-nav{
-  background: #00A0BE;
+.ui-company-wizard{
+  .ui-shescoding-nav, #footer{
+    background: #00A0BE;
+  }
 }
 
 .ui-wizard-question1{

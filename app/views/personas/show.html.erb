@@ -1,1 +1,21 @@
 <%= render "layouts/navbar", page: "" %>
+
+<p class="ui-shescoding-crud" id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @persona.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @persona.description %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @persona.questions %>
+</p>
+
+<%= link_to 'Edit', edit_persona_path(@persona) %> |
+<%= link_to 'Back', personas_path %>

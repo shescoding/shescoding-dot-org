@@ -25,7 +25,7 @@ class PersonasController < ApplicationController
   # PERSONAS /personas.json
   def create
     @persona = Persona.new(persona_params)
-    @persona.to_json
+    @persona.questions.to_json
 
     respond_to do |format|
       if @persona.save
@@ -62,9 +62,18 @@ class PersonasController < ApplicationController
     end
   end
 
+  def woman_wizard
+  end
+
+  def company_wizard
+  end
+
+  def supporter_wizard
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_guide
+    def set_persona
       @persona = Persona.find(params[:id])
     end
 
