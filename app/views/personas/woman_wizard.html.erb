@@ -6,36 +6,48 @@
         <div class="row">
             <div class="col-sm-8 col-sm-offset-1">
                 <p class="ui-persona-phrase">I am a woman who wants to
-                    <select class="selectpicker ui-woman-select">
-                        <option></option>
-                        <% @personas.each do |persona| %>
-                            <option class="ui-woman-options"><%= persona.questions %></option>
-                        <% end %>
-                    </select>
+                    <div class="dropdown ui-woman-select">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                            <% @personas.each do |persona| %>
+                                <li role="presentation" class="ui-woman-options"><a role="menuitem" tabindex="-1" href="#"><%= persona.questions %></a></li>
+                            <% end %>
+                        </ul>
+                    </div>
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-1">
                 <p class="ui-persona-phrase">I want to do this by
-                    <select class="selectpicker ui-woman-select">
-                        <option></option>
-                        <% @personas.each do |persona| %>
-                            <option class="ui-woman-options"><%= persona.questions %></option>
-                        <% end %>
-                    </select>
+                    <div class="dropdown ui-woman-select">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                            <% @personas.each do |persona| %>
+                                <li role="presentation" class="ui-woman-options"><a role="menuitem" tabindex="-1" href="#"><%= persona.questions %></a></li>
+                            <% end %>
+                        </ul>
+                    </div>
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-1">
                 <p class="ui-persona-phrase">I am a woman who
-                    <select class="selectpicker ui-woman-select">
-                        <option></option>
-                        <% @personas.each do |persona| %>
-                            <option class="ui-woman-options"><%= persona.questions %></option>
-                        <% end %>
-                    </select>
+                    <div class="dropdown ui-woman-select">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                            <% @personas.each do |persona| %>
+                                <li role="presentation" class="ui-woman-options"><a role="menuitem" tabindex="-1" href="#"><%= persona.questions %></a></li>
+                            <% end %>
+                        </ul>
+                    </div>
                 </p>
             </div>
         </div>

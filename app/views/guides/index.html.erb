@@ -7,7 +7,10 @@
 <% @guides.each_with_index do |guide| %>
 <div class="container">
     <div class="row ui-guide-row">
-        <div class="col-sm-3 col-sm-offset-1">
+        <div class="col-sm-1">
+            <p class="ui-guide-index"><%= guide.id %></p>
+        </div>
+        <div class="col-sm-3">
             <h3 class="ui-guide-title"><%= guide.title %></h3>
         </div>
         <div class="col-sm-6">
