@@ -1,19 +1,48 @@
 .ui-woman-wizard{
-  .ui-shescoding-nav, #footer{
+  padding-top: 100px;
+  .ui-shescoding-nav, #footer, .ui-woman-options:hover{
     background: #DB2C38;
   }
 }
 
+.ui-woman-select div.dropdown-menu.open {
+  border-color: #DB2C38;
+}
+
+.ui-woman-select{
+  .btn-default{
+    border-color: transparent;
+  }
+  .btn-default:hover, .open > .btn-default.dropdown-toggle{
+    border-color: transparent;
+    background: transparent;
+  }
+}
+
+.ui-persona-phrase{
+  font-size: 26px;
+}
+
 .ui-supporter-wizard{
-  .ui-shescoding-nav, #footer{
+  padding-top: 80px;
+  .ui-shescoding-nav, #footer, .ui-supporter-options:hover{
     background: #83C057;
   }
 }
 
+.ui-supporter-select div.dropdown-menu.open{
+  border-color: #83C057;
+}
+
 .ui-company-wizard{
-  .ui-shescoding-nav, #footer{
+  padding-top: 80px;
+  .ui-shescoding-nav, #footer, .ui-company-options:hover{
     background: #00A0BE;
   }
+}
+
+.ui-company-select div.dropdown-menu.open{
+  border-color: #00A0BE;
 }
 
 .ui-wizard-question1{

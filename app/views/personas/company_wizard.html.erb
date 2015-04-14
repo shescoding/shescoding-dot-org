@@ -2,4 +2,43 @@
 
 <%= render "layouts/navbar", page: "" %>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-1">
+            <p class="ui-persona-phrase">I am a company who wants to
+                <select class="selectpicker ui-company-select">
+                    <option></option>
+                    <% @personas.each do |persona| %>
+                        <option class="ui-company-options"><%= persona.questions %></option>
+                    <% end %>
+                </select>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-1">
+            <p class="ui-persona-phrase">I want to do this by
+                <select class="selectpicker ui-company-select">
+                    <option></option>
+                    <% @personas.each do |persona| %>
+                        <option class="ui-company-options"><%= persona.questions %></option>
+                    <% end %>
+                </select>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-1 ui-company-select">
+            <p class="ui-persona-phrase">I am a company who
+                <select class="selectpicker">
+                    <option></option>
+                    <% @personas.each do |persona| %>
+                        <option class="ui-company-options"><%= persona.questions %></option>
+                    <% end %>
+                </select>
+            </p>
+        </div>
+    </div>
+</div>
+
 </body>

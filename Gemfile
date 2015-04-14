@@ -9,6 +9,9 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.4'
 
+#Bootstrap styling for select dropdown
+gem 'bootstrap-select-rails'
+
 # Use Rails Bootstrap Forms. Read more: https://github.com/bootstrap-ruby/rails-bootstrap-forms
 gem 'bootstrap_form'
 

@@ -7,10 +7,20 @@
 }
 
 .ui-guide-row{
-  border-bottom: gray 1px solid;
+  border-bottom: #CCCCCC 1px solid;
   h3{
     padding-left: 0px;
   }
+  img{
+    width: 10%;
+    padding-top: 25px;
+  }
+}
+
+.ui-guide-intro{
+  padding-left: 150px;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
 
 .ui-guide-description{

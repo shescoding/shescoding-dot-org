@@ -1,8 +1,10 @@
 <%= render "layouts/navbar", page: "" %>
 
-<h1 class="ui-shescoding-crud">Listing guides</h1>
+<!-- <h1 class="ui-shescoding-crud">Listing guides</h1> -->
 
-<% @guides.each do |guide| %>
+<h1 class="ui-guide-intro">Great! Let us help you. Check out these resources...</h1>
+
+<% @guides.each_with_index do |guide| %>
 <div class="container">
     <div class="row ui-guide-row">
         <div class="col-sm-3 col-sm-offset-1">
@@ -10,6 +12,9 @@
         </div>
         <div class="col-sm-6">
             <p class="ui-guide-description"><%= guide.description %></p>
+        </div>
+        <div class="col-sm-2">
+          <%= image_tag('Heart-Red-Outlined.png') %>
         </div>
     </div>
 </div>

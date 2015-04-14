@@ -1,16 +1,3 @@
 <%= render "layouts/navbar", page: "" %>
 
 <p class="ui-shescoding-crud" id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @guide.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @guide.description %>
-</p>
-
-<%= link_to 'Edit', edit_guide_path(@guide) %> |
-<%= link_to 'Back', guides_path %>

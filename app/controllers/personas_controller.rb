@@ -4,7 +4,7 @@ class PersonasController < ApplicationController
   # GET /personas
   # GET /personas.json
   def index
-    # @personas = Persona.all
+    @personas = Persona.all
   end
 
   # GET /personas/1
@@ -63,12 +63,15 @@ class PersonasController < ApplicationController
   end
 
   def woman_wizard
+    @personas = Persona.all
   end
 
   def company_wizard
+    @personas = Persona.all
   end
 
   def supporter_wizard
+    @personas = Persona.all
   end
 
   private

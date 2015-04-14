@@ -14,28 +14,34 @@
 <div class="container">
     <div class="ui-persona-row">
         <div class="col-sm-4 ui-persona-col">
-            <div class='ui-rectangle-box ui-rectangle-woman'>
-                <div class='ui-rectangle-content'>
-                    <p>I am a</p>
-                    <p class="ui-persona">woman.</p>
+            <%= link_to woman_path do%>
+                <div class='ui-rectangle-box ui-rectangle-woman'>
+                    <div class='ui-rectangle-content'>
+                        <p>I am a</p>
+                        <p class="ui-persona">woman.</p>
+                    </div>
                 </div>
-            </div>
+            <% end %>
         </div>
         <div class="col-sm-4 ui-persona-col">
-            <div class='ui-rectangle-box ui-rectangle-supporter'>
-                <div class='ui-rectangle-content'>
-                    <p>I am a</p>
-                    <p class="ui-persona">supporter.</p>
+            <%= link_to supporter_path do%>
+                <div class='ui-rectangle-box ui-rectangle-supporter'>
+                    <div class='ui-rectangle-content'>
+                        <p>I am a</p>
+                        <p class="ui-persona">supporter.</p>
+                    </div>
                 </div>
-            </div>
+            <% end %>
         </div>
         <div class="col-sm-4 ui-persona-col">
-            <div class='ui-rectangle-box ui-rectangle-company'>
-                <div class='ui-rectangle-content'>
-                    <p>I am a </p>
-                    <p class="ui-persona">company.</p>
+            <%= link_to company_path do%>
+                <div class='ui-rectangle-box ui-rectangle-company'>
+                    <div class='ui-rectangle-content'>
+                        <p>I am a </p>
+                        <p class="ui-persona">company.</p>
+                    </div>
                 </div>
-            </div>
+            <% end %>
         </div>
     </div>
 </div>
