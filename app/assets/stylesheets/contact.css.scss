@@ -57,19 +57,19 @@ $green: #83C057;
 .contact-form {
     color: $green;
     text-align: left;
+    vertical-align: center;
 }
 
 .textareastyle {
     size: 30x10;
-    border: solid $green;
+    border: solid $green 1px;
     font-family: ArcherLight;
     color: #c4c4c4;  /* grey text */
     text-align: left;
+    outline: none;
 }
 
-.input .button .btn .btn-primary {
-    background-color: $green;
-    font-family: ArcherBold;
-    color: #FFFFFF;     /* white text */
-    text-align: center;
+.btn-contact {
+    width: 120px;
+    height: 44px;
 }

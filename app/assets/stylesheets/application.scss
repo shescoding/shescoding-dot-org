@@ -45,11 +45,22 @@ a:link {
 
 #notice {
   font-size: 30px;
-  color: green;
+  color: #83C057;   // green
 }
 
 .btn {
-  font-family: ArcherBold;
+  font-family: ArcherLight;
+  background-color: #83C057;   // green
+  border: 1px solid;
+  border-color: #83C057;     // green
+  border-radius: 0px;
+  color: white
+}
+
+.btn:hover {
+    background-color: #83C057;      // green
+    color: white;
+    border-color: #83C057;     // green
 }
 
 strong {

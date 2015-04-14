@@ -61,5 +61,3 @@ gem 'rails_12factor', group: :production
 gem 'mail_form'
 gem 'simple_form'
 
-ruby "2.2.1"
-
