@@ -26,6 +26,8 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    authorize! :edit, @guide
+    authorize! :edit, @resource
   end
 
   # POST /users
