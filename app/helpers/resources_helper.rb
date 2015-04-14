@@ -17,4 +17,8 @@ module ResourcesHelper
     ids = resource.categories.pluck(:id)
     ids.map {|i| "filter_#{i}"}.join(' ')
   end
+
+  def empty_or_full_heart(resource)
+    resource.likes > 0 ? "Heart-Asset-Yellow-16.png" : "Heart-Asset-Yellow-outlined-17.png"
+  end
 end
