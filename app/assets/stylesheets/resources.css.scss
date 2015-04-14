@@ -153,6 +153,10 @@ $tag_grey: #808080;
         .heart {
           border: transparent;
           background-color: transparent;
+
+          img {
+            width: 17px;
+          }
         }
 
         .heart:hover, .heart:focus {

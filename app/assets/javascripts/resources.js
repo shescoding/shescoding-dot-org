@@ -37,6 +37,11 @@ function incrementLike(event, target) {
   var newCount = 1 + parseInt(counterEl.innerText, 10);
   counterEl.innerText = newCount;
 
+  if (newCount === 1) {
+    var img = $(target).children()[0];
+    $(img).attr('src', '/assets/Heart-Asset-Yellow-16.png');
+  }
+
   $.ajax(form.attr("action"), {
     type: "POST"
   });
