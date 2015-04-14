@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   get 'contact'         => 'welcome#contact',   as: :contact_page
 
   devise_for :users
-  resources :users
+  scope "/admin" do
+    resources :users
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
