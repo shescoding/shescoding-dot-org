@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  authenticated :user do
+    root 'users#index', as: :authenticated_root
+  end
   root 'welcome#index'
+
   get 'team'            => 'welcome#team',      as: :team_page
   get 'contact'         => 'welcome#contact',   as: :contact_page
 
