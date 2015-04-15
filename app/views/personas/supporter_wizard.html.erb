@@ -4,51 +4,54 @@
 
   <div class="container">
       <div class="row">
-          <div class="col-sm-8 col-sm-offset-1">
-              <p class="ui-persona-phrase">I am a supporter who wants to
-                  <div class="dropdown ui-supporter-select">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                          <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                          <% @personas.each do |persona| %>
-                              <li role="presentation" class="ui-supporter-options"><a role="menuitem" tabindex="-1" href="#"><%= persona.questions %></a></li>
-                          <% end %>
-                      </ul>
-                </div>
-              </p>
+          <div class="col-sm-4 col-sm-offset-1">
+              <p class="ui-persona-phrase">I am a supporter who wants to<p>
+          </div>
+          <div class="col-sm-7 ui-supporter-dropdown-menu">
+              <div class="dropdown ui-supporter-select">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                      <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                      <% @personas.each do |persona| %>
+                          <li class="ui-supporter-options"><%= persona.questions %></li>
+                      <% end %>
+                  </ul>
+              </div>
           </div>
       </div>
       <div class="row">
-          <div class="col-sm-8 col-sm-offset-1">
-              <p class="ui-persona-phrase">I want to do this by
-                  <div class="dropdown ui-supporter-select">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                          <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                          <% @personas.each do |persona| %>
-                              <li role="presentation" class="ui-supporter-options"><a role="menuitem" tabindex="-1" href="#"><%= persona.questions %></a></li>
-                          <% end %>
-                      </ul>
-                  </div>
-              </p>
+          <div class="col-sm-4 col-sm-offset-1">
+              <p class="ui-persona-phrase">I want to do this by</p>
+          </div>
+          <div class="col-sm-7 ui-supporter-dropdown-menu">
+              <div class="dropdown ui-supporter-select">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                      <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                      <% @personas.each do |persona| %>
+                          <li class="ui-supporter-options"><%= persona.questions %></li>
+                      <% end %>
+                  </ul>
+              </div>
           </div>
       </div>
       <div class="row">
-          <div class="col-sm-8 col-sm-offset-1">
-              <p class="ui-persona-phrase">I am a supporter who
-                  <div class="dropdown ui-supporter-select">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                          <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                          <% @personas.each do |persona| %>
-                              <li role="presentation" class="ui-supporter-options"><a role="menuitem" tabindex="-1" href="#"><%= persona.questions %></a></li>
-                          <% end %>
-                      </ul>
-                  </div>
-              </p>
+          <div class="col-sm-4 col-sm-offset-1">
+              <p class="ui-persona-phrase">I am a supporter who</p>
+          </div>
+          <div class="col-sm-7 ui-supporter-dropdown-menu">
+              <div class="dropdown ui-supporter-select">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                      <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                      <% @personas.each do |persona| %>
+                          <li class="ui-supporter-options"><%= persona.questions %></li>
+                      <% end %>
+                  </ul>
+              </div>
           </div>
       </div>
   </div>

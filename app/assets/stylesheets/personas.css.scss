@@ -1,15 +1,22 @@
+$red: #DB2C38;
+$blue: #00A0BE;
+$green: #83C057;
+
 .ui-woman-wizard{
   padding-top: 100px;
   .ui-shescoding-nav, #footer, .ui-woman-options:hover{
-    background: #DB2C38;
+    background: $red;
+  }
+  ul.dropdown-menu.ui-dropdown{
+    border: 2px solid $red;
   }
 }
 
 .ui-woman-select div.dropdown-menu.open {
-  border-color: #DB2C38;
+  border-color: $red;
 }
 
-.ui-woman-select{
+.ui-woman-select, .ui-supporter-select, .ui-company-select{
   .btn-default{
     border-color: transparent;
   }
@@ -26,28 +33,29 @@
 .ui-supporter-wizard{
   padding-top: 80px;
   .ui-shescoding-nav, #footer, .ui-supporter-options:hover{
-    background: #83C057;
+    background: $green;
+  }
+  ul.dropdown-menu.ui-dropdown{
+    border: 2px solid $green;
   }
 }
 
 .ui-supporter-select div.dropdown-menu.open{
-  border-color: #83C057;
+  border-color: $green;
 }
 
 .ui-company-wizard{
   padding-top: 80px;
   .ui-shescoding-nav, #footer, .ui-company-options:hover{
-    background: #00A0BE;
+    background: $blue;
+  }
+  ul.dropdown-menu.ui-dropdown{
+    border: 2px solid $blue;
   }
 }
 
 .ui-company-select div.dropdown-menu.open{
-  border-color: #00A0BE;
-}
-
-.ui-wizard-question1{
-  padding-top: 100px;
-  display: inline-block;
+  border-color: $blue;
 }
 
 .ui-wizard-body{
@@ -59,7 +67,15 @@ div.ui-wizard-question2{
   display: inline-block;
 }
 
-ul.dropdown-menu > li > a{
+ul.dropdown-menu > li {
   font-size: 20px;
   padding: 3px 20px 0px 5px;
+}
+
+.ui-woman-dropdown-menu{
+  border-bottom: $red;
+}
+
+ul.dropdown-menu.ui-dropdown{
+  padding: 0px;
 }
