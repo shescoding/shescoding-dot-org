@@ -24,6 +24,8 @@ logfile
 app/.DS_Store
 app/assets/.DS_Store
 
+/.idea
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

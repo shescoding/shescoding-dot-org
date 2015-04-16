@@ -33,7 +33,8 @@ $green: #83C057;
 
 .ui-supporter-wizard{
   padding-top: 80px;
-  .ui-shescoding-nav, #footer, .ui-supporter-options:hover{
+  .ui-shescoding-nav, #footer, .ui-supporter-options:hover, .ui-supporter-options2:hover,
+  .ui-supporter-options3:hover{
     background: $green;
   }
   ul.dropdown-menu.ui-dropdown{
@@ -47,7 +48,8 @@ $green: #83C057;
 
 .ui-company-wizard{
   padding-top: 80px;
-  .ui-shescoding-nav, #footer, .ui-company-options:hover{
+  .ui-shescoding-nav, #footer, .ui-company-options:hover, .ui-company-options2:hover,
+  .ui-company-options3:hover{
     background: $blue;
   }
   ul.dropdown-menu.ui-dropdown{
@@ -81,6 +83,8 @@ ul.dropdown-menu.ui-dropdown{
   padding: 0px;
 }
 
-.ui-woman-question2, .ui-woman-question3{
+.ui-woman-question2, .ui-woman-question3,
+.ui-supporter-question2, .ui-supporter-question3,
+.ui-company-question2, .ui-company-question3{
   display: none;
 }

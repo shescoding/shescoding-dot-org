@@ -20,7 +20,7 @@
               </div>
           </div>
       </div>
-      <div class="row">
+      <div class="row ui-supporter-question2">
           <div class="col-sm-4 col-sm-offset-1">
               <p class="ui-persona-phrase">I want to do this by</p>
           </div>
@@ -31,13 +31,13 @@
                   </button>
                   <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
                       <% @personas.each do |persona| %>
-                          <li class="ui-supporter-options"><%= persona.questions %></li>
+                          <li class="ui-supporter-options2"><%= persona.questions %></li>
                       <% end %>
                   </ul>
               </div>
           </div>
       </div>
-      <div class="row">
+      <div class="row ui-supporter-question3">
           <div class="col-sm-4 col-sm-offset-1">
               <p class="ui-persona-phrase">I am a supporter who</p>
           </div>
@@ -48,7 +48,7 @@
                   </button>
                   <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
                       <% @personas.each do |persona| %>
-                          <li class="ui-supporter-options"><%= persona.questions %></li>
+                          <li class="ui-supporter-options3"><%= persona.questions %></li>
                       <% end %>
                   </ul>
               </div>
