@@ -1,8 +1,8 @@
 <%= render "layouts/navbar", page: "Team" %>
 
-<div class="team-page-image-section">
-    <img class="team-page-image" src="http://placekitten.com/1400/300">
-</div><!-- /team-page-image-section -->
+<div class="page">
+    <%= image_tag("team.png", class: "team-page-image") %>
+</div>
 
 <div class="team-section">
     <div class="container">
@@ -260,3 +260,5 @@
         </div><!-- /row -->
     </div><!-- /container -->
 </div>
+
+<%= render :partial => "layouts/footer" %>

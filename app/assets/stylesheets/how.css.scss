@@ -1,6 +1,8 @@
 //
-// ABOUT PAGE
+// HOW PAGE
 //
+
+$green: #83C057;
 
 .about-body {
   font-family: 'ArcherLight';
@@ -10,7 +12,7 @@
     text-align: center;
     font-family: 'ArcherBold';
     font-size: 33px;
-    //padding-top: 30px;
+    padding-top: 30px;
     padding-bottom: 30px;
   }
   margin-bottom: 100px;
@@ -21,7 +23,7 @@
   font-size: 20px;
   text-align: center;
   word-spacing: 10px;
-  padding-top: 30px;
+  padding-top: 80px;
   a, a:link, a:hover {
     color: black;
   }
@@ -35,4 +37,12 @@
 
 .page {
   width: 100%;
+}
+
+p > a {
+  color: $green;
+}
+
+p > a:hover {
+  color: red;
 }

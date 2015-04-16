@@ -17,8 +17,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.page {
+  padding-top: 70px;
+}
+
 a:link {
 	color: white;
+}  
+
+a {
+	color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -58,4 +70,8 @@ strong {
 
 body {
   font-family: ArcherLight;
+}
+
+img {
+  max-width: 100%;
 }
