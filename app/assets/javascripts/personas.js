@@ -33,3 +33,10 @@ $(function() {
     $(".ui-supporter-question3").toggle();
   });
 });
+
+$(function(){
+  $(".dropdown-menu").on('click', 'li', function(){
+     $(".btn:first-child").text($(this).text());
+     $(".btn:first-child").val($(this).text());
+  });
+});

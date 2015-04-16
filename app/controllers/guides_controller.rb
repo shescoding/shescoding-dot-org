@@ -61,6 +61,12 @@ class GuidesController < ApplicationController
     end
   end
 
+  def like
+    @guide.likes += 1
+    @guide.save
+    redirect_to guides_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_guide
