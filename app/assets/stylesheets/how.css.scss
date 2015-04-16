@@ -1,0 +1,9 @@
+$green: #83C057;
+
+p > a {
+  color: $green;
+}
+
+p > a:hover {
+  color: red;
+}
