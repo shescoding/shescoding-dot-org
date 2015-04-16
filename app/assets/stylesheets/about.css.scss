@@ -1,0 +1,35 @@
+//
+// ABOUT PAGE
+//
+
+.about-section-title {
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.about-body {
+  font-size: 18px;
+}
+
+.about-nav{
+  font-family: 'ArcherBook';
+  font-size: 18px;
+  text-align: center;
+  word-spacing: 10px;
+  padding-top: 50px;
+  a, a:link, a:hover {
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .active {
+    text-decoration: underline;
+  }
+}
+
+.page {
+  width: 100%;
+}

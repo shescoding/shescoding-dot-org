@@ -4,21 +4,24 @@
 
 #footer {
   margin-top: 70px;
-  padding: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 15px;
   font-size: 18px;
   font-family: ArcherLight;
   color: #FFFFFF;     /* white text */
   background: #1E2028; /* black background */
-
 }
 
-.clearfix {
-  a {
-    color: #FFFFFF;
-  }
+#footer a {
+  color: white;
 }
 
 .ui-ul {
 	margin-bottom: 0px;
 }
 
+.code-logo {
+  margin-right: 15px;
+}

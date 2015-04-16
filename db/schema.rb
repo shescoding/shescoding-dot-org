@@ -60,11 +60,11 @@ ActiveRecord::Schema.define(version: 20150414212641) do
   create_table "resources", force: true do |t|
     t.string   "title"
     t.string   "url"
-    t.string   "description"
+    t.text     "description"
     t.string   "source"
     t.datetime "date"
     t.boolean  "public"
-    t.integer  "likes"
+    t.integer  "likes",       default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
