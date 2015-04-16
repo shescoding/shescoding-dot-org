@@ -88,3 +88,20 @@ ul.dropdown-menu.ui-dropdown{
 .ui-company-question2, .ui-company-question3{
   display: none;
 }
+
+.ui-woman-guide-index, .ui-supporter-guide-index, .ui-company-guide-index{
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.ui-woman-guide-index{
+  color: $red;
+}
+
+.ui-woman-supporter-index{
+  color: $green;
+}
+
+.ui-woman-company-index{
+  color: $blue;
+}
