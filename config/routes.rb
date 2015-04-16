@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get 'company',          to: "personas#company_wizard"
   get 'supporter',        to: "personas#supporter_wizard"
 
-  get 'tags/:tag', to: 'resources#index', as: :tag
-
+  get 'resources/tags/:tag', to: 'resources#index', as: :tag
+  post 'resources/:id/like', to: 'resources#like', as: :like
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

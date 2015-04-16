@@ -11,6 +11,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# Ignore secrets.yml file
+/config/secrets.yml
+
 # Ignore all logfiles and tempfiles.
 logfile
 /log/*.log
@@ -21,18 +24,7 @@ logfile
 app/.DS_Store
 app/assets/.DS_Store
 
-.idea/.name
-
-.idea/encodings.xml
-
-.idea/misc.xml
-
-.idea/modules.xml
-
-.idea/scopes/scope_settings.xml
-
-.idea/shescoding.iml
-
-.idea/vcs.xml
-
-.idea/workspace.xml
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
