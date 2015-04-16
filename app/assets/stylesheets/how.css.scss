@@ -2,6 +2,8 @@
 // HOW PAGE
 //
 
+$green: #83C057;
+
 .about-body {
   font-family: 'ArcherLight';
   font-size: 26px;
@@ -35,4 +37,12 @@
 
 .page {
   width: 100%;
+}
+
+p > a {
+  color: $green;
+}
+
+p > a:hover {
+  color: red;
 }

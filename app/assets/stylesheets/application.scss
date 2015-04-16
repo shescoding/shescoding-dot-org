@@ -23,6 +23,14 @@
 
 a:link {
 	color: white;
+}  
+
+a {
+	color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .navbar-default .navbar-nav > li > a {
