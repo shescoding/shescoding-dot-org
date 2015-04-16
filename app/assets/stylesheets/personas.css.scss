@@ -4,7 +4,8 @@ $green: #83C057;
 
 .ui-woman-wizard{
   padding-top: 100px;
-  .ui-shescoding-nav, #footer, .ui-woman-options:hover{
+  .ui-shescoding-nav, #footer, .ui-woman-options:hover, .ui-woman-options2:hover,
+  .ui-woman-options3:hover{
     background: $red;
   }
   ul.dropdown-menu.ui-dropdown{
@@ -78,4 +79,8 @@ ul.dropdown-menu > li {
 
 ul.dropdown-menu.ui-dropdown{
   padding: 0px;
+}
+
+.ui-woman-question2, .ui-woman-question3{
+  display: none;
 }
