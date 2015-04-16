@@ -17,6 +17,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.page {
+  padding-top: 70px;
+}
+
 a:link {
 	color: white;
 }
@@ -58,4 +62,8 @@ strong {
 
 body {
   font-family: ArcherLight;
+}
+
+img {
+  max-width: 100%;
 }
