@@ -14,6 +14,7 @@ $blue: #00A0BE;
 
 .team-member {
     padding-top: 30px;
+    font-size: 18px;
 }
 
 .circle {
@@ -44,10 +45,17 @@ $blue: #00A0BE;
 }
 
 .team-section-title {
+    font-size: 36px;
     text-align: center;
 }
 
+.advisor {
+    font-size: 18px;
+    padding-top: 30px;
+}
+
 .advisor-section-title {
+    font-size: 36px;
     text-align: center;
     color: white;
 }
@@ -76,12 +84,17 @@ $blue: #00A0BE;
     border: 10px solid white;
 }
 
+.partner {
+  padding-top: 50px;
+}
+
 .partner-section {
     padding: 100px 0;
     background: white;
 }
 
 .partner-section-title {
+    font-size: 36px;
     text-align: center;
 }
 

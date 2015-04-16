@@ -4,26 +4,23 @@
 
 $green: #83C057;
 
-.about-body {
-  font-family: 'ArcherLight';
-  font-size: 26px;
-  position: center;
-  h2{
-    text-align: center;
-    font-family: 'ArcherBold';
-    font-size: 33px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  margin-bottom: 100px;
+.how-section-title {
+  text-align: center;
+  font-size: 36px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.about-nav{
+.how-body {
+  font-size: 18px;
+}
+
+.how-nav{
   font-family: 'ArcherBook';
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   word-spacing: 10px;
-  padding-top: 80px;
+  padding-top: 50px;
   a, a:link, a:hover {
     color: black;
   }
@@ -44,5 +41,5 @@ p > a {
 }
 
 p > a:hover {
-  color: red;
+  color: $green;
 }

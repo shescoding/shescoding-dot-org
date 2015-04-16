@@ -2,26 +2,23 @@
 // ABOUT PAGE
 //
 
+.about-section-title {
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
 .about-body {
-  font-family: 'ArcherLight';
-  font-size: 26px;
-  position: center;
-  h2{
-    text-align: center;
-    font-family: 'ArcherBold';
-    font-size: 33px;
-    //padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  margin-bottom: 100px;
+  font-size: 18px;
 }
 
 .about-nav{
   font-family: 'ArcherBook';
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   word-spacing: 10px;
-  padding-top: 30px;
+  padding-top: 50px;
   a, a:link, a:hover {
     color: black;
   }

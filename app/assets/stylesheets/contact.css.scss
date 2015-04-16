@@ -3,16 +3,13 @@ $black: #1E2028;
 $green: #83C057;
 
 .contact-section-title {
-    padding: 100px 0;
     text-align: center;
-    font-size: 33px;
-    font-family: ArcherBold;
+    font-size: 36px;
 }
 
 .contact-section-body {
-    text-align: left;
-    font-size: 26px;
-    font-family: ArcherLight;
+    font-size: 18px;
+    padding-top: 30px;
 }
 
 .contact-button{
@@ -21,7 +18,11 @@ $green: #83C057;
 }
 
 p > a:link {
-	color: black;
+	color: $green;
+}
+
+p > a:hover {
+  color: $green;
 }
 
 .page {
