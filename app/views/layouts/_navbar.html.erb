@@ -1,50 +1,48 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="row ui-shescoding-nav <%= add_custom_nav_class %>">
-          <!-- <div class="navbar-header"> -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-               data-target="#example-navbar-collapse">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-            </button>
-            <div class="col-sm-4">
-                <a class="navbar-brand" href="/">
-                    <%= image_tag('navbar-logo.png') %>
-                </a>
-            <!-- </div> -->
-          </div>
+  <div class="container-fluid">
+    <div class="row ui-shescoding-nav <%= add_custom_nav_class %>">    
+      <div class="col-sm-4">
+        <a class="navbar-brand" href="/">
+          <%= image_tag('Logo-White_HighRes.png') %>
+        </a>
+      </div>
+      <button type="button" class="navbar-toggle collapsed ui-shescoding-hamburger" data-toggle="collapse"
+        data-target="#example-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-          <div class="collapse navbar-collapse" id="example-navbar-collapse">
-            <div class="col-sm-7  col-sm-offset-1">
-                <ul class="nav navbar-nav navbar-right">
-                  <% if page == "About" %>
-                    <li class="active"><%= link_to "About", "/about" %></li>
-                  <% else %>
-                    <li><%= link_to "About", "/about" %></li>
-                  <% end %>
+      <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <div class="col-sm-7  col-sm-offset-1">
+          <ul class="nav navbar-nav navbar-right">
+            <% if page == "About" %>
+              <li class="active"><%= link_to "About", "/about" %></li>
+            <% else %>
+              <li><%= link_to "About", "/about" %></li>
+            <% end %>
 
-                  <% if page == "Resources" %>
-                    <li class="active"><%= link_to "Resources", "/resources" %></li>
-                  <% else %>
-                    <li><%= link_to "Resources", "/resources" %></li>
-                  <% end %>
+            <% if page == "Resources" %>
+              <li class="active"><%= link_to "Resources", "/resources" %></li>
+            <% else %>
+              <li><%= link_to "Resources", "/resources" %></li>
+            <% end %>
 
-                  <% if page == "Team" %>
-                    <li class="active"><%= link_to "Team", "/team" %></li>
-                  <% else %>
-                    <li><%= link_to "Team", "/team" %></li>
-                  <% end %>
+            <% if page == "Team" %>
+              <li class="active"><%= link_to "Team", "/team" %></li>
+            <% else %>
+              <li><%= link_to "Team", "/team" %></li>
+            <% end %>
 
-                  <% if page == "Contact" %>
-                    <li class="active"><%= link_to "Contact", "/contact" %></li>
-                  <% else %>
-                    <li><%= link_to "Contact", "/contact" %></li>
-                  <% end %>
-                <ul>
-              </div>
-          </div>
+            <% if page == "Contact" %>
+              <li class="active"><%= link_to "Connect", "/contact" %></li>
+            <% else %>
+              <li><%= link_to "Connect", "/contact" %></li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
 </nav>
