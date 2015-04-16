@@ -1,6 +1,6 @@
 <%= render "layouts/navbar", page: "" %>
 
-<div class="container front-page">
+<div class="container front-page page">
     <div class="col-sm-12">
         <div class="row">
             <div class="ui-shecodes-mission text-center">
@@ -14,25 +14,23 @@
 <div class="container">
     <div class="ui-persona-row">
         <div class="col-sm-4 ui-persona-col">
-            <div class='ui-rectangle-box ui-rectangle-woman'>
+            <div class='ui-rectangle-box'>
                 <div class='ui-rectangle-content'>
-                    <p>I am <span class="ui-persona">she </span></p>
+                    <%= image_tag("Front-Page_She.png", class: "persona-img") %>
                 </div>
             </div>
         </div>
         <div class="col-sm-4 ui-persona-col">
-            <div class='ui-rectangle-box ui-rectangle-supporter'>
+            <div class='ui-rectangle-box'>
                 <div class='ui-rectangle-content'>
-                    <p>I am a</p>
-                    <p class="ui-persona">supporter.</p>
+                    <%= image_tag("Front-Page_Company.png", class: "persona-img") %>
                 </div>
             </div>
         </div>
         <div class="col-sm-4 ui-persona-col">
-            <div class='ui-rectangle-box ui-rectangle-company'>
+            <div class='ui-rectangle-box'>
                 <div class='ui-rectangle-content'>
-                    <p>I am a </p>
-                    <p class="ui-persona">company.</p>
+                    <%= image_tag("Front-Page_Supporter.png", class: "persona-img") %>
                 </div>
             </div>
         </div>
