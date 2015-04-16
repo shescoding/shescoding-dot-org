@@ -1,10 +1,11 @@
 <%= render "layouts/navbar", page: "About" %>
 
+<div class="page">
+    <%= image_tag("about.png") %>
+</div>
+
 <div class='container'>
   <div class= 'about-nav'>
-    <div class='about-header-image'>
-      <!-- to be given an image later  -->
-    </div>
     <%= link_to "About", "/about", class: "active" %>
     <%= link_to "How", "/how" %>
   </div>
