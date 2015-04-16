@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/navbar", page: "" %>
+
+<p class="ui-shescoding-crud" id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -12,3 +14,5 @@
 
 <%= link_to 'Edit', edit_guide_path(@guide) %> |
 <%= link_to 'Back', guides_path %>
+
+<%= render :partial => "layouts/footer" %>

@@ -1,6 +1,16 @@
-<h1>Editing resource</h1>
+<%= render "layouts/navbar", page: "Resources" %>
 
-<%= render 'form' %>
+<div class="container">
 
-<%= link_to 'Show', @resource %> |
-<%= link_to 'Back', resources_path %>
+	<h1 class="ui-shescoding-crud">Editing resource</h1>
+
+	<%= render 'form' %>
+
+	<br>
+
+	<%= link_to 'Show', @resource %> |
+	<%= link_to 'Back', resources_path %>
+
+</div>
+
+<%= render :partial => "layouts/footer" %>

@@ -3,19 +3,28 @@ $black: #1E2028;
 $green: #83C057;
 
 .contact-section-title {
-    padding: 100px 0;
     text-align: center;
-    font-size: 33px;
-    font-family: ArcherBold;
+    font-size: 36px;
 }
 
 .contact-section-body {
-    text-align: left;
-    font-size: 26px;
-    font-family: ArcherLight;
+    font-size: 18px;
+    padding-top: 30px;
 }
 
 .contact-button{
   font-family: ArcherBook;
 
+}
+
+p > a:link {
+	color: $green;
+}
+
+p > a:hover {
+  color: $green;
+}
+
+.page {
+	width: 100%;
 }

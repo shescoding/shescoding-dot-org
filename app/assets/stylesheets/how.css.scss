@@ -1,0 +1,45 @@
+//
+// HOW PAGE
+//
+
+$green: #83C057;
+
+.how-section-title {
+  text-align: center;
+  font-size: 36px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.how-body {
+  font-size: 18px;
+}
+
+.how-nav{
+  font-family: 'ArcherBook';
+  font-size: 18px;
+  text-align: center;
+  word-spacing: 10px;
+  padding-top: 50px;
+  a, a:link, a:hover {
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .active {
+    text-decoration: underline;
+  }
+}
+
+.page {
+  width: 100%;
+}
+
+p > a {
+  color: $green;
+}
+
+p > a:hover {
+  color: $green;
+}

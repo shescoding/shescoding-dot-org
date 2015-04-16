@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/navbar", page: "Resources" %>
+
+<p class="ui-shescoding-crud" id="notice"><%= notice %></p>
 <br>
 <br>
 <br>
@@ -25,3 +27,5 @@
 
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
 <%= link_to 'Back', resources_path %>
+
+<%= render :partial => "layouts/footer" %>

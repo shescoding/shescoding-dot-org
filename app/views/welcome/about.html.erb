@@ -1,0 +1,32 @@
+<%= render "layouts/navbar", page: "About" %>
+
+<div class="page">
+    <%= image_tag("about.png") %>
+</div>
+
+<div class='container'>
+  <div class= 'about-nav'>
+    <%= link_to "About", "/about", class: "active" %>
+    <%= link_to "How", "/how" %>
+  </div>
+
+  <div class='about-section-title'>
+    We are community driven. We educate and empower. We are closing the gender gap in tech.
+  </div>
+  <div class='about-body'>
+    <p>
+      It is estimated that US universities will graduate about 400,000 computer scientists between 2010 and 2020, a decade during which 1.4 million US computing jobs will open up, leaving a gap of about a million computing jobs…which we think should be filled by women! Currently, only about 18% of undergraduate computer science degrees are awarded to females, and an even smaller percentage of females remain in the computer science profession after college. She’s Coding is on a mission to close the gender gap in computer science. Research shows that diverse teams are more creative, make better products, and produce more revenue than teams lacking diversity. As the She’s Coding team likes to say, “For better results, add more women.”
+    </p>
+    <br>
+    <p>
+      She’s Coding is an open-source project developed in cooperation with the documentary film CODE: Debugging the Gender Gap [link]. She’s Coding provides education, resources, and actionable guidelines for anyone who wants to help bridge the gender gap in the field of computer science. Whether you’re a woman currently working in tech, a girl interested in learning to code, a male ally for women in computer science, or a company trying to find ways to increase diversity, you’ve come to the right place! We are continuously working on enhancing and improving our content – check back regularly and see what’s new!
+    </p>
+    <br>
+    <p>
+      She’s Coding was inspired by CODE: Debugging the Gender Gap documentary filmmakers, and was initiated by a team of engineers, marketers, and designers at JOLT Labs in Seattle, WA. JOLT Labs cares deeply about diversifying the workplace, not just because it’s the right thing to do…but because it’s the smart thing to do. Diverse teams produce better results!
+    </p>
+
+  </div>
+</div>
+
+<%= render :partial => "layouts/footer" %>
