@@ -21,6 +21,6 @@ module ResourcesHelper
   end
 
   def empty_or_full_heart(resource)
-    resource.likes > 0 ? "Heart-Asset-Yellow-16.png" : "Heart-Asset-Yellow-outlined-17.png"
+    "filled-heart" if resource.likes > 0
   end
 end

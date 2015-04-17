@@ -31,15 +31,15 @@ function scrollToTop(event) {
 
 function incrementLike(event, target) {
   event.preventDefault();
-  var form = $(target).parents("form");
+  var form = $(target).parents('form');
 
-  var counterEl = $(target).children()[1];
+  var counterEl = form.find('span')[0];
   var newCount = 1 + parseInt(counterEl.innerText, 10);
   counterEl.innerText = newCount;
 
   if (newCount === 1) {
-    var img = $(target).children()[0];
-    $(img).attr('src', '/assets/Heart-Asset-Yellow-16.png');
+    var button = form.find('button');
+    button.addClass('filled-heart');
   }
 
   $.ajax(form.attr("action"), {
