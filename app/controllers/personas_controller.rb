@@ -1,28 +1,37 @@
 class PersonasController < ApplicationController
   before_action :set_persona, only: [:show, :edit, :update, :destroy]
 
-  # GET /personas
-  # GET /personas.json
-  def index
-    @personas = Persona.all
+  def woman_wizard
+    @woman = Persona.find_by(name: 'woman')
+    @woman_questions = YAML.load(@woman.questions)
+    @women_guides = @woman.guides
   end
 
-  # GET /personas/1
-  # GET /personas/1.json
+  def company_wizard
+    @company = Persona.find_by(name: 'company')
+    @company_questions = YAML.load(@company.questions)
+    @company_guides = @company.guides
+  end
+
+  def supporter_wizard
+    @supporter = Persona.find_by(name: 'supporter')
+    @supporter_questions = YAML.load(@supporter.questions)
+    @supporter_guides = @supporter.guides
+  end
+
+  def index
+  end
+
   def show
   end
 
-  # GET /personas/new
   def new
     @persona = Persona.new
   end
 
-  # GET /personas/1/edit
   def edit
   end
 
-  # PERSONAS /personas
-  # PERSONAS /personas.json
   def create
     @persona = Persona.new(persona_params)
     @persona.questions.to_json
@@ -38,8 +47,6 @@ class PersonasController < ApplicationController
     end
   end
 
-  # PATCH/PUT /personas/1
-  # PATCH/PUT /personas/1.json
   def update
     respond_to do |format|
       if @persona.update(persona_params)
@@ -52,26 +59,12 @@ class PersonasController < ApplicationController
     end
   end
 
-  # DELETE /personas/1
-  # DELETE /personas/1.json
   def destroy
     @persona.destroy
     respond_to do |format|
       format.html { redirect_to personas_url, notice: 'Persona was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-
-  def woman_wizard
-    @personas = Persona.all
-  end
-
-  def company_wizard
-    @personas = Persona.all
-  end
-
-  def supporter_wizard
-    @personas = Persona.all
   end
 
   private

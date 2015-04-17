@@ -21,6 +21,10 @@ class ResourcesController < ApplicationController
   # GET /resources/new
   def new
     @resource = Resource.new
+
+    @all_categories = Category.all
+
+    @resource_category = @resource.resource_category.build
   end
 
   # GET /resources/1/edit
