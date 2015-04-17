@@ -1,0 +1,42 @@
+//
+// SUPPORTER QUESTIONS
+//
+// "{'parent': [ {'with a kid interested in tech': [{'find resources targeted for children': 'parent_resources'},{'find tech-related workshops and camps for children': 'parent_camps'}]},{'with a kid not yet interested in tech': [{'find ways to get my child interested in tech': 'parent_interest'}]}],'man': [{'already in tech': [{'become an advocate': 'tech_man_advocate'}]}, {'interested in tech': [{'become an advocate': 'man_advocate'}]}]}"
+
+{
+    "parent": [
+        {
+            "with a kid interested in tech": [
+                {
+                    "find resources targeted for children": "parent_resources"
+                },
+                {
+                    "find tech-related workshops and camps for children": "parent_camps"
+                }
+            ]
+        },
+        {
+            "with a kid not yet interested in tech": [
+                {
+                    "find ways to get my child interested in tech": "parent_interest"
+                }
+            ]
+        }
+    ],
+    "man": [
+        {
+            "already in tech": [
+                {
+                    "become an advocate": "tech_man_advocate"
+                }
+            ]
+        },
+        {
+            "interested in tech": [
+                {
+                    "become an advocate": "man_advocate"
+                }
+            ]
+        }
+    ]
+}

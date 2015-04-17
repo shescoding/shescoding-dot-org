@@ -1,0 +1,11 @@
+//
+// SUPPORTER QUESTIONS
+//
+// "{'company': [{'become an advocate': 'company_advocate'},{'diversify our work environment': 'company_diversify'}]}"
+
+{
+    "company": [
+        {"become an advocate": "company_advocate"},
+        {"diversify our work environment": "company_diversify"}
+    ]
+}

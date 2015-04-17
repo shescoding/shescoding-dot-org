@@ -1,0 +1,65 @@
+//
+// SUPPORTER QUESTIONS
+//
+// "{'woman': [{'already in tech': [{'advance my career': 'tech_woman_career'},{'learn how to diversify my work environment': 'tech_woman_diversify'},{'become an advocate': 'tech_woman_advocate'}]},{'interested in tech': [{'become a coder': 'woman_coder'},{'find a job': 'woman_job'},{'become an advocate': 'woman_advocate'}]},{'interested in gaming': [{'learn how to get into the gaming industry': 'woman_gamer'}]}],'girl': [{'interested in tech': [{'learn how to code': 'girl_coder'}]},{'already coding or building': [{'find interesting projects and groups': 'tech_girl'}]},{'interested in games': [{'learn how to build my own games': 'girl_gamer'}]}]}"
+
+{
+    "woman": [
+        {
+            "already in tech": [
+                {
+                    "advance my career": "tech_woman_career"
+                },
+                {
+                    "learn how to diversify my work environment": "tech_woman_diversify"
+                },
+                {
+                    "become an advocate": "tech_woman_advocate"
+                }
+            ]
+        },
+        {
+            "interested in tech": [
+                {
+                    "become a coder": "woman_coder"
+                },
+                {
+                    "find a job": "woman_job"
+                },
+                {
+                    "become an advocate": "woman_advocate"
+                }
+            ]
+        },
+        {
+            "interested in gaming": [
+                {
+                    "learn how to get into the gaming industry": "woman_gamer"
+                }
+            ]
+        }
+    ],
+    "girl": [
+        {
+            "interested in tech": [
+                {
+                    "learn how to code": "girl_coder"
+                }
+            ]
+        },
+        {
+            "already coding or building": [
+                {
+                    "find interesting projects and groups": "tech_girl"
+                }
+            ]
+        },
+        {
+            "interested in games": [
+                {
+                    "learn how to build my own games": "girl_gamer"
+                }
+            ]
+        }
+    ]
+}
