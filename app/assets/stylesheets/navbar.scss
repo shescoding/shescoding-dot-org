@@ -1,8 +1,10 @@
-.ui-shescoding-nav{
+@import "./variables";
+
+.ui-shescoding-nav.navbar {
   background: black;
-  height: 70px;
   font-family: 'ArcherLight';
-  li{
+
+  .navbar-nav > li {
     color: white;
     font-size: 14px;
     padding-right: 20px;
@@ -10,9 +12,20 @@
     padding-top: 25px;
     letter-spacing: 1px;
   }
-  img{
-    height: 32px;
-    padding-left: 20px;
-    margin-top: 5px;
+
+  .navbar-brand {
+    $brand-height: 32px;
+    $vpad: ($navbar-height - $brand-height) / 2;
+
+    padding: floor($vpad) 20px ceil($vpad) 20px;
+    height: $navbar-height;
+
+    & > img {
+      height: $brand-height;
+    }
+  }
+
+  .navbar-collapse {
+    border-top: 0;
   }
 }

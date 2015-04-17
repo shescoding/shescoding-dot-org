@@ -14,6 +14,9 @@
  *= require_self
  */
 
+// Include this here so the bootstrap variables that it contains are set before
+// we include bootstrap.
+@import "./variables";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
