@@ -5,8 +5,10 @@ $light_grey: #F2F2F2;
 $dark_grey: #CCCCCC;
 $tag_grey: #808080;
 
-.resources-nav {
-  background: $yellow;
+// This needs to be .resources-nav.navbar so it's more specific than the
+// default bootstrap rule and overrides it.
+.resources-nav.navbar {
+  background-color: $yellow;
 }
 
 .resources-section {
@@ -25,7 +27,7 @@ $tag_grey: #808080;
 
     li a {
       font-family: ArcherBook;
-      font-size: 15px;
+      font-size: 18px;
       color: $black;
     }
 
@@ -72,7 +74,7 @@ $tag_grey: #808080;
     .panel-header {
       h3 {
         font-family: ArcherBold;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.4;
         margin-top: 10px;
 
@@ -93,7 +95,7 @@ $tag_grey: #808080;
 
     .panel-preview {
       color: $black;
-      font-size: 13px;
+      font-size: 14px;
 
       .text {
         font-family: ArcherLight;

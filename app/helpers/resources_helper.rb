@@ -6,7 +6,9 @@ module ResourcesHelper
   end
 
   def format_date(date)
-    date.strftime("%B %-d, %Y")
+    if date
+      date.strftime("%B %-d, %Y")
+    end
   end
 
   def create_filter(id)
