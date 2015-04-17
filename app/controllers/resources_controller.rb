@@ -1,6 +1,8 @@
 class ResourcesController < ApplicationController
 
-  before_action :set_resource, only: [:show, :edit, :update, :like, :destroy]
+  load_and_authorize_resource
+
+  # before_action :set_resource, only: [:show, :edit, :update, :like, :destroy]
 
   # GET /resources
   # GET /resources.json
@@ -20,7 +22,7 @@ class ResourcesController < ApplicationController
 
   # GET /resources/new
   def new
-    @resource = Resource.new
+    # @resource = Resource.new
   end
 
   # GET /resources/1/edit
@@ -30,7 +32,7 @@ class ResourcesController < ApplicationController
   # RESOURCE /resources
   # RESOURCE /resources.json
   def create
-    @resource = Resource.new(resource_params)
+    # @resource = Resource.new(resource_params)
 
     respond_to do |format|
       if @resource.save
@@ -75,9 +77,9 @@ class ResourcesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_resource
-      @resource = Resource.find(params[:id])
-    end
+    # def set_resource
+    #   @resource = Resource.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
