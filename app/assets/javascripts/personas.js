@@ -1,5 +1,6 @@
 $(function() {
   $(".ui-woman-options").click(function() {
+    var selected_value = $(this).text()
     $(".ui-woman-question2").toggle();
   });
 });

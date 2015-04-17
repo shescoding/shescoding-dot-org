@@ -1,81 +1,79 @@
-<body class="ui-company-wizard">
+<div class="ui-company-wizard ui-wizard">
 
-<%= render "layouts/navbar", page: "" %>
+    <%= render "layouts/navbar", page: "" %>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4 col-sm-offset-1">
-            <p class="ui-persona-phrase">I am a company who wants to</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-1">
+                <p class="ui-persona-phrase">I am a company that wants to</p>
+            </div>
+            <div class="col-sm-5 ui-company-dropdown-menu">
+                <div class="dropdown ui-company-select">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                        <% @personas.each do |persona| %>
+                            <li class="ui-company-options"><%= persona.questions %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-7 ui-company-dropdown-menu">
-            <div class="dropdown ui-company-select">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                    <% @personas.each do |persona| %>
-                        <li class="ui-company-options"><%= persona.questions %></li>
-                    <% end %>
-                </ul>
+        <div class="row ui-company-question2">
+            <div class="col-sm-6 col-sm-offset-1">
+                <p class="ui-persona-phrase">I want to do this by</p>
+            </div>
+            <div class="col-sm-5 ui-company-dropdown-menu">
+                <div class="dropdown ui-company-select">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                        <% @personas.each do |persona| %>
+                            <li class="ui-company-options2"><%= persona.questions %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row ui-company-question3">
+            <div class="col-sm-6 col-sm-offset-1">
+                <p class="ui-persona-phrase">I am a company who</p>
+            </div>
+            <div class="col-sm-5 ui-company-dropdown-menu">
+                <div class="dropdown ui-company-select">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                        <% @personas.each do |persona| %>
+                            <li class="ui-company-options3"><%= persona.questions %></li>
+                        <% end %>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class="row ui-company-question2">
-        <div class="col-sm-4 col-sm-offset-1">
-            <p class="ui-persona-phrase">I want to do this by</p>
-        </div>
-        <div class="col-sm-7 ui-company-dropdown-menu">
-            <div class="dropdown ui-company-select">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                    <% @personas.each do |persona| %>
-                        <li class="ui-company-options2"><%= persona.questions %></li>
-                    <% end %>
-                </ul>
+    <div class="ui-company-guide">
+        <h1 class="ui-guide-intro">Great! Let us help you. Check out these resources...</h1>
+        <%= @guides.each do |guide| %>
+            <div class="container">
+                <div class="row ui-guide-row">
+                    <div class="col-sm-1">
+                        <p class="ui-company-guide-index"><%= guide.id %></p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3 class="ui-guide-title"><%= guide.title %></h3>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="ui-guide-description"><%= guide.description %></p>
+                    </div>
+                    <div class="col-sm-2">
+                        <%= image_tag empty_or_full_heart(guide) %>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row ui-company-question3">
-        <div class="col-sm-4 col-sm-offset-1">
-            <p class="ui-persona-phrase">I am a company who</p>
-        </div>
-        <div class="col-sm-7 7 ui-company-dropdown-menu">
-            <div class="dropdown ui-company-select">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                    <% @personas.each do |persona| %>
-                        <li class="ui-company-options3"><%= persona.questions %></li>
-                    <% end %>
-                </ul>
-            </div>
-        </div>
+        <% end %>
     </div>
 </div>
-<!-- <div class="ui-company-guide">
-    <h1 class="ui-guide-intro">Great! Let us help you. Check out these resources...</h1>
-
-    <%# @guides.each do |guide| %>
-        <div class="container">
-            <div class="row ui-guide-row">
-                <div class="col-sm-1">
-                    <p class="ui-company-guide-index"><%# guide.id %></p>
-                </div>
-                <div class="col-sm-3">
-                    <h3 class="ui-guide-title"><%# guide.title %></h3>
-                </div>
-                <div class="col-sm-6">
-                    <p class="ui-guide-description"><%# guide.description %></p>
-                </div>
-                <div class="col-sm-2">
-                    <%= image_tag empty_or_full_heart(guide) %>
-                </div>
-            </div>
-        </div>
-    <%# end %>
-</div>-->
-
-</body>

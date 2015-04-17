@@ -1,81 +1,60 @@
-<body class="ui-woman-wizard">
+<div class="ui-woman-wizard ui-wizard">
 
-<%= render "layouts/navbar", page: "" %>
+  <%= render "layouts/navbar", page: "" %>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4 col-sm-offset-1">
-                <p class="ui-persona-phrase">I am a woman who wants to<p>
-            </div>
-            <div class="col-sm-7 ui-woman-dropdown-menu">
-                <div class="dropdown ui-woman-select">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                        <% @personas.each do |persona| %>
-                            <li class="ui-woman-options"><%= persona.questions %></li>
-                        <% end %>
-                    </ul>
-                </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-1">
+            <p class="ui-persona-phrase">I am a <p>
+        </div>
+        <div class="col-sm-5 ui-woman-dropdown-menu">
+            <div class="dropdown ui-woman-select">
+              <input type="TextBox" ID="datebox" Class="form-control"></input>
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                    <% @woman_questions.each do |key, value| %>
+                        <li class="ui-woman-options"><a href='#'><%= key %></a></li>
+                    <% end %>
+                </ul>
+                Bla:<%=@selected_value%>
             </div>
         </div>
-        <div class="row ui-woman-question2">
-            <div class="col-sm-4 col-sm-offset-1">
-                <p class="ui-persona-phrase">I want to do this by<p>
+    </div>
+    <div class="row ui-woman-question2">
+        <div class="col-sm-6 col-sm-offset-1">
+            <p class="ui-persona-phrase">I want to do this by<p>
+        </div>
+        <div class="col-sm-5 ui-woman-dropdown-menu">
+            <div class="dropdown ui-woman-select">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+                    <% @personas.each do |persona| %>
+                        <li class="ui-woman-options2"><%= persona.questions %></li>
+                    <% end %>
+                </ul>
             </div>
-            <div class="col-sm-7 ui-woman-dropdown-menu">
-                <div class="dropdown ui-woman-select">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                        <% @personas.each do |persona| %>
-                            <li class="ui-woman-options2"><%= persona.questions %></li>
-                        <% end %>
-                    </ul>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="row ui-woman-question3">
+      <div class="col-sm-6 col-sm-offset-1">
+          <p class="ui-persona-phrase">I am a woman who<p>
       </div>
-      <div class="row ui-woman-question3">
-          <div class="col-sm-4 col-sm-offset-1">
-              <p class="ui-persona-phrase">I am a woman who<p>
-          </div>
-          <div class="col-sm-7 ui-woman-dropdown-menu">
-              <div class="dropdown ui-woman-select">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                      <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                      <% @personas.each do |persona| %>
-                          <li class="ui-woman-options3"><%= persona.questions %></li>
-                      <% end %>
-                  </ul>
-              </div>
-          </div>
+      <div class="col-sm-5 ui-woman-dropdown-menu">
+        <div class="dropdown ui-woman-select">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+              <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+            <% @personas.each do |persona| %>
+                <li class="ui-woman-options3"><%= persona.questions %></li>
+            <% end %>
+          </ul>
+        </div>
       </div>
+    </div>
   </div>
-  <!-- <div class="ui-woman-guide">
-      <h1 class="ui-guide-intro">Great! Let us help you. Check out these resources...</h1>
-
-      <%# @guides.each do |guide| %>
-          <div class="container">
-              <div class="row ui-guide-row">
-                  <div class="col-sm-1">
-                      <p class="ui-woman-guide-index"><%# guide.id %></p>
-                  </div>
-                  <div class="col-sm-3">
-                      <h3 class="ui-guide-title"><%# guide.title %></h3>
-                  </div>
-                  <div class="col-sm-6">
-                      <p class="ui-guide-description"><%# guide.description %></p>
-                  </div>
-                  <div class="col-sm-2">
-                      <%= image_tag empty_or_full_heart(guide) %>
-                  </div>
-              </div>
-          </div>
-      <%# end %>
-  </div> -->
-
-</body>
+</div>

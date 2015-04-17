@@ -1,13 +1,13 @@
-<body class="ui-supporter-wizard">
+<div class="ui-supporter-wizard ui-wizard">
 
   <%= render "layouts/navbar", page: "" %>
 
   <div class="container">
       <div class="row">
-          <div class="col-sm-4 col-sm-offset-1">
+          <div class="col-sm-6 col-sm-offset-1">
               <p class="ui-persona-phrase">I am a supporter who wants to<p>
           </div>
-          <div class="col-sm-7 ui-supporter-dropdown-menu">
+          <div class="col-sm-5 ui-supporter-dropdown-menu">
               <div class="dropdown ui-supporter-select">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                       <span class="caret"></span>
@@ -21,10 +21,10 @@
           </div>
       </div>
       <div class="row ui-supporter-question2">
-          <div class="col-sm-4 col-sm-offset-1">
+          <div class="col-sm-6 col-sm-offset-1">
               <p class="ui-persona-phrase">I want to do this by</p>
           </div>
-          <div class="col-sm-7 ui-supporter-dropdown-menu">
+          <div class="col-sm-5 ui-supporter-dropdown-menu">
               <div class="dropdown ui-supporter-select">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                       <span class="caret"></span>
@@ -38,10 +38,10 @@
           </div>
       </div>
       <div class="row ui-supporter-question3">
-          <div class="col-sm-4 col-sm-offset-1">
+          <div class="col-sm-6 col-sm-offset-1">
               <p class="ui-persona-phrase">I am a supporter who</p>
           </div>
-          <div class="col-sm-7 ui-supporter-dropdown-menu">
+          <div class="col-sm-5 ui-supporter-dropdown-menu">
               <div class="dropdown ui-supporter-select">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                       <span class="caret"></span>
@@ -55,27 +55,4 @@
           </div>
       </div>
   </div>
-  <!-- <div class="ui-supporter-guide">
-      <h1 class="ui-guide-intro">Great! Let us help you. Check out these resources...</h1>
-
-      <%# @guides.each do |guide| %>
-          <div class="container">
-              <div class="row ui-guide-row">
-                  <div class="col-sm-1">
-                      <p class="ui-supporter-guide-index"><%# guide.id %></p>
-                  </div>
-                  <div class="col-sm-3">
-                      <h3 class="ui-guide-title"><%# guide.title %></h3>
-                  </div>
-                  <div class="col-sm-6">
-                      <p class="ui-guide-description"><%# guide.description %></p>
-                  </div>
-                  <div class="col-sm-2">
-                      <%= image_tag empty_or_full_heart(guide) %>
-                  </div>
-              </div>
-          </div>
-      <%# end %>
-    </div> -->
-
-</body>
+</div>
