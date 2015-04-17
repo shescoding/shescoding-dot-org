@@ -2,8 +2,11 @@ $red: #DB2C38;
 $blue: #00A0BE;
 $green: #83C057;
 
+.ui-wizard {
+  padding-top: 200px;
+}
+
 .ui-woman-wizard{
-  padding-top: 100px;
   .ui-shescoding-nav, #footer, .ui-woman-options:hover, .ui-woman-options2:hover,
   .ui-woman-options3:hover{
     background: $red;
@@ -28,11 +31,10 @@ $green: #83C057;
 }
 
 .ui-persona-phrase{
-  font-size: 26px;
+  font-size: 36px;
 }
 
 .ui-supporter-wizard{
-  padding-top: 80px;
   .ui-shescoding-nav, #footer, .ui-supporter-options:hover, .ui-supporter-options2:hover,
   .ui-supporter-options3:hover{
     background: $green;
@@ -47,7 +49,6 @@ $green: #83C057;
 }
 
 .ui-company-wizard{
-  padding-top: 80px;
   .ui-shescoding-nav, #footer, .ui-company-options:hover, .ui-company-options2:hover,
   .ui-company-options3:hover{
     background: $blue;
@@ -71,7 +72,7 @@ div.ui-wizard-question2{
 }
 
 ul.dropdown-menu > li {
-  font-size: 20px;
+  font-size: 18px;
   padding: 3px 20px 0px 5px;
 }
 
