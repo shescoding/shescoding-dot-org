@@ -7,6 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # ruby encoding: utf-8
+
+#
+# CATEGORIES
+#
 Category.delete_all
 Category.create(name: 'Mentorship', description: '')
 Category.create(name: 'Negotiations', description: '')
@@ -23,6 +27,9 @@ Category.create(name: 'Sexism', description: '')
 Category.create(name: 'Research/White Papers', description: '')
 Category.create(name: 'Statistics', description: '')
 
+#
+# RESOURCES
+#
 res = Resource.find_or_create_by(title: 'Code School', url: 'https://www.codeschool.com/', 
 	description: 'Code School teaches web technologies online with video lessons, coding challenges, and screencasts.', 
 	source: 'Code School', public: true)
@@ -179,3 +186,25 @@ res.categories << Category.find_or_create_by(name: 'Online Classes')
 res.categories << Category.find_or_create_by(name: 'Research/White Papers')
 res.categories << Category.find_or_create_by(name: 'Diversity')
 res.date = DateTime.parse('2015-4-14')
+
+#
+# PERSONAS
+#
+Persona.find_or_create_by(name: 'woman', color: '#DB2C38;', description: 'A person identifying as female',
+	questions: "{'woman': [{'already in tech': [{'advance my career': 'tech_woman_career'},{'learn how to diversify my work environment': 'tech_woman_diversify'},{'become an advocate': 'tech_woman_advocate'}]},{'interested in tech': [{'become a coder': 'woman_coder'},{'find a job': 'woman_job'},{'become an advocate': 'woman_advocate'}]},{'interested in gaming': [{'learn how to get into the gaming industry': 'woman_gamer'}]}],'girl': [{'interested in tech': [{'learn how to code': 'girl_coder'}]},{'already coding or building': [{'find interesting projects and groups': 'tech_girl'}]},{'interested in games': [{'learn how to build my own games': 'girl_gamer'}]}]}")
+Persona.find_or_create_by(name: 'company', color: '#00A0BE;', description: 'A company',
+	questions: "{'company': [{'become an advocate': 'company_advocate'},{'diversify our work environment': 'company_diversify'}]}")
+Persona.find_or_create_by(name: 'supporter', color: '#83C057;', description: 'A supporter or ally for women in tech',
+	questions: "{'parent': [ {'with a kid interested in tech': [{'find resources targeted for children': 'parent_resources'},{'find tech-related workshops and camps for children': 'parent_camps'}]},{'with a kid not yet interested in tech': [{'find ways to get my child interested in tech': 'parent_interest'}]}],'man': [{'already in tech': [{'become an advocate': 'tech_man_advocate'}]}, {'interested in tech': [{'become an advocate': 'man_advocate'}]}]}")
+
+
+
+
+
+
+
+
+
+
+
+
