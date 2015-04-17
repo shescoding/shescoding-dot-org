@@ -36,8 +36,7 @@
             <div class="panel-data">
               <div class="date"><%= format_date(resource.date) %></div>
               <div class="likes">
-                <%= button_to like_path(resource.id), method: :post, class: "heart" do %>
-                  <%= image_tag empty_or_full_heart(resource) %>
+                <%= button_to like_path(resource.id), method: :post, class: "heart #{empty_or_full_heart(resource)}" do %>
                   <span><%= resource.likes %></span>
                 <% end %>
               </div>
