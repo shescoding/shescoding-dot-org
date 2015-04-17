@@ -5,8 +5,10 @@ $light_grey: #F2F2F2;
 $dark_grey: #CCCCCC;
 $tag_grey: #808080;
 
-.resources-nav {
-  background: $yellow;
+// This needs to be .resources-nav.navbar so it's more specific than the
+// default bootstrap rule and overrides it.
+.resources-nav.navbar {
+  background-color: $yellow;
 }
 
 .resources-section {
