@@ -87,6 +87,21 @@
 
                 <div class="team-member col-sm-6 col-xs-12">
                     <div class="member-container tooltips">
+                        <%= link_to image_tag("http://placekitten.com/g/150/150", class: "circle green"), "https://www.linkedin.com/in/deirdreallison", target: "_blank" %>
+                        <div class="team-member-name">Deirdre Allison</div>
+                        <div class="team-member-title">Web Developer</div>
+                        <div class="the-tooltip">
+                            <div class="team-member-name">Deirdre Allison</div>
+                            <div class="team-member-title">Web Developer</div>
+                            <div class="tooltip-description">
+                                Deirdre is a full stack web developer in Seattle who enjoys trail running and supporting women in tech initiatives. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member col-sm-6 col-xs-12">
+                    <div class="member-container tooltips">
                         <%= link_to image_tag("http://placekitten.com/g/150/150", class: "circle green"), "https://www.linkedin.com/in/kavitasa", target: "_blank" %>
                         <div class="team-member-name">Kavita Sachdeva</div>
                         <div class="team-member-title">Web Developer</div>
@@ -207,21 +222,6 @@
 
                 <div class="team-member col-sm-6 col-xs-12">
                     <div class="member-container tooltips">
-                        <%= link_to image_tag("http://placekitten.com/g/150/150", class: "circle green"), "https://www.linkedin.com/in/deirdreallison", target: "_blank" %>
-                        <div class="team-member-name">Deirdre Allison</div>
-                        <div class="team-member-title">Web Developer</div>
-                        <div class="the-tooltip">
-                            <div class="team-member-name">Deirdre Allison</div>
-                            <div class="team-member-title">Web Developer</div>
-                            <div class="tooltip-description">
-                                Deirdre is a full stack web developer in Seattle who enjoys trail running and supporting women in tech initiatives. 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-member col-sm-6 col-xs-12">
-                    <div class="member-container tooltips">
                         <%= image_tag("http://placekitten.com/g/150/150", class: "circle green") %>
                         <div class="team-member-name">YOU?</div>
                         <div class="team-member-title">Awesomeness Provider</div>
@@ -248,7 +248,8 @@
 
                 <div class="advisor col-sm-6 col-xs-12">
                     <div class="member-container tooltips">
-                        <img class="circle white" src="http://placekitten.com/g/150/150">
+                        <%= link_to image_tag("http://placekitten.com/g/150/150", class: "circle white"), 
+                        "https://www.linkedin.com/in/paulcwatts", target: "_blank" %>
                         <div class="advisor-name">Paul Watts</div>
                         <div class="advisor-title">Founding Partner, JOLT Labs</div>
                         <div class="the-tooltip">
@@ -263,7 +264,8 @@
 
                 <div class="advisor col-sm-6 col-xs-12">
                     <div class="member-container tooltips">
-                        <img class="circle white" src="http://placekitten.com/g/150/150">
+                        <%= link_to image_tag("http://placekitten.com/g/150/150", class: "circle white"), 
+                        "https://www.linkedin.com/pub/robin-hauser-reynolds/18/742/b30", target: "_blank" %>
                         <div class="advisor-name">Robin Hauser Reynolds</div>
                         <div class="advisor-title">Director/Producer, CODE: Debugging the Gender Gap</div>
                         <div class="the-tooltip">
@@ -278,7 +280,8 @@
 
                 <div class="advisor col-sm-6 col-xs-12">
                     <div class="member-container tooltips">
-                        <img class="circle white" src="http://placekitten.com/g/150/150">
+                        <%= link_to image_tag("http://placekitten.com/g/150/150", class: "circle white"), 
+                        "https://www.linkedin.com/pub/staci-hartman/12/147/6a4", target: "_blank" %>
                         <div class="advisor-name">Staci Hartman</div>
                         <div class="advisor-title">Producer, CODE: Debugging the Gender Gap</div>
                         <div class="the-tooltip">
