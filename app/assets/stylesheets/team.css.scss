@@ -79,7 +79,6 @@ $blue: #00A0BE;
     margin: 0 auto;
 }
 
-
 .white {
     border: 10px solid white;
 }
@@ -114,8 +113,13 @@ $blue: #00A0BE;
 }
 
 div.tooltips {
-  position: relative;
-  display: inline;
+    position: relative;
+    display: inline;
+}
+
+div.member-container {
+    display: table;
+    margin: auto;
 }
 
 div.tooltips .the-tooltip {
@@ -130,6 +134,12 @@ div.tooltips .the-tooltip {
   border-radius: 2px;
 }
 
+div.advisor .the-tooltip {
+    color: white;
+    background: $green;
+    border: 3px solid white;
+}
+
 div.tooltips .the-tooltip:before {
   content: '';
   position: absolute;
@@ -140,6 +150,10 @@ div.tooltips .the-tooltip:before {
   border-bottom: 12px solid $green;
   border-right: 12px solid transparent;
   border-left: 12px solid transparent;
+}
+
+div.advisor .the-tooltip:before {
+    border-bottom: 12px solid white;
 }
 
 div.tooltips .the-tooltip:after {
@@ -154,18 +168,14 @@ div.tooltips .the-tooltip:after {
   border-left: 8px solid transparent;
 }
 
+div.advisor .the-tooltip:after {
+    border-bottom: 8px solid $green;
+}
+
 div:hover.tooltips .the-tooltip {
   visibility: visible;
   opacity: 1;
   top: 200px;
-  left: 30%;
-  z-index: 999;
-}
-
-div:hover.advisor .the-tooltip {
-  visibility: visible;
-  opacity: 1;
-  top: 175px;
   left: 30%;
   z-index: 999;
 }
