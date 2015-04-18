@@ -8,7 +8,7 @@
     <div class="container">
         <div class="team-section-title">Team</div>
             <div class="row">
-             <div class="team-list">
+            <div class="team-list">
 
                 <div class="team-member col-sm-6 col-xs-12">
                     <div class="member-container tooltips">
@@ -299,12 +299,22 @@
 <div class="partner-section">
     <div class="partner-section-title">Partners</div>
     <div class="container">
-        <div class="partner row">
-            <div class="col-md-6">
-                <img class="logo" src="http://placekitten.com/g/400/200">
+        <div class="row">
+            <div class="partner col-sm-3">
+                <%= link_to image_tag("jolt.png", class: "logo"), 
+                "http://joltlabs.com/", target: "_blank" %>
             </div>
-            <div class="col-md-6">
-                <img class="logo" src="http://placekitten.com/g/400/200">
+            <div class="partner col-sm-3">
+                <%= link_to image_tag("code.png", class: "logo"), 
+                "http://codedocumentary.com/", target: "_blank" %>
+            </div>
+            <div class="partner col-sm-3">
+                <%= link_to image_tag("qualcomm.png", class: "logo"), 
+                "https://www.qualcomm.com/", target: "_blank" %>
+            </div>
+            <div class="partner col-sm-3">
+                <%= link_to image_tag("ga.jpeg", class: "logo"), 
+                "https://generalassemb.ly/", target: "_blank" %>
             </div>
         </div><!-- /row -->
     </div><!-- /container -->
