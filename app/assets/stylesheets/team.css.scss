@@ -66,6 +66,7 @@ $blue: #00A0BE;
 }
 
 .advisor-name {
+    color: white;
     font-weight: bold;
     text-align: center;
     width: 100%;
@@ -175,8 +176,8 @@ div.advisor .the-tooltip:after {
 div:hover.tooltips .the-tooltip {
   visibility: visible;
   opacity: 1;
-  top: 200px;
-  left: 30%;
+  top: 170px;
+  left: 15%;
   z-index: 999;
 }
 
