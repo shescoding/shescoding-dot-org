@@ -43,3 +43,7 @@ p > a {
 p > a:hover {
   color: $green;
 }
+
+p > a:focus {
+  color: $green;
+}
