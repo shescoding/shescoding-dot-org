@@ -66,7 +66,7 @@ $blue: #00A0BE;
 }
 
 .advisor-name {
-    color: white;
+    color: $black;
     font-weight: bold;
     text-align: center;
     width: 100%;
@@ -136,9 +136,9 @@ div.tooltips .the-tooltip {
 }
 
 div.advisor .the-tooltip {
-    color: white;
-    background: $green;
-    border: 3px solid white;
+    color: $black;
+    background: white;
+    border: 3px solid $green;
 }
 
 div.tooltips .the-tooltip:before {
@@ -154,7 +154,7 @@ div.tooltips .the-tooltip:before {
 }
 
 div.advisor .the-tooltip:before {
-    border-bottom: 12px solid white;
+    border-bottom: 12px solid $green;
 }
 
 div.tooltips .the-tooltip:after {
@@ -170,7 +170,7 @@ div.tooltips .the-tooltip:after {
 }
 
 div.advisor .the-tooltip:after {
-    border-bottom: 8px solid $green;
+    border-bottom: 8px solid white;
 }
 
 div:hover.tooltips .the-tooltip {
