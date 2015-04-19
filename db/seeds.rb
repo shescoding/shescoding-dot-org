@@ -27,19 +27,23 @@ Category.create(name: 'Unconscious Bias', description: '')
 Category.create(name: 'Women Blogs', description: '')
 Category.create(name: 'Working Mothers', description: '')
 
+tag_list = ['online classes', 'free courses', 'paid courses', 'shows', 'screencasts', 'forum',
+'coding', 'women', 'local', 'in-person', 'design', 'business skills', 'corporate training',
+'companies', 'supporters', 'hiring', 'diversity', 'attrition', 'statistics', 'advice', 'diversity', 
+'culture', 'teams', 'feedback', 'social norms', 'gender', ]
+
+tag_list.each do |tag|
+  ActsAsTaggableOn::Tag.new(:name => tag).save
+end
+
 res = Resource.find_or_create_by(title: 'Code School', url: 'https://www.codeschool.com/', 
 	description: 'Code School teaches web technologies online with video lessons, coding challenges, and screencasts.', 
 	source: 'Code School', public: true)
 res.categories << Category.find_or_create_by(name: 'Learning')
 res.categories << Category.find_or_create_by(name: 'Coding')
-res.tags << Tag.find_or_create_by("online classes")
-res.tags << Tag.find_or_create_by("free courses")
-res.tags << Tag.find_or_create_by("paid courses")
-res.tags << Tag.find_or_create_by("shows")
-res.tags << Tag.find_or_create_by("screencasts")
-res.tags << Tag.find_or_create_by("forum")
-res.tags << Tag.find_or_create_by("coding")
-res.tags << Tag.find_or_create_by("women")
+res.tag_list = ["online classes", "free courses", "paid courses", "shows", "screencasts", "forum", 
+	"coding", "women"]
+res.save
 
 
 res = Resource.find_or_create_by(title: 'General Assembly', url: 'https://generalassemb.ly/', 
@@ -48,16 +52,9 @@ res = Resource.find_or_create_by(title: 'General Assembly', url: 'https://genera
 res.categories << Category.find_or_create_by(name: 'Learning')
 res.categories << Category.find_or_create_by(name: 'Coding')
 res.categories << Category.find_or_create_by(name: 'Events')
-res.tags << Tag.find_or_create_by("online classes")
-res.tags << Tag.find_or_create_by("in-person")
-res.tags << Tag.find_or_create_by("local")
-res.tags << Tag.find_or_create_by("free courses")
-res.tags << Tag.find_or_create_by("paid courses")
-res.tags << Tag.find_or_create_by("design")
-res.tags << Tag.find_or_create_by("business skills")
-res.tags << Tag.find_or_create_by("corporate training")
-res.tags << Tag.find_or_create_by("women")
-res.tags << Tag.find_or_create_by("companies")
+res.tag_list = ["online classes", "in-person", "local", "free courses", "paid courses", "design", 
+	"business skills", "corporate training", "women", "companies"]
+res.save
 
 res = Resource.find_or_create_by(title: 'Trying To Hire A Diverse Team Of Engineers? It’s Not Just A Pipeline Issue', 
 	url: 'http://techcrunch.com/2015/02/28/trying-to-hire-a-diverse-team-of-engineers-its-not-just-a-pipeline-issue', 
@@ -66,9 +63,8 @@ res = Resource.find_or_create_by(title: 'Trying To Hire A Diverse Team Of Engine
 res.categories << Category.find_or_create_by(name: 'Gender Discrimination')
 res.categories << Category.find_or_create_by(name: 'Hiring')
 res.date = DateTime.parse('2015-2-28')
-res.tags << Tag.find_or_create_by("companies")
-res.tags << Tag.find_or_create_by("hiring")
-res.tags << Tag.find_or_create_by("diversity")
+res.tag_list = ["companies", "hiring", "diversity"]
+res.save
 
 res = Resource.find_or_create_by(title: 'Why women leave tech: what the research says', 
 	url: 'https://docs.google.com/document/d/1soIYek-YEIvqtu9brv3ecdPbuVzQKp_GhAozC06UrLo/edit#heading=h.xae30yo7kzy3', 
@@ -78,12 +74,8 @@ res.categories << Category.find_or_create_by(name: 'Research')
 res.categories << Category.find_or_create_by(name: 'Gender Discrimination')
 res.categories << Category.find_or_create_by(name: 'Retaining Women')
 res.categories << Category.find_or_create_by(name: 'Career Advancement')
-res.tags << Tag.find_or_create_by("women")
-res.tags << Tag.find_or_create_by("companies")
-res.tags << Tag.find_or_create_by("supporters")
-res.tags << Tag.find_or_create_by("attrition")
-res.tags << Tag.find_or_create_by("statistics")
-res.tags << Tag.find_or_create_by("advice")
+res.tag_list = ["women", "companies", "supporters", "attrition", "statistics", "advice"]
+res.save
 
 res = Resource.find_or_create_by(title: 'How Our Engineering Environments are Killing Diversity', 
 	url: 'https://kateheddleston.com/blog/how-our-engineering-environments-are-killing-diversity-introduction', 
@@ -92,14 +84,7 @@ res = Resource.find_or_create_by(title: 'How Our Engineering Environments are Ki
 res.categories << Category.find_or_create_by(name: 'Gender Discrimination')
 res.categories << Category.find_or_create_by(name: 'Women Blogs')
 res.categories << Category.find_or_create_by(name: 'Career Advancement')
-res.tags << Tag.find_or_create_by("work environments")
-res.tags << Tag.find_or_create_by("diversity")
-res.tags << Tag.find_or_create_by("culture")
-res.tags << Tag.find_or_create_by("teams")
-res.tags << Tag.find_or_create_by("feedback")
-res.tags << Tag.find_or_create_by("social norms")
-res.tags << Tag.find_or_create_by("gender expectations")
-res.tags << Tag.find_or_create_by("women")
-res.tags << Tag.find_or_create_by("companies")
-res.tags << Tag.find_or_create_by("supporters")
+res.tag_list = ["work environments", "diversity", "culture", "teams", "feedback", "social norms", 
+	"gender", "women", "companies", "supporters"]
+res.save
 
