@@ -12,7 +12,7 @@ Category.create(name: 'Coding', description: '')
 Category.create(name: 'Communities', description: '')
 Category.create(name: 'Learning', description: '')
 Category.create(name: 'Events', description: '')
-Category.create(name: 'Fair pay', description: '')
+Category.create(name: 'Fair Pay', description: '')
 Category.create(name: 'Gaming', description: '')
 Category.create(name: 'Gender Discrimination', description: '')
 Category.create(name: 'Imposter Syndrome', description: '')
@@ -61,7 +61,7 @@ res = Resource.find_or_create_by(title: 'Trying To Hire A Diverse Team Of Engine
 	description: 'Recently, there have been a flurry of articles discussing the lack of diversity in tech. Many reference “pipeline” issues as justification for the low numbers. According to the National Center for Education Statistics, blacks and Hispanics collectively make up approximately 18 percent of U.S. computer science graduates, yet Facebook, Yahoo and LinkedIn are between 8 to 11 percent non-white, non-Asian, and Google’s American workforce is only 2 percent black. Clearly, there’s more than just a pipeline issue at play.', 
 	source: 'Tech Crunch', public: true)
 res.categories << Category.find_or_create_by(name: 'Gender Discrimination')
-res.categories << Category.find_or_create_by(name: 'Hiring')
+res.categories << Category.find_or_create_by(name: 'Jobs')
 res.date = DateTime.parse('2015-2-28')
 res.tag_list = ["companies", "hiring", "diversity"]
 res.save
