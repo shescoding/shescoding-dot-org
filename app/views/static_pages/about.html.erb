@@ -1,7 +1,7 @@
 <%= render "layouts/navbar", page: "About" %>
 
 <div class="page">
-    <%= image_tag("about.png") %>
+    <%= image_tag("static_pages/about.png") %>
 </div>
 
 <div class='container'>
@@ -19,11 +19,11 @@
     </p>
     <br>
     <p>
-      She’s Coding is an open-source project developed in cooperation with the documentary film CODE: Debugging the Gender Gap [link]. She’s Coding provides education, resources, and actionable guidelines for anyone who wants to help bridge the gender gap in the field of computer science. Whether you’re a woman currently working in tech, a girl interested in learning to code, a male ally for women in computer science, or a company trying to find ways to increase diversity, you’ve come to the right place! We are continuously working on enhancing and improving our content – check back regularly and see what’s new!
+      She’s Coding is an open-source project developed in cooperation with the documentary film <%= link_to "CODE: Debugging the Gender Gap", "http://codedocumentary.com/", target: "_blank" %>. She’s Coding provides education, resources, and actionable guidelines for anyone who wants to help bridge the gender gap in the field of computer science. Whether you’re a woman currently working in tech, a girl interested in learning to code, a male ally for women in computer science, or a company trying to find ways to increase diversity, you’ve come to the right place! We are continuously working on enhancing and improving our content – check back regularly and see what’s new!
     </p>
     <br>
     <p>
-      She’s Coding was inspired by CODE: Debugging the Gender Gap documentary filmmakers, and was initiated by a team of engineers, marketers, and designers at JOLT Labs in Seattle, WA. JOLT Labs cares deeply about diversifying the workplace, not just because it’s the right thing to do…but because it’s the smart thing to do. Diverse teams produce better results!
+      She’s Coding was inspired by CODE: Debugging the Gender Gap documentary filmmakers, and was initiated by a team of engineers, marketers, and designers at <%= link_to "JOLT Labs", "http://joltlabs.com", target: "_blank" %> in Seattle, WA. JOLT Labs cares deeply about diversifying the workplace, not just because it’s the right thing to do…but because it’s the smart thing to do. Diverse teams produce better results!
     </p>
 
   </div>
