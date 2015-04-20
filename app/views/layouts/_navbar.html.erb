@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <%= image_tag('Logo-navbar.png') %>
+        <%= image_tag('navbar/logo_navbar_small.png') %>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-links">
@@ -32,10 +32,10 @@
           <li><%= link_to "Team", "/team" %></li>
         <% end %>
 
-        <% if page == "Contact" %>
-          <li class="active"><%= link_to "Connect", "/contact" %></li>
+        <% if page == "Connect" %>
+          <li class="active"><%= link_to "Connect", "/connect" %></li>
         <% else %>
-          <li><%= link_to "Connect", "/contact" %></li>
+          <li><%= link_to "Connect", "/connect" %></li>
         <% end %>
       </ul>
     </div>

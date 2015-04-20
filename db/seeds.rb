@@ -737,7 +737,7 @@ res = Resource.find_or_create_by(title: "The only bad press is no press: What El
 	source: 'Ars Technica', public: true)
 res.categories << Category.find_or_create_by(name: 'Gender Discrimination')
 res.categories << Category.find_or_create_by(name: 'Fair Pay')
-res.categories << Category.find_or_create_by(name: 'Retaining women')
+res.categories << Category.find_or_create_by(name: 'Retaining Women')
 res.categories << Category.find_or_create_by(name: 'Career Advancement')
 res.categories << Category.find_or_create_by(name: 'Unconscious Bias')
 res.date = DateTime.parse('2015-4-5')

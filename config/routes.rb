@@ -1,24 +1,21 @@
 Rails.application.routes.draw do
 
-  get 'welcome/index'
+  # You can have the root of your site routed with "root"
+  root 'static_pages#front_page'
 
-  resources :guides
-  resources :resources
-
-
-  get 'about',            to: "welcome#about"
-  get 'how',              to: "welcome#how"
-
-  get 'resources/tags/:tag', to: 'resources#index', as: :tag
-  post 'resources/:id/like', to: 'resources#like', as: :like
+  resources :resources,       only: [:index]
+  get 'resources/tags/:tag',  to: 'resources#index',  as: :tag
+  post 'resources/:id/like',  to: 'resources#like',   as: :like
+  
+  # Static pages
+  get 'about',            to: "static_pages#about"
+  get 'how',              to: "static_pages#how"
+  get 'team',             to: 'static_pages#team'
+  get 'connect',          to: 'static_pages#connect'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'welcome#index'
-  get 'team'            => 'welcome#team',      as: :team_page
-  get 'contact'         => 'welcome#contact',   as: :contact_page
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
