@@ -1,12 +1,14 @@
 $(function() {
-  $(".ui-woman-options").click(function() {
-    var selected_value = $(this).text()
-    $(".ui-woman-question2").toggle();
-  });
+    $(".ui-woman-options").click(function() {
+        // var selected_value = $(this).text();
+//        return selected_value;
+        $(".ui-woman-question2").toggle();
+    });
 });
 
 $(function() {
   $(".ui-woman-options2").click(function() {
+//      return question1();
     $(".ui-woman-question3").toggle();
   });
 });

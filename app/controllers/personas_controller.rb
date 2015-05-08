@@ -3,7 +3,7 @@ class PersonasController < ApplicationController
 
   def woman_wizard
     @woman = Persona.find_by(name: 'woman')
-    @woman_questions = YAML.load(@woman.questions)
+    @woman_questions = @woman.questions
     @women_guides = @woman.guides
   end
 

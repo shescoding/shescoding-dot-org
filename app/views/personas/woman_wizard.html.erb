@@ -1,60 +1,91 @@
 <div class="ui-woman-wizard ui-wizard">
 
-  <%= render "layouts/navbar", page: "" %>
+    <%= render "layouts/navbar", page: "" %>
 
-  <div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-sm-offset-1">
-            <p class="ui-persona-phrase">I am a <p>
-        </div>
-        <div class="col-sm-5 ui-woman-dropdown-menu">
-            <div class="dropdown ui-woman-select">
-              <input type="TextBox" ID="datebox" Class="form-control"></input>
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                    <% @woman_questions.each do |key, value| %>
-                        <li class="ui-woman-options"><a href='#'><%= key %></a></li>
-                    <% end %>
-                </ul>
-                Bla:<%=@selected_value%>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-1">
+                    <p class="ui-persona-phrase">I am a </p>
+                </div>
+                <div class="col-sm-5 ui-woman-dropdown-menu">
+                    <div class="dropdown ui-woman-select">
+                        <input type="TextBox" ID="datebox" Class="form-control"></input>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                        <ul id="answers-1" class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1" id="gender">
+
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row ui-woman-question2">
-        <div class="col-sm-6 col-sm-offset-1">
-            <p class="ui-persona-phrase">I want to do this by<p>
-        </div>
-        <div class="col-sm-5 ui-woman-dropdown-menu">
-            <div class="dropdown ui-woman-select">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-                    <% @personas.each do |persona| %>
-                        <li class="ui-woman-options2"><%= persona.questions %></li>
-                    <% end %>
-                </ul>
+            <div class="row ui-woman-question2">
+                <div class="col-sm-6 col-sm-offset-1">
+                    <p class="ui-persona-phrase">I want to do this by<p>
+                </div>
+                <div class="col-sm-5 ui-woman-dropdown-menu">
+                    <div class="dropdown ui-woman-select">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul id="answers-2" class="dropdown-menu ui-dropdown"  role="menu" aria-labelledby="dropdownMenu1">
+
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div class="row ui-woman-question3">
+                <div class="col-sm-6 col-sm-offset-1">
+                    <p class="ui-persona-phrase">I am a woman who<p>
+                </div>
+                <div class="col-sm-5 ui-woman-dropdown-menu">
+                    <div class="dropdown ui-woman-select">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="row ui-woman-question3">
-      <div class="col-sm-6 col-sm-offset-1">
-          <p class="ui-persona-phrase">I am a woman who<p>
-      </div>
-      <div class="col-sm-5 ui-woman-dropdown-menu">
-        <div class="dropdown ui-woman-select">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-              <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu ui-dropdown" role="menu" aria-labelledby="dropdownMenu1">
-            <% @personas.each do |persona| %>
-                <li class="ui-woman-options3"><%= persona.questions %></li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </div>
+<script>
+var WomanQuiz = function(){
+  var curQuestion = 1;
+  var tree = <%= raw @woman.questions %>;
+  var curTree = tree;
+  var answers = [];
+
+  $('.answer').on('click', function(){
+    console.log($(this).data('tree'));
+    curTree = $.parseJSON($(this).data('tree'));
+    if(curTree.guide == undefined){
+      console.log(1);
+      showQuestion(2);
+    } else {
+      console.log("FOUND GUIDE:", curTree.guide);
+    }
+
+  });
+  console.log(tree);
+  var showQuestion = function(q){
+    var temp = "";
+    console.log(curTree);
+    for(var i=0; i < curTree.length; i++){
+      console.log("H", i);
+      temp += "<li class='ui-woman-options"+q+" answer' data-tree='"+ JSON.stringify(curTree[i].nextQuestions)+"'>< key ></li>";
+    }
+    console.log("TEMP", temp);
+    $('#answers-'+1).html(temp);
+
+  };
+  showQuestion(1);
+}
+
+var quiz = new WomanQuiz();
+</script>
