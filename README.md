@@ -10,77 +10,91 @@ This is the code for the [shescoding.org](http://shescoding.org) website.
 
 Yes! *She's Coding* is build by the community, for the community. We currently have a small group of volunteers bootstrapping the project, and we are in the process of defining some simple rules on how to contribute for the wider community.
 
-[Let us know](mailto:nathalie@joltlabs.com) if you want to join our team! 
+[Let us know](mailto:nathalie@joltlabs.com) if you want to join our team!
 
 ### Installation
 
-Install Homebrew:
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
++ Install [Homebrew](http://brew.sh/) (OSX):
+  ```
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
 
-Install rvm:
-```
-\curl -sSL https://get.rvm.io | bash -s stable
-```
++ Install [rvm](https://rvm.io/):
+  ```
+  \curl -sSL https://get.rvm.io | bash -s stable
+  ```
 
-Install Ruby:
-```
-rvm install 2.2.1
-```
++ Install [Ruby](https://www.ruby-lang.org/en/):
+  ```
+  rvm install 2.2.1
+  ```
 
-Select this version for use:
-```
-rvm use 2.2.1
-```
++ Select this version for use:
+  ```
+  rvm use 2.2.1
+  ```
 
-Install Rails:
-```
-gem install rails 
-```
++ Install [Postgresql](http://www.postgresql.org/)
+  + Mac:
 
-Install Postgresql:
-```
-brew install postgresql
-```
+    Install:
+    ```
+    brew install postgresql
+    ```
 
-Initialize the postgres database:
-```
-initdb /usr/local/var/postgres
-```
+    Initialize the postgres database:
+    ```
+    initdb /usr/local/var/postgres
+    ```
 
-Start the postgres server:
-```
-pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
-```
+    Start the postgres server:
+    ```
+    pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+    ```
 
-Set up the database:
-```
-$ createdb shescoding_development
-$ psql -d shescoding_development -c "CREATE USER shescoding WITH PASSWORD 'shescoding'"
-$ psql -d shescoding_development -c "GRANT ALL PRIVILEGES ON DATABASE shescoding_development to shescoding"
-```
+  + Ubuntu:
 
-Clone the repository:
-```
-git clone https://github.com/shescoding/shescoding-dot-org.git
-```
+    See [https://help.ubuntu.com/community/PostgreSQL]
 
-Load all the gems: 
-```
-bundle install
-```
+    For simple setup (local use only) follow the "Alternate Server Setup" of the
+resource provided above.
 
-Run database migrations:
-```
-rake db:migrate
-```
++ Set up the database:
+  ```
+  $ createdb shescoding_development
+  $ psql -d shescoding_development -c "CREATE USER shescoding WITH PASSWORD 'shescoding'"
+  $ psql -d shescoding_development -c "GRANT ALL PRIVILEGES ON DATABASE shescoding_development to shescoding"
+  ```
 
-Start the Rails server:
-```
-rails s
-```
-The project should be running on port 3000
++ Set up your local repo
+  + Fork the repository by hitting the "Fork" button on the shescoding github page
+  + Clone the repository:
+
+    ```
+    git clone https://github.com/<your_github_username>/shescoding-dot-org.git
+    ```
+  + Add the upstream repository:
+
+    ```
+    git remote add upstream https://github.com/shescoding/shescoding-dot-org.git
+    ```
+
++ Load all the gems:
+  ```
+  bundle install
+  ```
+
++ Run database migrations:
+  ```
+  rake db:migrate
+  ```
+
++ Start the Rails server:
+  ```
+  rails s
+  ```
+
++ Visit the project at [localhost:3000](http://localhost:3000)
 
 ### Pre-commit hook
 
