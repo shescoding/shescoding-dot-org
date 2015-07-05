@@ -47,3 +47,23 @@ p > a:hover {
 p > a:focus {
   color: $green;
 }
+.connect {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15px;
+}
+.connect_icons {
+  width: 80%;
+  list-style: none;
+  display: inline;
+}
+
+.connect_icons > li {
+   display: inline;
+}
+
+.connect img {
+  width: 11%;
+  padding: 5px 25px;
+}
+
