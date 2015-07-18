@@ -1,54 +1,54 @@
 <%= render "layouts/navbar", page: "Resources" %>
-
-<div class="resources-section container">
-  <div class="row">
-    <div class="resources-sidebar col-md-3">
-      <ul>
-        <li class="selected" data-category="*">
-          <%= link_to "All Resources", resources_path %>
-        </li>
-        <% @categories.each do |category| %>
-          <li data-category="<%= create_filter(category.id) %>">
-            <%= link_to category.name, resources_path(anchor: category.id) %>
+<div class="page-content">
+  <div class="resources-section container">
+    <div class="row">
+      <div class="resources-sidebar col-md-3">
+        <ul>
+          <li class="selected" data-category="*">
+            <%= link_to "All Resources", resources_path %>
           </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class="resources-grid col-md-9">
-      <% @resources.each do |resource| %>
-        <div class="panel panel-default <%= create_filter_targets(resource) %>">
-          <div class="panel-body">
-            <div class="panel-header">
-              <h4><%= resource.source %></h4>
-              <h3><%= link_to resource.title, resource.url, target: "_blank" %></h3>
-            </div>
-            <div class="panel-preview">
-              <div class="text">"<%= resource.description %></div>
-              <%= link_to "Read More >>", resource.url, class: "next", target: "_blank" %>
-            </div>
-            <div class="panel-tags">
-              <ul>
-                <% resource.tag_list.each do |tag| %>
-                  <li><%= link_to tag, tag_path(tag) %></li>
-                <% end %>
-              </ul>
-            </div>
-            <div class="panel-data">
-              <div class="date"><%= format_date(resource.date) %></div>
-              <div class="likes">
-                <%= button_to like_path(resource.id), method: :post, class: "heart #{empty_or_full_heart(resource)}" do %>
-                  <span><%= resource.likes %></span>
-                <% end %>
+          <% @categories.each do |category| %>
+            <li data-category="<%= create_filter(category.id) %>">
+              <%= link_to category.name, resources_path(anchor: category.id) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="resources-grid col-md-9">
+        <% @resources.each do |resource| %>
+          <div class="panel panel-default <%= create_filter_targets(resource) %>">
+            <div class="panel-body">
+              <div class="panel-header">
+                <h4><%= resource.source %></h4>
+                <h3><%= link_to resource.title, resource.url, target: "_blank" %></h3>
+              </div>
+              <div class="panel-preview">
+                <div class="text">"<%= resource.description %></div>
+                <%= link_to "Read More >>", resource.url, class: "next", target: "_blank" %>
+              </div>
+              <div class="panel-tags">
+                <ul>
+                  <% resource.tag_list.each do |tag| %>
+                    <li><%= link_to tag, tag_path(tag) %></li>
+                  <% end %>
+                </ul>
+              </div>
+              <div class="panel-data">
+                <div class="date"><%= format_date(resource.date) %></div>
+                <div class="likes">
+                  <%= button_to like_path(resource.id), method: :post, class: "heart #{empty_or_full_heart(resource)}" do %>
+                    <span><%= resource.likes %></span>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <% end %>
-      <button id="return-to-top" class="btn btn-lg btn-default">Return to Top</button>
+        <% end %>
+        <button id="return-to-top" class="btn btn-lg btn-default">Return to Top</button>
+      </div>
     </div>
   </div>
 </div>
-
 <script>
   $(document).ready(function() {
     // Get Current URL

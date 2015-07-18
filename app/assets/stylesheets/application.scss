@@ -20,6 +20,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.content{
+  display:flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+}
 .page {
   padding-top: 70px;
 }

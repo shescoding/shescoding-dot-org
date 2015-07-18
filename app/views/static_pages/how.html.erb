@@ -1,30 +1,30 @@
 <%= render "layouts/navbar", page: "About" %>
+<div class="page-content">
+  <div class="page">
+      <%= image_tag("static_pages/how.png") %>
+  </div>
 
-<div class="page">
-    <%= image_tag("static_pages/how.png") %>
+  <div class='container'>
+    <div class= 'how-nav'>
+      <%= link_to "About", "/about" %>
+      <%= link_to "How", "/how", class: "active" %>
+    </div>
+
+    <div class='how-section-title'>
+      Contribute your skills to She’s Coding
+    </div>
+    <div class='how-body'>
+      <p>
+        Interesting in helping out? Join the She's Coding team! We maintain an open-source Ruby on Rails project on Github, and have some simple rules on how to contribute. She’s Coding is built by the community, for the community. The initial site was launched in April 2015 to coincide with the world premiere of the CODE documentary, and will continue to grow and expand in resources and functionality over time. 
+      </p>
+      <br>
+      <p>
+        Want to learn more or be a part of the she’s coding team? <%= link_to "Connect with us", "/connect" %>, or check out our project management systems: <%= link_to "Github", "https://github.com/shescoding", target: "_blank" %>, <%= link_to "Google Group", "https://groups.google.com/forum/#!forum/shescoding", target: "_blank" %>, <%= link_to "Trello", "https://trello.com/shescoding", target: "_blank" %>, <%= link_to "Slack", "https://shescoding.slack.com/", target: "_blank" %>.
+      </p>
+    </div>
+    <div class='how-section-title'>
+      Convert understanding into action - join the She's Coding team!
+    </div>
+  </div>
 </div>
-
-<div class='container'>
-  <div class= 'how-nav'>
-    <%= link_to "About", "/about" %>
-    <%= link_to "How", "/how", class: "active" %>
-  </div>
-
-  <div class='how-section-title'>
-    Contribute your skills to She’s Coding
-  </div>
-  <div class='how-body'>
-    <p>
-      Interesting in helping out? Join the She's Coding team! We maintain an open-source Ruby on Rails project on Github, and have some simple rules on how to contribute. She’s Coding is built by the community, for the community. The initial site was launched in April 2015 to coincide with the world premiere of the CODE documentary, and will continue to grow and expand in resources and functionality over time. 
-    </p>
-    <br>
-    <p>
-      Want to learn more or be a part of the she’s coding team? <%= link_to "Connect with us", "/connect" %>, or check out our project management systems: <%= link_to "Github", "https://github.com/shescoding", target: "_blank" %>, <%= link_to "Google Group", "https://groups.google.com/forum/#!forum/shescoding", target: "_blank" %>, <%= link_to "Trello", "https://trello.com/shescoding", target: "_blank" %>, <%= link_to "Slack", "https://shescoding.slack.com/", target: "_blank" %>.
-    </p>
-  </div>
-  <div class='how-section-title'>
-    Convert understanding into action - join the She's Coding team!
-  </div>
-</div>
-
 <%= render :partial => "layouts/footer" %>

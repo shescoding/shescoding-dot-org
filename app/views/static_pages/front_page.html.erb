@@ -1,36 +1,37 @@
 <%= render "layouts/navbar", page: "" %>
-
-<div class="container front-page page">
-    <div class="col-sm-12">
-        <div class="row">
-            <div class="ui-shecodes-mission text-center">
-                <p>We are community driven.</p>
-                <p>We educate and empower.</p>
-                <p>We are closing the gender gap in tech.<p>
+<div class="page-content">
+    <div class="container front-page page">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="ui-shecodes-mission text-center">
+                    <p>We are community driven.</p>
+                    <p>We educate and empower.</p>
+                    <p>We are closing the gender gap in tech.<p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="ui-persona-row">
-        <div class="col-sm-4 ui-persona-col">
-            <div class='ui-rectangle-box'>
-                <div class='ui-rectangle-content'>
-                    <%= link_to image_tag("static_pages/front_page_she.png", class: "persona-img"), "resources/tags/women" %>
+    <div class="container">
+        <div class="ui-persona-row">
+            <div class="col-sm-4 ui-persona-col">
+                <div class='ui-rectangle-box'>
+                    <div class='ui-rectangle-content'>
+                        <%= link_to image_tag("static_pages/front_page_she.png", class: "persona-img"), "resources/tags/women" %>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 ui-persona-col">
-            <div class='ui-rectangle-box'>
-                <div class='ui-rectangle-content'>
-                    <%= link_to image_tag("static_pages/front_page_company.png", class: "persona-img"), "resources/tags/companies" %>
+            <div class="col-sm-4 ui-persona-col">
+                <div class='ui-rectangle-box'>
+                    <div class='ui-rectangle-content'>
+                        <%= link_to image_tag("static_pages/front_page_company.png", class: "persona-img"), "resources/tags/companies" %>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 ui-persona-col">
-            <div class='ui-rectangle-box'>
-                <div class='ui-rectangle-content'>
-                    <%= link_to image_tag("static_pages/front_page_supporter.png", class: "persona-img"), "resources/tags/supporters" %>
+            <div class="col-sm-4 ui-persona-col">
+                <div class='ui-rectangle-box'>
+                    <div class='ui-rectangle-content'>
+                        <%= link_to image_tag("static_pages/front_page_supporter.png", class: "persona-img"), "resources/tags/supporters" %>
+                    </div>
                 </div>
             </div>
         </div>
