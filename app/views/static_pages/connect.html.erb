@@ -1,21 +1,21 @@
 <%= render "layouts/navbar", page: "Connect" %>
+<div class="page-content">
+  <div class="page">
+      <%= image_tag("static_pages/connect.png") %>
+  </div>
 
-<div class="page">
-    <%= image_tag("static_pages/connect.png") %>
-</div>
-
-    <div class="container page">
-        <div class="connect-section-title">
-          We would love to hear from you
-        </div>
-        <br>
-        <div class="connect-section-body">
-          <p>
-          	Whether you would like to contribute your skills and time to the development of She’s Coding, give us your feedback on the project, or tell us about an amazing resource we should include on the site, don’t hesitate to get in touch!			
-          </p>
+      <div class="container page">
+          <div class="connect-section-title">
+            We would love to hear from you
+          </div>
           <br>
-          <p>Contact us via email: <%= mail_to 'info@shescoding.org', " She's Coding" %></p>
-        </div>
-    </div>
-
+          <div class="connect-section-body">
+            <p>
+            	Whether you would like to contribute your skills and time to the development of She’s Coding, give us your feedback on the project, or tell us about an amazing resource we should include on the site, don’t hesitate to get in touch!			
+            </p>
+            <br>
+            <p>Contact us via email: <%= mail_to 'info@shescoding.org', " She's Coding" %></p>
+          </div>
+      </div>
+  </div>
 <%= render :partial => "layouts/footer" %>
