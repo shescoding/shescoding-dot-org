@@ -64,8 +64,8 @@ p > a:focus {
 }
 
 .connect img {
-  width: 11%;
-  padding: 5px 25px;
+  width: 45px;
+  margin: 5px 25px;
 }
 
 // a.tooltips {
@@ -102,3 +102,13 @@ p > a:focus {
 //   margin-left: -76px;
 //   z-index: 999;
 // }
+
+
+//media queries
+
+@media (max-width: 500px) {
+  .connect img {
+  width: 35px;
+  margin: 5px 10px;
+}
+}
