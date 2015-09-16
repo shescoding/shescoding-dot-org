@@ -52,3 +52,6 @@ gem 'acts-as-taggable-on', '~> 3.4'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'rails_12factor', group: :production
+
+#Use Social-Share-Button for sharing to external social sites
+gem 'social-share-button', '~>0.1.9'

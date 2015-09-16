@@ -35,6 +35,7 @@
             </div>
             <div class="panel-data">
               <div class="date"><%= format_date(resource.date) %></div>
+              <%= social_share_button_tag(resource.title, :url => resource.url) %>
               <div class="likes">
                 <%= button_to like_path(resource.id), method: :post, class: "heart #{empty_or_full_heart(resource)}" do %>
                   <span><%= resource.likes %></span>
