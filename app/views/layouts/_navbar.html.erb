@@ -20,10 +20,19 @@
           <li><%= link_to "About", "/about" %></li>
         <% end %>
 
-        <% if page == "Blog" %>
-          <li class="active"><%= link_to "Blog", "/blog" %></li>
+        <!-- For now, don't show blog in navbar -->
+        <% if false %>
+            <% if page == "Blog" %>
+              <li class="active"><%= link_to "Blog", "/blog" %></li>
+            <% else %>
+              <li><%= link_to "Blog", "/blog" %></li>
+            <% end %>
+        <% end %>
+
+        <% if page == "Mentorship" %>
+            <li class="active"><%= link_to "Mentorship", "/mentorship" %></li>
         <% else %>
-          <li><%= link_to "Blog", "/blog" %></li>
+            <li><%= link_to "Mentorship", "/mentorship" %></li>
         <% end %>
 
         <% if page == "Resources" %>

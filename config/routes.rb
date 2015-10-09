@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # Static pages
   get 'about',            to: "static_pages#about"
   get 'blog',             to: "static_pages#blog"
+  get 'mentorship',       to: "static_pages#mentorship"
   get 'how',              to: "static_pages#how"
   get 'team',             to: 'static_pages#team'
   get 'connect',          to: 'static_pages#connect'
