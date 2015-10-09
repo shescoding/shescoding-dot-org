@@ -1,0 +1,35 @@
+//
+// MENTORSHIP PAGE
+//
+
+$black: #1E2028;
+$red: #DB2C38;
+$green: #83C057;
+$blue: #00A0BE;
+
+.mentorship-section-title {
+  text-align: center;
+  font-size: 36px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.mentorship-body {
+  font-size: 18px;
+}
+
+.page {
+  width: 100%;
+}
+
+p > a {
+  color: $green;
+}
+
+p > a:hover {
+  color: $green;
+}
+
+p > a:focus {
+  color: $green;
+}
