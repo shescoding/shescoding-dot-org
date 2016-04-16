@@ -10,7 +10,7 @@ This is the code for the [shescoding.org](http://shescoding.org) website.
 
 Yes! *She's Coding* is build by the community, for the community. We currently have a small group of volunteers bootstrapping the project, and we are in the process of defining some simple rules on how to contribute for the wider community.
 
-[Let us know](mailto:nathalie@joltlabs.com) if you want to join our team!
+[Let us know](mailto:nathalie@shescoding.org) if you want to join our team!
 
 ### Installation
 
