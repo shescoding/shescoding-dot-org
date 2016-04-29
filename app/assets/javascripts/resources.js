@@ -61,7 +61,7 @@ function incrementLike(event, target) {
   var resourceID = target.parentNode.parentNode.action.split('/')[4]
   console.log(resourceID);
 
-  //no shescoding cookie object exists
+  //create shescoding_likes cookie if it does not exist
   if (getCookie("_shescoding_likes") === "")
   {
     document.cookie = "_shescoding_likes  = {}";
@@ -71,13 +71,12 @@ function incrementLike(event, target) {
   setCookie("_shescoding_likes", newValue, 365); 
 
 
-  // else 
-
-  //shescoding cookie object exists
-
-  
+ 
+  //if shescoding cookie object exists
   //check for resourceID key
-  //add shescoding resourceID and   
+  //if key exists, do nothing
+  //else
+  //add shescoding resourceID and update database
 
 
   var counterEl = form.find('span')[0];
