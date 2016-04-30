@@ -29,7 +29,6 @@ function scrollToTop(event) {
   $('html, body').animate({scrollTop: 0}, 'slow');
 }
 
-
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -45,7 +44,6 @@ function getCookie(cname) {
     return "";
 }
 
-
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -53,31 +51,35 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
-
 function incrementLike(event, target) {
   event.preventDefault();
   var form = $(target).parents('form');
 
-  var resourceID = target.parentNode.parentNode.action.split('/')[4]
+  resourceID = target.parentNode.parentNode.action.split('/')[4]
   console.log(resourceID);
 
   //create shescoding_likes cookie if it does not exist
-  if (getCookie("_shescoding_likes") === "")
-  {
+  if (getCookie("_shescoding_likes") === ""){
     document.cookie = "_shescoding_likes  = {}";
+    newValue = JSON.stringify({[resourceID]: true});
+    setCookie("_shescoding_likes", newValue, 365); 
   } 
-   
-  newValue = JSON.stringify({[resourceID]: true});
-  setCookie("_shescoding_likes", newValue, 365); 
-
-
- 
   //if shescoding cookie object exists
-  //check for resourceID key
-  //if key exists, do nothing
-  //else
-  //add shescoding resourceID and update database
+  else {
+    // if  (getCookie("_shescoding_likes") != "")
+    var oldCookie = getCookie("_shescoding_likes");
+    console.log("oldCookie is " + oldCookie);
+    
 
+    var newCookie = JSON.parse(oldCookie);
+    newCookie[resourceID] = true;
+    newValue = JSON.stringify(newCookie);
+    setCookie("_shescoding_likes", newValue, 365)
+    //check for resourceID key
+    //if key exists, do nothing
+    //else
+    //add shescoding resourceID and update database
+  }
 
   var counterEl = form.find('span')[0];
   var newCount = 1 + parseInt(counterEl.innerText, 10);
