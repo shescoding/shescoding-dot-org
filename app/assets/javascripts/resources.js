@@ -51,6 +51,11 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
+function processLike(event, target){
+  //if resource id is already liked decrement like
+  //if resource id is not in the list increment like
+}
+
 function incrementLike(event, target) {
   event.preventDefault();
   var form = $(target).parents('form');
@@ -80,7 +85,7 @@ function incrementLike(event, target) {
     //else
     //add shescoding resourceID and update database
   }
-
+  
   var counterEl = form.find('span')[0];
   var newCount = 1 + parseInt(counterEl.innerText, 10);
   counterEl.innerText = newCount;
