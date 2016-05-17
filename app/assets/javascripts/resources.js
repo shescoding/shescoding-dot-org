@@ -52,40 +52,39 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 function processLike(event, target){
-  //if resource id is already liked decrement like
-  //if resource id is not in the list increment like
-}
+  event.preventDefault();
+
+  resourceID = target.parentNode.parentNode.action.split('/')[4]
+  console.log(resourceID);
+  //create shescoding_likes cookie if it does not exist
+  if (getCookie("_shescoding_likes") === ""){
+    document.cookie = "_shescoding_likes  = {}";
+    newValue = JSON.stringify({[resourceID]: true});
+    setCookie("_shescoding_likes", newValue, 365);
+    incrementLike(event, target); 
+
+  } 
+  //if shescoding_likes cookie does exist
+  else {
+  
+  //check if resource id exists
+  var oldCookie = getCookie("_shescoding_likes");
+  var newCookie = JSON.parse(oldCookie);
+
+  //if the resourceid is not liked yet
+  if (!(newCookie.hasOwnProperty(resourceID))){
+    newCookie[resourceID] = true;
+    newValue = JSON.stringify(newCookie);
+    setCookie("_shescoding_likes", newValue, 365);
+    incrementLike(event, target); 
+    };
+  };
+};
 
 function incrementLike(event, target) {
   event.preventDefault();
   var form = $(target).parents('form');
 
-  resourceID = target.parentNode.parentNode.action.split('/')[4]
-  console.log(resourceID);
-
-  //create shescoding_likes cookie if it does not exist
-  if (getCookie("_shescoding_likes") === ""){
-    document.cookie = "_shescoding_likes  = {}";
-    newValue = JSON.stringify({[resourceID]: true});
-    setCookie("_shescoding_likes", newValue, 365); 
-  } 
-  //if shescoding cookie object exists
-  else {
-    // if  (getCookie("_shescoding_likes") != "")
-    var oldCookie = getCookie("_shescoding_likes");
-    console.log("oldCookie is " + oldCookie);
-    
-
-    var newCookie = JSON.parse(oldCookie);
-    newCookie[resourceID] = true;
-    newValue = JSON.stringify(newCookie);
-    setCookie("_shescoding_likes", newValue, 365)
-    //check for resourceID key
-    //if key exists, do nothing
-    //else
-    //add shescoding resourceID and update database
-  }
-  
   var counterEl = form.find('span')[0];
   var newCount = 1 + parseInt(counterEl.innerText, 10);
   counterEl.innerText = newCount;
