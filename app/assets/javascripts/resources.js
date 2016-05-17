@@ -53,25 +53,22 @@ function setCookie(cname, cvalue, exdays) {
 
 function processLike(event, target){
   event.preventDefault();
-
   resourceID = target.parentNode.parentNode.action.split('/')[4]
-  console.log(resourceID);
+ 
   //create shescoding_likes cookie if it does not exist
   if (getCookie("_shescoding_likes") === ""){
     document.cookie = "_shescoding_likes  = {}";
     newValue = JSON.stringify({[resourceID]: true});
     setCookie("_shescoding_likes", newValue, 365);
     incrementLike(event, target); 
-
   } 
+
   //if shescoding_likes cookie does exist
   else {
-  
   //check if resource id exists
   var oldCookie = getCookie("_shescoding_likes");
   var newCookie = JSON.parse(oldCookie);
-
-  //if the resourceid is not liked yet
+  
   if (!(newCookie.hasOwnProperty(resourceID))){
     newCookie[resourceID] = true;
     newValue = JSON.stringify(newCookie);
