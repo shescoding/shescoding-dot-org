@@ -29,6 +29,7 @@ function scrollToTop(event) {
   $('html, body').animate({scrollTop: 0}, 'slow');
 }
 
+//getCookie function taken from http://www.w3schools.com/js/js_cookies.asp
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -44,6 +45,7 @@ function getCookie(cname) {
     return "";
 }
 
+//setCookie function taken from http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -53,7 +55,7 @@ function setCookie(cname, cvalue, exdays) {
 
 function processLike(event, target){
   event.preventDefault();
-  resourceID = target.parentNode.parentNode.action.split('/')[4]
+  resourceID = target.parentNode.parentNode.action.split('/').slice(-2)[0]
  
   //create shescoding_likes cookie if it does not exist
   if (getCookie("_shescoding_likes") === ""){
@@ -65,15 +67,15 @@ function processLike(event, target){
 
   //if shescoding_likes cookie does exist
   else {
-  //check if resource id exists
-  var oldCookie = getCookie("_shescoding_likes");
-  var newCookie = JSON.parse(oldCookie);
-  
-  if (!(newCookie.hasOwnProperty(resourceID))){
-    newCookie[resourceID] = true;
-    newValue = JSON.stringify(newCookie);
-    setCookie("_shescoding_likes", newValue, 365);
-    incrementLike(event, target); 
+    //check if resource id exists
+    var oldCookie = getCookie("_shescoding_likes");
+    var newCookie = JSON.parse(oldCookie);
+    
+    if (!(newCookie.hasOwnProperty(resourceID))){
+      newCookie[resourceID] = true;
+      newValue = JSON.stringify(newCookie);
+      setCookie("_shescoding_likes", newValue, 365);
+      incrementLike(event, target); 
     };
   };
 };
