@@ -69,14 +69,26 @@ function processLike(event, target){
   else {
     //check if resource id exists
     var oldCookie = getCookie("_shescoding_likes");
+    console.log(resourceID)
     var newCookie = JSON.parse(oldCookie);
-    
+    console.log("current cookie", newCookie);
+
+    //if it doesn't exist, then create it and increment the like
     if (!(newCookie.hasOwnProperty(resourceID))){
       newCookie[resourceID] = true;
       newValue = JSON.stringify(newCookie);
+      console.log("doesn't exist so i'm adding", newValue)
       setCookie("_shescoding_likes", newValue, 365);
       incrementLike(event, target); 
-    };
+    } else {
+      //if it does exist
+      //remove resource id from cookie
+      delete newCookie[resourceID];
+      newValue = JSON.stringify(newCookie);
+      console.log("does exist so i'm removing", newValue);
+      setCookie("_shescoding_likes", newValue, 365);
+      decrementLike(event, target);
+    }
   };
 };
 
@@ -93,8 +105,33 @@ function incrementLike(event, target) {
     button.addClass('filled-heart');
   }
 
-  $.ajax(form.attr("action"), {
-    type: "POST"
-  });
+  // $.ajax(form.attr("action"), {
+  //   type: "POST"
+  // });
+}
+
+function decrementLike(event, target){
+  console.log("decrementing like!");
+  event.preventDefault();
+
+  var form = $(target).parents('form');
+  console.log("form is", form)
+
+  var counterEl = form.find('span')[0];
+  var newCount = parseInt(counterEl.innerText, 10) -1;
+  if (newCount >= 0){
+    counterEl.innerText = newCount;
+  }
+
+  if (newCount === 0) {
+    var button = form.find('button');
+    button.removeClass('filled-heart');
+    button.addClass('heart');
+  }
+
+  // $.ajax(form.attr("action"), {
+  //   type: "POST"
+  // });
+
 }
 
