@@ -71,7 +71,7 @@ function processLike(event, target){
     var oldCookie = getCookie("_shescoding_likes");
     console.log(resourceID)
     var newCookie = JSON.parse(oldCookie);
-    console.log("current cookie", newCookie);
+    // console.log("current cookie", newCookie);
 
     //if it doesn't exist, then create it and increment the like
     if (!(newCookie.hasOwnProperty(resourceID))){
@@ -85,9 +85,9 @@ function processLike(event, target){
       //remove resource id from cookie
       delete newCookie[resourceID];
       newValue = JSON.stringify(newCookie);
-      console.log("does exist so i'm removing", newValue);
+      // console.log("does exist so i'm removing", newValue);
       setCookie("_shescoding_likes", newValue, 365);
-      decrementLike(event, target);
+      decrementLike(event, target, resourceID);
     }
   };
 };
@@ -105,12 +105,12 @@ function incrementLike(event, target) {
     button.addClass('filled-heart');
   }
 
-  // $.ajax(form.attr("action"), {
-  //   type: "POST"
-  // });
+  $.ajax(form.attr("action"), {
+    type: "POST"
+  });
 }
 
-function decrementLike(event, target){
+function decrementLike(event, target, resourceID){
   console.log("decrementing like!");
   event.preventDefault();
 
@@ -132,6 +132,15 @@ function decrementLike(event, target){
   // $.ajax(form.attr("action"), {
   //   type: "POST"
   // });
+  
+  var unlike = "resources/";
+  unlike += resourceID;
+  unlike += "/unlike";
+  // console.log(unlike);
+
+  $.ajax(form.attr("action", unlike), {
+    type: "POST"
+  });
 
 }
 

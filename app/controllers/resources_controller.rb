@@ -63,6 +63,12 @@ class ResourcesController < ApplicationController
     redirect_to resources_path
   end
 
+  def unlike
+    @resource.likes -= 1
+    @resource.save
+    redirect_to resources_path
+  end
+
   # DELETE /resources/1
   # DELETE /resources/1.json
   def destroy
