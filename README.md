@@ -26,12 +26,18 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
 
 + Install [Ruby](https://www.ruby-lang.org/en/):
   ```
-  rvm install 2.2.1
+  rvm install 2.3.1
   ```
 
 + Select this version for use:
   ```
-  rvm use 2.2.1
+  rvm use 2.3.1
+  ```
+
++ If you use [rbenv](https://github.com/rbenv/rbenv) as your ruby version management tool, you don't have to install rvm. Just simply change your ruby version locally inside shescoding-dot-org repository:
+  ```
+  cd shescoding-dot-org
+  rbenv local 2.3.1
   ```
 
 + Install [Postgresql](http://www.postgresql.org/)
@@ -87,6 +93,11 @@ resource provided above.
 + Run database migrations:
   ```
   rake db:migrate
+  ```
+
++ Seed the database:
+  ```
+  rake db:seed
   ```
 
 + Start the Rails server:
