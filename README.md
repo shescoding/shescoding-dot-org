@@ -43,6 +43,7 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
 
     ##### Set ruby version if you already have rvm installed:
       + Select this version for use:
+
       ```
       $ rvm use 2.3.1
       $ \curl -sSL https://get.rvm.io | bash -s stable
@@ -68,6 +69,7 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
       
     ##### Set ruby version if you already have rbenv installed:
       + Change your ruby version locally inside shescoding-dot-org repository:
+      
       ```
       $ cd shescoding-dot-org
       $ rbenv local 2.3.1
