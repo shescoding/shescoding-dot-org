@@ -15,63 +15,63 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
 ### Installation
 
 + Install [Homebrew](http://brew.sh/) (OSX):
+
   ```
   $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   ```
+
 + Set the [Ruby](https://www.ruby-lang.org/en/) version to 2.3.1. In order to be able to pick the ruby version or to download ruby, you will need to use Ruby version manager. There are 2 ruby version management tools: [rvm](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv).
 
     ##### **RVM**
-      ##### Installing **rvm** from scratch:
+    ##### Installing **rvm** from scratch:
 
-        + Install [rvm](https://rvm.io/):
-        ```
-        $ \curl -sSL https://get.rvm.io | bash -s stable
-        ```
+      + Install [rvm](https://rvm.io/):
+      ```
+      $ \curl -sSL https://get.rvm.io | bash -s stable
+      ```
 
-        + Install [Ruby](https://www.ruby-lang.org/en/):
-        ```
-        $ rvm install 2.3.1
-        ```
+      + Install [Ruby](https://www.ruby-lang.org/en/):
+      ```
+      $ rvm install 2.3.1
+      ```
 
-        + Select this version of ruby for use in this project:
-        ```
-        $ rvm use 2.3.1
-        $ \curl -sSL https://get.rvm.io | bash -s stable
-        ```
+      + Select this version of ruby for use in this project:
+      ```
+      $ rvm use 2.3.1
+      $ \curl -sSL https://get.rvm.io | bash -s stable
+      ```
 
-      ##### Set ruby version if you already have rvm installed:
-        + Select this version for use:
-        ```
-        $ rvm use 2.3.1
-        $ \curl -sSL https://get.rvm.io | bash -s stable
-        ```
+    ##### Set ruby version if you already have rvm installed:
+      + Select this version for use:
+      ```
+      $ rvm use 2.3.1
+      $ \curl -sSL https://get.rvm.io | bash -s stable
+      ```
 
-   ##### **RBENV**
-      ##### Installing **rbenv** from scratch:
-        + Install [rbenv](https://github.com/rbenv/rbenv):
-        ```
-        $ brew install rbenv
-        ```
+    ##### **RBENV**
+    ##### Installing **rbenv** from scratch:
+      + Install [rbenv](https://github.com/rbenv/rbenv):
+      ```
+      $ brew install rbenv
+      ```
 
-        + Install [Ruby](https://www.ruby-lang.org/en/):
-        ```
-         $ rbenv install 2.3.1
-        ```
+      + Install [Ruby](https://www.ruby-lang.org/en/):
+      ```
+      $ rbenv install 2.3.1
+      ```
 
-        + Check ruby version:
-        ```
-        $ ruby -v
-        ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
-        ```
+      + Check ruby version:
+      ```
+      $ ruby -v
+      ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
+      ```
       
-      ##### Set ruby version if you already have rbenv installed:
-
-        + Change your ruby version locally inside shescoding-dot-org repository:
-
-        ```
-        $ cd shescoding-dot-org
-        $ rbenv local 2.3.1
-        ```
+    ##### Set ruby version if you already have rbenv installed:
+      + Change your ruby version locally inside shescoding-dot-org repository:
+      ```
+      $ cd shescoding-dot-org
+      $ rbenv local 2.3.1
+      ```
 
 + Install [Postgresql](http://www.postgresql.org/)
   + Mac:
