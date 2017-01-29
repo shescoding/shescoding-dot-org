@@ -16,46 +16,79 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
 
 + Install [Homebrew](http://brew.sh/) (OSX):
   ```
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   ```
++ Set the [Ruby](https://www.ruby-lang.org/en/) version to 2.3.1. In order to be able to pick the ruby version or to download ruby, you will need to use Ruby version manager. There are 2 ruby version management tools: [rvm](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv).
 
-+ Install [rvm](https://rvm.io/):
-  ```
-  \curl -sSL https://get.rvm.io | bash -s stable
-  ```
+    ##### **RVM**
+      ##### Installing **rvm** from scratch:
 
-+ Install [Ruby](https://www.ruby-lang.org/en/):
-  ```
-  rvm install 2.3.1
-  ```
+        + Install [rvm](https://rvm.io/):
+        ```
+        $ \curl -sSL https://get.rvm.io | bash -s stable
+        ```
 
-+ Select this version for use:
-  ```
-  rvm use 2.3.1
-  ```
+        + Install [Ruby](https://www.ruby-lang.org/en/):
+        ```
+        $ rvm install 2.3.1
+        ```
 
-+ If you use [rbenv](https://github.com/rbenv/rbenv) as your ruby version management tool, you don't have to install rvm. Just simply change your ruby version locally inside shescoding-dot-org repository:
-  ```
-  cd shescoding-dot-org
-  rbenv local 2.3.1
-  ```
+        + Select this version of ruby for use in this project:
+        ```
+        $ rvm use 2.3.1
+        $ \curl -sSL https://get.rvm.io | bash -s stable
+        ```
+
+      ##### Set ruby version if you already have rvm installed:
+        + Select this version for use:
+        ```
+        $ rvm use 2.3.1
+        $ \curl -sSL https://get.rvm.io | bash -s stable
+        ```
+
+   ##### **RBENV**
+      ##### Installing **rbenv** from scratch:
+        + Install [rbenv](https://github.com/rbenv/rbenv):
+        ```
+        $ brew install rbenv
+        ```
+
+        + Install [Ruby](https://www.ruby-lang.org/en/):
+        ```
+         $ rbenv install 2.3.1
+        ```
+
+        + Check ruby version:
+        ```
+        $ ruby -v
+        ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
+        ```
+      
+      ##### Set ruby version if you already have rbenv installed:
+
+        + Change your ruby version locally inside shescoding-dot-org repository:
+
+        ```
+        $ cd shescoding-dot-org
+        $ rbenv local 2.3.1
+        ```
 
 + Install [Postgresql](http://www.postgresql.org/)
   + Mac:
 
     Install:
     ```
-    brew install postgresql
+    $ brew install postgresql
     ```
 
     Initialize the postgres database:
     ```
-    initdb /usr/local/var/postgres
+    $ initdb /usr/local/var/postgres
     ```
 
     Start the postgres server:
     ```
-    pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+    $ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
     ```
 
   + Ubuntu:
@@ -77,32 +110,32 @@ resource provided above.
   + Clone the repository:
 
     ```
-    git clone https://github.com/<your_github_username>/shescoding-dot-org.git
+    $ git clone https://github.com/<your_github_username>/shescoding-dot-org.git
     ```
   + Add the upstream repository:
 
     ```
-    git remote add upstream https://github.com/shescoding/shescoding-dot-org.git
+    $ git remote add upstream https://github.com/shescoding/shescoding-dot-org.git
     ```
 
 + Load all the gems:
   ```
-  bundle install
+  $ bundle install
   ```
 
 + Run database migrations:
   ```
-  rake db:migrate
+  $ rake db:migrate
   ```
 
 + Seed the database:
   ```
-  rake db:seed
+  $ rake db:seed
   ```
 
 + Start the Rails server:
   ```
-  rails s
+  $ rails s
   ```
 
 + Visit the project at [localhost:3000](http://localhost:3000)
@@ -111,9 +144,6 @@ resource provided above.
 
 Please do not commit and push directly to the master branch! The hooks/pre-commit file in this repository contains a pre-commit hook that warns you if you are checking directly into master. In order to enable this hook, from the root of the repo do:
 ```
-cp hooks/pre-commit .git/hooks/
-chmod +x .git/hooks/pre-commit
+$ cp hooks/pre-commit .git/hooks/
+$ chmod +x .git/hooks/pre-commit
 ```
-
-
-
