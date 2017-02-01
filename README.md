@@ -20,7 +20,7 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
   $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   ```
 
-+ Set the [Ruby](https://www.ruby-lang.org/en/) version to 2.3.1. In order to be able to pick the ruby version or to download ruby, you will need to use Ruby version manager. There are 2 ruby version management tools: [rvm](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv).
++ Set the [Ruby](https://www.ruby-lang.org/en/) version to 2.3.1. In order to be able to pick the ruby version or to download ruby, we recommend using a ruby version manager. There are 2 ruby version management tools: [rvm](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv).
 
     ##### **RVM**
     ##### Installing **rvm** from scratch:
@@ -38,7 +38,6 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
       + Select this version of ruby for use in this project:
       ```
       $ rvm use 2.3.1
-      $ \curl -sSL https://get.rvm.io | bash -s stable
       ```
 
     ##### Set ruby version if you already have rvm installed:
@@ -46,7 +45,6 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
 
       ```
       $ rvm use 2.3.1
-      $ \curl -sSL https://get.rvm.io | bash -s stable
       ```
 
     ##### **RBENV**
