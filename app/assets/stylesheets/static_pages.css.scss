@@ -1,50 +1,50 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the static_pages controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.front-page {
-    padding-top: 20px;
-    padding-bottom: 40px;
-}
+// .front-page {
+//     padding-top: 20px;
+//     padding-bottom: 40px;
+// }
 
-.ui-rectangle-box{
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    //background: #4679BD;
-    padding-right: 20px;
-    align: left;
-}
+// .ui-rectangle-box{
+//     position: relative;
+//     width: 100%;
+//     overflow: hidden;
+//     //background: #4679BD;
+//     padding-right: 20px;
+//     align: left;
+// }
 
-.ui-rectangle-box:before{
-    content: "";
-    display: inline-block;
-    padding-top: 80%;
-}
+// .ui-rectangle-box:before{
+//     content: "";
+//     display: inline-block;
+//     padding-top: 80%;
+// }
 
-.ui-rectangle-content{
-    position:  absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
+// .ui-rectangle-content{
+//     position:  absolute;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+// }
 
-.ui-shecodes-mission{
-    font-size: 26px;
-    margin-bottom: 50px;
-    margin-top: 100px;
-}
+// .ui-shecodes-mission{
+//     font-size: 26px;
+//     margin-bottom: 50px;
+//     margin-top: 100px;
+// }
 
-.ui-persona-row{
-    margin-right: -45px;
-    margin-left: -45px;
-}
+// .ui-persona-row{
+//     margin-right: -45px;
+//     margin-left: -45px;
+// }
 
-.ui-persona-col{
-    padding-right: 5px !important;
-}
+// .ui-persona-col{
+//     padding-right: 5px !important;
+// }
 
-.persona-img {
-    width: 100%;
-}
+// .persona-img {
+//     width: 100%;
+// }
