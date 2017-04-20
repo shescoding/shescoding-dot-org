@@ -48,3 +48,29 @@
 // .persona-img {
 //     width: 100%;
 // }
+//convert px value to rem value
+
+@import "./connect";
+@function px-to-rem($px, $base:10px){
+  @return ($px / $base) * 1rem;
+}
+
+.featured-list {
+    padding: px-to-rem(5px);
+
+    h3 {
+        margin: px-to-rem(5px) 0;
+    }
+
+    @media (min-width: 50em){ //~800px
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            flex: 1 0 50%;
+            padding-right: px-to-rem(18px);
+        }
+    }
+}
