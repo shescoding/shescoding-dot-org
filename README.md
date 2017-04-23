@@ -148,7 +148,7 @@ $ cp hooks/pre-commit .git/hooks/
 $ chmod +x .git/hooks/pre-commit
 ```
 
-### Running the tests
+### Running the tests:
 
 In order to run the tests, make sure all the gems are installed and the test environment is set up properly with working database. 
 
@@ -160,7 +160,7 @@ $ bundle exec rake db:create RAILS_ENV=test
 $ bundle exec rake db:schema:load RAILS_ENV=test
 ```
 
-+ Run the tests:
++ Run the tests with [RSpec Rails](https://github.com/rspec/rspec-rails):
 
 ```
 $ bundle exec rspec -fd
