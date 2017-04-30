@@ -2,6 +2,31 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$base-font-size: 10px;
+
+//convert px value to rem value
+@function px-to-rem($px, $base:$base-font-size) {
+  @return ($px / $base) * 1rem;
+}
+
+.site-section {
+  text-align: center;
+  
+  h2 {
+    font-size: px-to-rem(36px);
+    margin-bottom: px-to-rem(30px);
+  }
+
+  p {
+    font-size: px-to-rem(18px);
+  }
+
+  a {
+    color: black;
+  }
+}
+
+
 // .front-page {
 //     padding-top: 20px;
 //     padding-bottom: 40px;
