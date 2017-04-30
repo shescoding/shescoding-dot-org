@@ -130,7 +130,7 @@ $tag_grey: #808080;
         color: $tag_grey;
       }
 
-      li a:hover, li a:focus {
+      li a:hover, li a:focus, li .active-tag {
         background-color: $yellow;
         text-decoration: none;
       }
@@ -247,4 +247,10 @@ $tag_grey: #808080;
 
 .resource-back {
   padding-left: 15px;
+}
+
+.breadcrumb {
+  @media (max-width: 990px) and (min-width: 768px) {
+    margin-top: 55px;
+  }
 }

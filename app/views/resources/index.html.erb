@@ -2,6 +2,14 @@
 
 <div class="resources-section container">
   <div class="row">
+    <div class="breadcrumbs col-md-12">
+      <ul class="breadcrumb">
+        <li id="category-breadcrumb">All Resources</li>
+        <li id="tag-breadcrumb" class="active">All Tags</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
     <div class="resources-sidebar col-md-3">
       <ul>
         <li class="selected" data-category="*">
@@ -29,7 +37,7 @@
             <div class="panel-tags">
               <ul>
                 <% resource.tag_list.each do |tag| %>
-                  <li><%= link_to tag, tag_path(tag) %></li>
+                  <li><%= link_to tag, tag_path(tag), class: "#{tag}-tag-link" %></li>
                 <% end %>
               </ul>
             </div>
@@ -71,6 +79,9 @@
     $('.resources-sidebar li').click(function(e) {
       filterSelectedCategory(e, currentUrl, this, $container);
     });
+
+    // Initialize Selected Tag's breadcrumb
+    initializeSelectedTagBreadcrumb(currentUrl);
 
     // Return To Top
     $('#return-to-top').click(function(e) {

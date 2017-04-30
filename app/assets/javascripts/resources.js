@@ -8,7 +8,25 @@ function initializeSelectedCategory(currentUrl, container) {
     var queryString = '*[data-category="' + newSelectedCategory + '"]';
     toggleSelectedClasses(queryString);
     container.isotope({filter: newSelectedCategory});
+    var categoryName = $(queryString + ' > a')[0].innerHTML;
+    updateCategoryBreadCrumb(categoryName);
   }
+}
+
+function initializeSelectedTagBreadcrumb(currentUrl) {
+  var indexOfTag = currentUrl.indexOf('resources/tags')
+  if (indexOfTag > -1) {
+    tagNameIndex = indexOfTag + 'resources/tags'.length + 1;
+    var encodedTagName = currentUrl.slice(tagNameIndex);
+    var decodedTagName = decodeURIComponent(encodedTagName);
+    $('#tag-breadcrumb')[0].innerHTML = decodedTagName;
+    $('.panel-tags li .' + decodedTagName + '-tag-link').addClass('active-tag');
+  }
+
+}
+
+function updateCategoryBreadCrumb(categoryName) {
+  $('#category-breadcrumb')[0].innerHTML = categoryName;
 }
 
 function toggleSelectedClasses(target) {
@@ -20,6 +38,7 @@ function filterSelectedCategory(event, currentUrl, target, container) {
   if (currentUrl.indexOf('resources/tags') < 0) {
     event.preventDefault();
     toggleSelectedClasses(target);
+    updateCategoryBreadCrumb(target.innerText);
     container.isotope({filter: target.dataset.category});
   }
 }
