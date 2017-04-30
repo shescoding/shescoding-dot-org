@@ -14,7 +14,7 @@ function initializeSelectedCategory(currentUrl, container) {
 }
 
 function initializeSelectedTagBreadcrumb(currentUrl) {
-  var indexOfTag = currentUrl.indexOf('resources/tags')
+  var indexOfTag = currentUrl.indexOf('resources/tags');
   if (indexOfTag > -1) {
     tagNameIndex = indexOfTag + 'resources/tags'.length + 1;
     var encodedTagName = currentUrl.slice(tagNameIndex);
