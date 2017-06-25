@@ -7,3 +7,5 @@
 // Bootstrap variables
 //
 $navbar-height: 70px;
+$brand-height-small: 25px;
+$vpad: ($navbar-height - $brand-height-small) / 2;
