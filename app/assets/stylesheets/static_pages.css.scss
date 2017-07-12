@@ -49,17 +49,24 @@
 //     width: 100%;
 // }
 //convert px value to rem value
-
+@import "./_variables";
 @import "./connect";
 @function px-to-rem($px, $base:10px){
   @return ($px / $base) * 1rem;
 }
 
+/* These are meant to be base styles for links */
+.template a {
+  color: $green;
+  &:hover {
+    color: $green;  
+  }
+}
+
 .featured-list {
-    padding: px-to-rem(5px);
 
     h3 {
-        margin: px-to-rem(5px) 0;
+        margin-bottom: px-to-rem(5px);
     }
 
     @media (min-width: 50em){ //~800px
