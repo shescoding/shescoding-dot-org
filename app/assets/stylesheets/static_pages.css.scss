@@ -2,6 +2,9 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "./_variables";
+@import "./_mixins";
+
 $base-font-size: 10px;
 
 //convert px value to rem value
@@ -11,7 +14,7 @@ $base-font-size: 10px;
 
 .site-section {
   text-align: center;
-  
+
   h2 {
     font-size: px-to-rem(36px);
     margin-bottom: px-to-rem(30px);
@@ -23,7 +26,43 @@ $base-font-size: 10px;
 
   a {
     color: black;
+    @include arrow();
   }
+
+  &.resources {
+    //resources-specific styles here
+    background-color: red; //temp color
+  }
+
+  &.community {
+    //community-specific styles here
+    background-color: green; // temp color
+  }
+
+  &.mentorship {
+    //mentorship-specific styles here
+    background-color: blue; // temp color
+  }
+
+  @media (min-width: $width-md) {
+
+    padding: 0 px-to-rem(20px);
+
+    .primary {
+      padding: px-to-rem(20px) px-to-rem(30px);
+    }
+  }
+
+  //use this for larger screen sizes, define the width of the screen in _variables.scss
+  @media (min-width: $width-lg) {
+
+  }
+}
+
+//testing only -- this is not the "real" featured-list
+.featured-list {
+  display: block;
+  background-color: pink;
 }
 
 
