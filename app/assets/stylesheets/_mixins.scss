@@ -1,0 +1,20 @@
+@mixin arrow() {
+  position: relative;
+  text-indent: -9999999rem;
+  &::before { // the line of the arrow
+    content: '';
+    position: absolute;
+    top: calc(50% - .2rem); //change the rem value when we know the height
+    height: .4rem;
+    width: 2rem;
+    background-color: black;
+  }
+  &::after { // the head of the arrow
+    content: '>';
+    position: absolute;
+    top: calc(50% - .5rem); //change the rem value when we know the height
+    height: 1rem;
+    width: 1rem;
+    color: black; 
+  }
+}
