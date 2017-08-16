@@ -2,6 +2,34 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.top-right-sidebar {
+  @media (min-width: 34.375em) {
+    display: flex;
+    padding: 0.938rem;
+
+    .primary {
+      order: 1;
+      width: 66.666%;
+      padding-right: 0.469rem;
+    }
+
+    .sidebar {
+      order: 2;
+      width: 33.333%;
+      padding-left: 0.469rem;
+    }
+  }
+  @media (min-width: 63.75em) {
+    .primary {
+      width: 75%;
+    }
+
+    .sidebar {
+      width: 25%;
+    }
+  }
+}
+
 // .front-page {
 //     padding-top: 20px;
 //     padding-bottom: 40px;
