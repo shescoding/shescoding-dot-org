@@ -37,6 +37,13 @@ group :development do
   gem "binding_of_caller"
 end
 
+# Setting up rspec tests
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+
 # Tagging
 gem 'acts-as-taggable-on', '~> 3.4'
 
