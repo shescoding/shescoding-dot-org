@@ -2,10 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//convert px value to rem value
 @import "./_variables";
 @import "./connect";
 
+//convert px value to rem value
 @function px-to-rem($px, $base:10px){
   @return ($px / $base) * 1rem;
 }
