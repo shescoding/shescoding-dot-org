@@ -1,13 +1,54 @@
-<%# render "layouts/navbar", page: "" %>
+<% render "layouts/navbar", page: "" %>
+
 <main class="top-right-sidebar">
   <div class="sidebar">
-    <p> This is the sidebar content.</p>
+    <section>
+      <h2>Purpose</h2>
+      <p>Here's the paragraph for the purpose section.</p>
+    </section>
+
+    <section>
+      <h2>What We're Working On</h2>
+      <ul>
+        <li>Thing one</li>
+        <li>Thing two</li>
+        <li>Thing three</li>
+      </ul>
+    </section>
   </div>
 
   <div class="primary">
-    <p> This is the primary content.</p>
+    <section class="site-section resources">
+      <h2>Resources</h2>
+      <p>Here's the paragraph for the resources section.</p>
+      <a href="#">Join Us</a>
+    </section>
+
+    <section class="site-section community">
+      <h2>Community</h2>
+      <p>Here's the paragraph for the community section.</p>
+      <a href="#">Community</a>
+    </section>
+
+    <section class="site-section mentorship">
+      <h2>Mentorship</h2>
+      <p>Here's the paragraph for the mentorship section.</p>
+      <a href="#">Mentorship</a>
+    </section>
+
+    <section class="as-seen-on">
+      <h2>As Seen On <cite>CODE: Debugging the Gender Gap</cite></h2>
+      <p>CODE documentary exposes the dearth of American female and minority software engineers and explores the reasons for this gender gap. CODE raises the question: what would society gain from having more women and minorities code?</p>
+      <a href="https://www.codedoc.co/">View the Documentary</a>
+      <a href="https://vimeo.com/136884902">
+        <img src="" alt="Watch the Video">
+      </a>
+    </section>
   </div>
 </main>
+
+
+
 <!-- <div class="container front-page page">
     <div class="col-sm-12">
         <div class="row">

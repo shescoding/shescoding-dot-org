@@ -2,6 +2,14 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+    color: #333333;
+}
+
+a:link {
+    color: #333333;
+}
+
 .top-right-sidebar {
   @media (min-width: 34.375em) {
     display: flex;
