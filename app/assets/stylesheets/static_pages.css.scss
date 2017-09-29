@@ -6,6 +6,18 @@
 @import "./_functions";
 @import "./_mixins";
 
+.btn {
+  // background-color:
+  border-color: #333333;
+  border-width: 1%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
 * {
   color: #333333;
 }
