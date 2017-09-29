@@ -28,7 +28,7 @@
   padding: (3.125rem + 4.375rem) 0.938rem 0.938rem 0.938rem;
 
   a:link {
-    color: #333333 !important;
+    color: #83c057;
   }
 
   @media (min-width: 34.375em) {
@@ -80,15 +80,21 @@
   }
 
   &.resources { //resources-specific styles here
-    // .btn {
-    //   border-color:
-    // }
+    .cta {
+      border-color: #fbcc3b;
+    }
   }
 
   &.community { //community-specific styles here
+    .cta {
+      //border-color: 
+    }
   }
 
   &.mentorship { //mentorship-specific styles here
+    .cta {
+      //border-color: 
+    }
   }
 
   @media (min-width: 38.75em) {
@@ -96,6 +102,23 @@
 
     .summary {
       padding: px-to-rem(20px) px-to-rem(30px);
+    }
+  }
+}
+
+.featured-list {
+  padding-left: 1.438rem;
+  
+  li {
+    text-align: left;
+  }
+
+  @media (min-width: 34.375em) {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      flex-basis: 50%;
     }
   }
 }
