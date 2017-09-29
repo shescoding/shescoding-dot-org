@@ -10,10 +10,9 @@
   color: #333333;
 }
 
-.btn {
+.cta {
   // background-color:
-  border-color: #333333;
-  border-width: 1%;
+  border: 1px solid #333333;
   cursor: pointer;
 
   &:hover, &:focus {
