@@ -6,24 +6,12 @@
 @import "./_functions";
 @import "./_mixins";
 
-.btn {
-  // background-color:
-  border-color: #333333;
-  border-width: 1%;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #333333;
-  color: #ffffff;
-}
-
 * {
   color: #333333;
 }
 
 a:link {
-  color: #333333;
+  color: #333333 !important; //rails is compiling this before another selector declaration
 }
 
 .top-right-sidebar {
@@ -77,7 +65,7 @@ a:link {
     font-size: px-to-rem(18px);
   }
 
-  a {
+  .btn {
     color: black;
     @include arrow();
   }
@@ -97,5 +85,21 @@ a:link {
     .summary {
       padding: px-to-rem(20px) px-to-rem(30px);
     }
+  }
+}
+
+.btn {
+  // background-color:
+  border-color: #333333;
+  border-width: 1%;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  &:active {
+
   }
 }
