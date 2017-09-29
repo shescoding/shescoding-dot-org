@@ -1,13 +1,17 @@
-// // Place all the styles related to the static_pages controller here.
-// // They will automatically be included in application.css.
-// // You can use Sass (SCSS) here: http://sass-lang.com/
+// // // Place all the styles related to the static_pages controller here.
+// // // They will automatically be included in application.css.
+// // // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "./_variables";
+@import "./_functions";
+@import "./_mixins";
 
 * {
-    color: #333333;
+  color: #333333;
 }
 
 a:link {
-    color: #333333;
+  color: #333333;
 }
 
 .top-right-sidebar {
@@ -29,11 +33,11 @@ a:link {
     }
   }
 
-  @media (min-width: 48rem) {
+  @media (min-width: 48em) {
     padding-top: 3.125rem + 8.75rem;
   }
 
-  @media (min-width: 62rem) {
+  @media (min-width: 62em) {
     padding-top: 3.125rem + 4.375rem;
   }
 
@@ -44,6 +48,45 @@ a:link {
 
     .sidebar {
       width: 25%;
+    }
+  }
+}
+
+.site-section {
+  display: block;
+  text-align: center;
+
+  h2 {
+    font-size: px-to-rem(36px);
+    margin-bottom: px-to-rem(30px);
+  }
+
+  p {
+    font-size: px-to-rem(18px);
+  }
+
+  a {
+    color: black;
+    @include arrow();
+  }
+
+  &.resources { //resources-specific styles here
+    
+  }
+
+  &.community { //community-specific styles here
+    
+  }
+
+  &.mentorship { //mentorship-specific styles here
+    
+  }
+
+  @media (min-width: 38.75em) {
+    padding: 0 px-to-rem(20px);
+
+    .summary {
+      padding: px-to-rem(20px) px-to-rem(30px);
     }
   }
 }
