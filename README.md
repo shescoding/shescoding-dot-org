@@ -147,3 +147,25 @@ Please do not commit and push directly to the master branch! The hooks/pre-commi
 $ cp hooks/pre-commit .git/hooks/
 $ chmod +x .git/hooks/pre-commit
 ```
+
+### Running the tests
+
+In order to run the tests, make sure all the gems are installed and the test environment is set up properly with working database. 
+
++ Set up:
+
+```
+$ bundle install
+$ bundle exec rake db:create RAILS_ENV=test
+$ bundle exec rake db:schema:load RAILS_ENV=test
+```
+
++ Run the tests with [RSpec Rails](https://github.com/rspec/rspec-rails):
+
+```
+$ bundle exec rspec -fd
+```
+
+Notes:
++ ```-fd``` stands for full details. You can also run tests by using commands ```bundle exec rspec``` or ```bundle exec rake``` to get an overview without details of each test.
++ If you are having trouble running bundle install, please make sure Nokogiri gem is installed on your machine. Full instructions can be found [here](http://www.nokogiri.org/tutorials/installing_nokogiri.html).

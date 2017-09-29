@@ -35,7 +35,7 @@ tag_list = ['advice', 'advocacy', 'African-American', 'after-school programs', '
     'entrepreneurs', 'feedback', 'fellows', 'feminism', 'financial success', 'flexibility',  
     'forum', 'free', 'game development', 'game industry', 'game jams', 'geek', 'gender', 
     'gender equality', 'gender gap', 'gender stereotypes', 'girls', 'global', 'grants', 'hackathons', 
-    'high-school', 'hiring', 'India', 'influence', 'in-person', 'international', 'internships', 
+    'high school', 'hiring', 'India', 'influence', 'in-person', 'international', 'internships',
     'interviewing', 'job board', 'Latino/a', 'leadership', 'lean in', 'learning tracks', 
     'local', 'mailing list', 'makerfests', 'math', 'middle-school', 'minorities', 'misogyny', 
     'motivation', 'movement', 'mothers', 'negotiation', 'nerds', 'networking', 'node.js', 
@@ -305,7 +305,7 @@ res = Resource.find_or_create_by(title: 'Code HS',
 res.categories << Category.find_or_create_by(name: 'Learning')
 res.categories << Category.find_or_create_by(name: 'Kids')
 res.categories << Category.find_or_create_by(name: 'Coding')
-res.tag_list = ['paid courses', 'online classes', 'high-school', 'learning tracks', 'technical skills']
+res.tag_list = ['paid courses', 'online classes', 'high school', 'learning tracks', 'technical skills']
 res.save
 
 res = Resource.find_or_create_by(title: 'Black Girls Code', 
@@ -351,7 +351,7 @@ res.categories << Category.find_or_create_by(name: 'Events')
 res.categories << Category.find_or_create_by(name: 'Learning')
 res.categories << Category.find_or_create_by(name: 'Kids')
 res.categories << Category.find_or_create_by(name: 'Mentorship')
-res.tag_list = ['women', 'camps', 'workshops', 'local', 'girls', 'free', 'high-school']
+res.tag_list = ['women', 'camps', 'workshops', 'local', 'girls', 'free', 'high school']
 res.save
 
 res = Resource.find_or_create_by(title: 'Hack Hands', 
@@ -535,7 +535,7 @@ res = Resource.find_or_create_by(title: 'Latinas in STEM',
 res.categories << Category.find_or_create_by(name: 'Communities')
 res.categories << Category.find_or_create_by(name: 'Kids')
 res.categories << Category.find_or_create_by(name: 'Events')
-res.tag_list = ['youth programs', 'local', 'STEM', 'Latino/a', 'diversity', 'spanish', 'technology', 'high-school', 'middle-school']
+res.tag_list = ['youth programs', 'local', 'STEM', 'Latino/a', 'diversity', 'spanish', 'technology', 'high school', 'middle-school']
 res.save
 
 res = Resource.find_or_create_by(title: 'PowertoFly', 
@@ -609,7 +609,7 @@ res = Resource.find_or_create_by(title: 'Square Code Camp',
 res.categories << Category.find_or_create_by(name: 'Coding')
 res.categories << Category.find_or_create_by(name: 'Learning')
 res.categories << Category.find_or_create_by(name: 'Events')
-res.tag_list = ['free', 'high-school', 'in-person', 'college', 'bootcamp', 'women', 'companies', 'diversity']
+res.tag_list = ['free', 'high school', 'in-person', 'college', 'bootcamp', 'women', 'companies', 'diversity']
 res.save
 
 res = Resource.find_or_create_by(title: 'Silicon Valley Code Camp', 
@@ -629,7 +629,7 @@ res = Resource.find_or_create_by(title: 'CodeNow',
 res.categories << Category.find_or_create_by(name: 'Events')
 res.categories << Category.find_or_create_by(name: 'Coding')
 res.categories << Category.find_or_create_by(name: 'Mentorship')
-res.tag_list = ['local', 'workshops', 'youth programs', 'high-school', 'minorities', 'diversity', 'free', 'programming support']
+res.tag_list = ['local', 'workshops', 'youth programs', 'high school', 'minorities', 'diversity', 'free', 'programming support']
 res.save
 
 res = Resource.find_or_create_by(title: 'Decoded - Demistifying the Digital World', 
@@ -650,7 +650,7 @@ res.categories << Category.find_or_create_by(name: 'Coding')
 res.categories << Category.find_or_create_by(name: 'Learning')
 res.categories << Category.find_or_create_by(name: 'Events')
 res.categories << Category.find_or_create_by(name: 'Kids')
-res.tag_list = ['high-school', 'corporate training', 'mobile development', 'local', 'in-person', 'technical skills']
+res.tag_list = ['high school', 'corporate training', 'mobile development', 'local', 'in-person', 'technical skills']
 res.save
 
 res = Resource.find_or_create_by(title: 'Girls Make Games', 
@@ -672,7 +672,7 @@ res.categories << Category.find_or_create_by(name: 'Kids')
 res.categories << Category.find_or_create_by(name: 'Coding')
 res.categories << Category.find_or_create_by(name: 'Mentorship')
 res.categories << Category.find_or_create_by(name: 'Events')
-res.tag_list = ['non-profit', 'local', 'women', 'high-school', 'diversity', 'in-person', 'camps', 'girls']
+res.tag_list = ['non-profit', 'local', 'women', 'high school', 'diversity', 'in-person', 'camps', 'girls']
 res.save
 
 res = Resource.find_or_create_by(title: 'Iron Hack', 
@@ -1070,11 +1070,39 @@ res.save
 
 res = Resource.find_or_create_by(title: 'Tynker', url: 'www.tynker.com', 
 	description: 'Makes learning to code fun and easy -- at home, school, after school and camps. Tynker offers interactive courses for children to learn programming at their own pace at home as well as a grade based curriculum for schools.', 
-	source: 'Caltech', public: true)
+	source: 'Tynker', public: true)
 res.categories << Category.find_or_create_by(name: 'Kids')
 res.categories << Category.find_or_create_by(name: 'Learning')
 res.categories << Category.find_or_create_by(name: 'Coding')
 res.categories << Category.find_or_create_by(name: 'Gaming')
 res.tag_list = ["online classes", "curriculum", "game development", "projects", "middle-school", "on-demand"]
+res.save
+
+res = Resource.find_or_create_by(title: 'Expand Your Horizons Network', url: 'https://www.ocf.berkeley.edu/~eyh/index.html',
+																 description: 'Expanding Your Horizons conferences are designed to introduce 5th-8th grade girls to careers in science, technology, engineering and mathematics, (STEM).',
+																 source: 'UC Berkeley', public: true)
+res.categories << Category.find_or_create_by(name: 'Kids')
+res.categories << Category.find_or_create_by(name: 'Learning')
+res.categories << Category.find_or_create_by(name: 'Events')
+res.tag_list = ["conferences", "youth programs", "girls", "advocacy", "influence", "in-person", "STEM"]
+res.save
+
+res = Resource.find_or_create_by(title: 'TechWomen', url: 'https://www.techwomen.org/',
+																 description: "TechWomen empowers, connects, and supports the next generation of women leaders in science, technology, engineering, and mathematics (STEM) from Africa, Central Asia, and the Middle East by providing them the access and opportunity needed to advance their careers, pursue their dreams, and inspire women and girls in their communities. Through mentorship and exchange, TechWomen strengthens participants’ professional capacity, increases mutual understanding between key networks of professionals, and expands girls’ interest in STEM careers by exposing them to female role models.",
+																 source: "U.S. Department of State's Bureau of Educational and Cultural Affairs", public: true)
+res.categories << Category.find_or_create_by(name: 'Career Advancement')
+res.categories << Category.find_or_create_by(name: 'Communities')
+res.categories << Category.find_or_create_by(name: 'Mentorship')
+res.tag_list = ["advocacy", "allies", "ambassadors", "women", "social impact", "leadership", "STEM"]
+res.save
+
+res = Resource.find_or_create_by(title: 'Everybody Code Now!', url: 'http://everybodycodenow.github.io/',
+																 description: 'Everybody Code Now! Is a non-profit organization that works to empower the next generation of leaders in computing to transform their future and help lead their communities towards a new era of technical expertise and entrepreneurship from exposure to basic programming skills. Through Everybody Code Now’s various camps, workshops, and mentorship opportunities, Everybody Code Now shows students that with determination, hard work, and a couple lines of code, the future is theirs for the making.',
+																 source: 'Everybody Code Now!', public: true)
+res.categories << Category.find_or_create_by(name: 'Mentorship')
+res.categories << Category.find_or_create_by(name: 'Learning')
+res.categories << Category.find_or_create_by(name: 'Events')
+res.categories << Category.find_or_create_by(name: 'Kids')
+res.tag_list = ["youth programs", "girls", "ambassadors", "women", "social impact", "leadership", "non-profit", "camps", "workshops"]
 res.save
 
