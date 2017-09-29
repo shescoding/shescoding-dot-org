@@ -10,25 +10,40 @@
   color: #333333;
 }
 
-.cta {
-  // background-color:
-  border: 1px solid #333333;
-  cursor: pointer;
-
-  &:hover, &:focus {
-    background-color: #333333;
-    color: #ffffff;
-  }
-
-  &:active {
-  }
-}
-
 .top-right-sidebar {
   padding: (3.125rem + 4.375rem) 0.938rem 0.938rem 0.938rem;
 
   a:link {
     color: #83c057;
+  }
+
+  .cta, .cta:link {
+    display: inline-block;
+    font-size: 2rem;
+    color: #333333;
+    background-color: transparent;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 1.75rem;
+    padding-right: 5rem;
+    cursor: pointer;
+    @include arrow;
+
+
+    &:hover, &:focus {
+      background-color: rgba(#333333, 0.6);
+      color: #ffffff;
+      text-decoration: none;
+
+      &::after {
+        color: #ffffff;
+      }
+    }
+
+    &:active {
+      background-color: rgba(#333333, 1);
+
+    }
   }
 
   @media (min-width: 34.375em) {
@@ -87,13 +102,13 @@
 
   &.community { //community-specific styles here
     .cta {
-      //border-color: 
+      //border-color:
     }
   }
 
   &.mentorship { //mentorship-specific styles here
     .cta {
-      //border-color: 
+      //border-color:
     }
   }
 
@@ -108,7 +123,7 @@
 
 .featured-list {
   padding-left: 1.438rem;
-  
+
   li {
     text-align: left;
   }

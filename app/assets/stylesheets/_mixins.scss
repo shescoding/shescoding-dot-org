@@ -1,13 +1,12 @@
 @mixin arrow() {
   position: relative;
-  text-indent: -9999999rem;
-  
+
   &::after { //the head of the arrow
     content: '>';
+    font-size: 4.5rem;
     position: absolute;
-    top: calc(50% - .5rem); //change the rem value when we know the height
-    height: 1rem;
-    width: 1rem;
-    color: black; 
+    top: calc(50% - 3.25rem); //change the rem value when we know the height
+    right: 1.75rem;
+    color: #333333;
   }
 }
