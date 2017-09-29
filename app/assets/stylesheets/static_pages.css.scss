@@ -10,12 +10,27 @@
   color: #333333;
 }
 
-a:link {
-  color: #333333 !important; //rails is compiling this before another selector declaration
+.btn {
+  // background-color:
+  border-color: #333333;
+  border-width: 1%;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  &:active {
+  }
 }
 
 .top-right-sidebar {
   padding: (3.125rem + 4.375rem) 0.938rem 0.938rem 0.938rem;
+
+  a:link {
+    color: #333333 !important;
+  }
 
   @media (min-width: 34.375em) {
     display: flex;
@@ -65,12 +80,10 @@ a:link {
     font-size: px-to-rem(18px);
   }
 
-  .btn {
-    color: black;
-    @include arrow();
-  }
-
   &.resources { //resources-specific styles here
+    // .btn {
+    //   border-color: 
+    // }
   }
 
   &.community { //community-specific styles here
@@ -85,21 +98,5 @@ a:link {
     .summary {
       padding: px-to-rem(20px) px-to-rem(30px);
     }
-  }
-}
-
-.btn {
-  // background-color:
-  border-color: #333333;
-  border-width: 1%;
-  cursor: pointer;
-
-  &:hover, &:focus {
-    background-color: #333333;
-    color: #ffffff;
-  }
-
-  &:active {
-
   }
 }
