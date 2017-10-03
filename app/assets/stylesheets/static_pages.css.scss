@@ -15,7 +15,13 @@
 }
 
 h2 {
-  margin-top: 0 !important;
+  margin: 0 0 px-to-rem(30px) 0 !important;
+  font-size: px-to-rem(36px);
+  text-align: center;
+}
+
+a, a:link {
+  color: #83c057;
 }
 
 ul {
@@ -25,6 +31,22 @@ ul {
     text-align: left;
   }
 }
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
 //-------------------------------------------------------------
 // CTA Component
@@ -61,11 +83,7 @@ ul {
 // Top Right Sidebar Template
 //-------------------------------------------------------------
 .top-right-sidebar {
-  padding: (5rem + px-to-rem(70px)) 0.938rem 0.938rem 0.938rem;
-
-  a:link {
-    color: #83c057;
-  }
+  padding: (5rem + px-to-rem(70px)) 0.938rem 5rem 0.938rem;
 
   .cta, .cta:link {
     color: #333333;
@@ -123,12 +141,6 @@ ul {
 .site-section {
   margin-bottom: px-to-rem(70px);
 
-  h2 {
-    font-size: px-to-rem(36px);
-    margin-bottom: px-to-rem(30px);
-    text-align: center;
-  }
-
   p {
     font-size: px-to-rem(18px);
     text-align: center;
@@ -137,6 +149,26 @@ ul {
   .cta {
     display: table;
     margin: px-to-rem(50px) auto;
+  }
+
+  &.resources {
+    .cta {
+      border-color: #fbcc3b;
+
+      &::after {
+        color: #fbcc3b;
+      }
+    }
+  }
+
+  &.mentorship {
+    .cta {
+      border-color: #83c057;
+
+      &::after {
+        color: #83c057;
+      }
+    }
   }
 
   @media (min-width: 33.75em) {
@@ -151,7 +183,11 @@ ul {
 .featured-list {
   margin-bottom: px-to-rem(50px);
 
-  @media (min-width: 62em) {
+  a, a:link {
+    color: #83c057;
+  }
+
+  @media (min-width: 38.75em) {
     display: flex;
     flex-wrap: wrap;
 
@@ -165,6 +201,38 @@ ul {
       &:nth-of-type(even) {
         margin-left: 0.469rem;
       }
+    }
+  }
+}
+
+
+//-------------------------------------------------------------
+// As Seen On Component
+//-------------------------------------------------------------
+.as-seen-on {
+  a, a:link {
+    color: #83c057;
+  }
+
+  .description {
+    margin-bottom: px-to-rem(50px);
+  }
+
+  @media (min-width: 75em) {
+    display: flex;
+
+    h2 {
+      text-align: left;
+    }
+
+    .description {
+      flex-basis: 50%;
+      padding-right: px-to-rem(15px);
+    }
+    .iframe-container {
+      flex-basis: 50%;
+      padding-left: px-to-rem(15px);
+      padding-bottom: 29.25%;
     }
   }
 }

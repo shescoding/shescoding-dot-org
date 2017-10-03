@@ -1,7 +1,7 @@
 @mixin arrow() {
   position: relative;
 
-  &::after { //the head of the arrow
+  &::after {
     content: '>';
     font-size: 4.5rem;
     position: absolute;
