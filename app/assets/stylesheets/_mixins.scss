@@ -3,10 +3,10 @@
 
   &::after {
     content: '>';
-    font-size: 4.5rem;
+    font-size: 3.2rem;
     position: absolute;
-    top: calc(50% - 3.25rem); //change the rem value when we know the height
-    right: 1.75rem;
-    color: #333333;
+    top: calc(50% - 2.45rem); //change the rem value when we know the height
+    right: px-to-rem(15px);
+    color: #fff;
   }
 }
