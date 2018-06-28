@@ -110,7 +110,7 @@ resource provided above.
   + Clone the repository:
 
     ```
-    $ git clone https://github.com/<your_github_username>/shescoding-dot-org.git
+    $ git clone https://github.com/shescoding/shescoding-dot-org.git
     ```
   + Add the upstream repository:
 
