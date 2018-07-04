@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Required for AWS Elastic Beanstalk deployment
+gem 'puma'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use postgresql as the database for Active Record
