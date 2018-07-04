@@ -55,6 +55,45 @@ ol {
   }
 }
 
+//-------------------------------------------------------------
+// Image Styles
+//-------------------------------------------------------------
+.image-container {
+  position: relative;
+  padding-bottom: 25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.ui-rectangle-box{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-right: 20px;
+    align: left;
+}
+
+.ui-rectangle-box:before{
+    content: "";
+    display: inline-block;
+    padding-top: 80%;
+}
+
+.ui-rectangle-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.ui-persona-col{
+    padding-right: 5px !important;
+}
+
+.sidebar-img {
+    padding-left: 15%;
+}
 
 //-------------------------------------------------------------
 // CTA Component
