@@ -28,4 +28,23 @@
   .navbar-collapse {
     border-top: 0;
   }
+
+  @media (min-width: 768px) and (max-width: 991px){
+    .navbar-nav {
+      li {
+        font-size: 12px;
+      }
+    }
+
+    .navbar-brand {
+      padding: floor($vpad) 10px ceil($vpad);
+
+      & {
+        img {
+          height: $brand-height-small;
+        }
+      }
+    }
+  }
 }
+
