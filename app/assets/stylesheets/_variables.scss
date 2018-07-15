@@ -3,6 +3,10 @@
 
 $base-font-size: 10px;
 $navbar-height: 70px;
+$brand-height-small: 25px;
+$vpad: ($navbar-height - $brand-height-small) / 2;
+
+//colors of the site
 $green: #83c057; /* green background */
 $black: #1E2028;
 $yellow: #FBCC3B;
