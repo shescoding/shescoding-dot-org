@@ -1,11 +1,7 @@
 //
 // MENTORSHIP PAGE
 //
-
-$black: #1E2028;
-$red: #DB2C38;
-$green: #83C057;
-$blue: #00A0BE;
+@import "./_variables";
 
 .mentorship-section-title {
   text-align: center;
@@ -16,10 +12,6 @@ $blue: #00A0BE;
 
 .mentorship-body {
   font-size: 18px;
-}
-
-.page {
-  width: 100%;
 }
 
 p > a {

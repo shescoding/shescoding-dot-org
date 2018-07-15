@@ -6,12 +6,11 @@
 @import "./_functions";
 @import "./_mixins";
 
-
 //-------------------------------------------------------------
 // Base Styles
 //-------------------------------------------------------------
 * {
-  color: #333333;
+  color: $grey;
 }
 
 h2 {
@@ -21,7 +20,7 @@ h2 {
 }
 
 a, a:link {
-  color: #83c057;
+  color: $green;
 }
 
 ul {
@@ -55,55 +54,36 @@ ol {
   }
 }
 
-//-------------------------------------------------------------
-// Image Styles
-//-------------------------------------------------------------
-.image-container {
-  position: relative;
-  padding-bottom: 25%;
-  height: 0;
-  overflow: hidden;
+main {
+  margin-top: 125px;
 }
 
-.ui-rectangle-box{
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-right: 20px;
-    align: left;
+.vertical-align {
+  display: flex;
+  align-items: center;
 }
 
-.ui-rectangle-box:before{
-    content: "";
-    display: inline-block;
-    padding-top: 80%;
+.mb-3 {
+  margin-bottom: 1rem!important;
 }
 
-.ui-rectangle-content{
-    position:  absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+.mb-5 {
+  margin-bottom: 2rem!important;
 }
 
-.ui-persona-col{
-    padding-right: 5px !important;
-}
-
-.sidebar-img {
-    padding-left: 15%;
+.mt-5 {
+  margin-top: 2rem!important;
 }
 
 //-------------------------------------------------------------
-// CTA Component
+// CTA Component | Homepage
 //-------------------------------------------------------------
 .cta {
   display: inline-block;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #fff;
-  background-color: #83c057;
+  background-color: $green;
   border-radius: 5px;
   padding: px-to-rem(15px);
   padding-right: px-to-rem(35px);
@@ -112,67 +92,17 @@ ol {
 
   &:hover, &:focus {
     color: #fff;
-    background-color: lighten(#83c057, 5%);
+    background-color: lighten($green, 5%);
     text-decoration: none;
   }
 
   &:active {
-    background-color: #83c057;
+    background-color: $green;
   }
 }
 
-
 //-------------------------------------------------------------
-// Top Right Sidebar Template
-//-------------------------------------------------------------
-.top-right-sidebar {
-  padding: (5rem + px-to-rem(70px)) 0.938rem 5rem 0.938rem;
-
-  @media (min-width: 48em) {
-    padding: (5rem + px-to-rem(140px)) px-to-rem(15px) 5rem px-to-rem(15px);
-    max-width: px-to-rem(750px);
-    margin: 0 auto;
-  }
-
-  @media (min-width: 62em) {
-    display: flex;
-    max-width: px-to-rem(970px);
-    padding-top: 5rem + px-to-rem(70px);
-
-    .primary {
-      order: 1;
-      width: 66.666%;
-      padding-right: px-to-rem(15px);
-    }
-
-    .sidebar {
-      top: 5rem + px-to-rem(70px);
-      order: 2;
-      width: 33.333%;
-      padding-left: px-to-rem(15px);
-
-      h2, p {
-        text-align: left;
-      }
-    }
-  }
-
-  @media (min-width: 75em) {
-    max-width: px-to-rem(1170px);
-
-    .primary {
-      width: 75%;
-    }
-
-    .sidebar {
-      width: 25%;
-    }
-  }
-}
-
-
-//-------------------------------------------------------------
-// Site Section Component
+// Site Section Component | Homepage
 //-------------------------------------------------------------
 .site-section {
   margin-bottom: px-to-rem(70px);
@@ -186,72 +116,16 @@ ol {
     margin: px-to-rem(50px) auto;
   }
 
-  // &.resources {
-  //   .cta {
-  //     border-color: #fbcc3b;
-
-  //     &::after {
-  //       color: #fbcc3b;
-  //     }
-
-  //     &:hover, &:focus {
-  //       background-color: rgba(#fbcc3b, 0.9);
-  //       color: #333;
-
-  //       &::after {
-  //         color: #333;
-  //       }
-  //     }
-
-  //     &:active {
-  //       background-color: rgba(#fbcc3b, 1);
-  //     }
-  //   }
-  // }
-
-  // &.mentorship {
-  //   .cta {
-  //     border-color: #83c057;
-
-  //     &::after {
-  //       color: #83c057;
-  //     }
-
-  //     &:hover, &:focus {
-  //       background-color: rgba(#83c057, 0.9);
-  //       color: #333;
-
-  //       &::after {
-  //         color: #333;
-  //       }
-  //     }
-
-  //     &:active {
-  //       background-color: rgba(#83c057, 1);
-  //     }
-  //   }
-  // }
-
   @media (min-width: 33.75em) {
     margin-bottom: px-to-rem(90px);
   }
 }
 
-
 //-------------------------------------------------------------
-// Featured List Component
+// Featured List Component | Homepage
 //-------------------------------------------------------------
 .featured-list {
   margin-bottom: px-to-rem(50px);
-
-  a, a:link {
-    color: #83c057;
-
-    &:hover, &:focus {
-      color: #83c057;
-      text-decoration: underline;
-    }
-  }
 
   @media (min-width: 38.75em) {
     display: flex;
@@ -271,34 +145,25 @@ ol {
   }
 }
 
-
 //-------------------------------------------------------------
-// Sidebar List Component
+// Force green links on ul, ol | Homepage
 //-------------------------------------------------------------
-.sidebar-list {
+.green-links {
   a, a:link {
-    color: #83c057;
+    color: $green;
 
     &:hover, &:focus {
-      color: #83c057;
+      color: $green;
       text-decoration: underline;
     }
   }
 }
 
-
 //-------------------------------------------------------------
-// As Seen On Component
+// As Seen On Component | Homepage
 //-------------------------------------------------------------
 .as-seen-on {
-  a, a:link {
-    color: #83c057;
-
-    &:hover, &:focus {
-      color: #83c057;
-      text-decoration: underline;
-    }
-  }
+  margin-bottom: 0;
 
   .description {
     margin-bottom: px-to-rem(50px);

@@ -2,7 +2,7 @@
 // HOW PAGE
 //
 
-$green: #83C057;
+@import "./_variables";
 
 .how-section-title {
   text-align: center;
@@ -22,7 +22,7 @@ $green: #83C057;
   word-spacing: 10px;
   padding-top: 50px;
   a, a:link, a:hover {
-    color: black;
+    color: $black;
   }
   a:hover {
     text-decoration: none;
@@ -30,10 +30,6 @@ $green: #83C057;
   .active {
     text-decoration: underline;
   }
-}
-
-.page {
-  width: 100%;
 }
 
 p > a {
@@ -53,7 +49,6 @@ p > a:focus {
   padding-top: 15px;
 }
 .connect_icons {
-  width: 80%;
   list-style: none;
   display: inline;
   padding: 0;
@@ -107,8 +102,8 @@ p > a:focus {
 //media queries
 
 @media (max-width: 500px) {
-  .connect img {
-  width: 35px;
-  margin: 5px 10px;
-}
+    .connect img {
+      width: 35px;
+      margin: 5px 10px;
+  }
 }
