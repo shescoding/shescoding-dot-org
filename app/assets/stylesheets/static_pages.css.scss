@@ -82,7 +82,7 @@ main {
   display: inline-block;
   font-size: 1.5rem;
   text-transform: uppercase;
-  color: #fff;
+  color: white;
   background-color: $green;
   border-radius: 5px;
   padding: px-to-rem(15px);
@@ -91,7 +91,7 @@ main {
   @include arrow;
 
   &:hover, &:focus {
-    color: #fff;
+    color: white;
     background-color: lighten($green, 5%);
     text-decoration: none;
   }
