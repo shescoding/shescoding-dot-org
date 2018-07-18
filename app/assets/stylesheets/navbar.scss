@@ -1,7 +1,7 @@
-@import "./variables";
+@import "./_variables";
 
 .ui-shescoding-nav.navbar {
-  background: black;
+  background: $green;
   font-family: 'ArcherLight';
 
   .navbar-nav > li {
