@@ -3,7 +3,7 @@
   <main class="container">
     <div class="row">
       <div class="col-md-3 col-md-offset-1 col-md-push-8 mb-5">
-        <section>
+        <section class="section site-section">
           <div class="row col hidden-xs hidden-sm">
             <h2>Purpose</h2>
             <p>She's Coding is a nonprofit organization with the main goal to help close the gender gap in tech via:</p>
@@ -35,22 +35,23 @@
               </div>
             </div>
         </section>
-        <section>
-            <h2>What We're Working&nbsp;On</h2>
+        <section class="section site-section">
+            <h2>What's New?</h2>
+            <p>Summer 2018:</p>
             <ul class="green-links">
               <li>Launching our
-                <a href="https://www.eventbrite.com/e/shes-coding-summer-code-a-thon-connect-collaborate-code-women-only-tickets-47359093323"
+                <a href="https://www.eventbrite.com/o/shes-coding-16743334622"
                   target="_blank">Seattle Summer Code-a-thon</a>, which runs from July to September 2018.</li>
               <li>Launching a new
                 <a href="https://www.meetup.com/shescoding-eastside/" target="_blank">Meetup</a> on Seattle's Eastside.</li>
-              <li>Developing new features for this website, keep a lookout for changes such as an events page, new resources,
+              <li>Developing new features for this website - keep a lookout for changes such as an events page, new resources,
                 and others.
               </li>
             </ul>
         </section>
       </div>
       <div class="col-md-8 col-md-pull-4">
-          <section class="mb-5">
+          <section class="mb-5 hidden-xs hidden-sm">
               <div class="row text-center">
                   <div class="col-sm-4 mb-3">
                     <%= link_to image_tag("static_pages/front_page_she.png"), "resources/tags/women" %>
@@ -59,6 +60,19 @@
                     <%= link_to image_tag("static_pages/front_page_company.png"), "resources/tags/companies" %>
                   </div>
                   <div class="col-sm-4 mb-3">
+                    <%= link_to image_tag("static_pages/front_page_supporter.png"), "resources/tags/supporters" %>
+                  </div>
+                </div>
+          </section>
+          <section class="mb-5 visible-xs visible-sm">
+              <div class="row text-center">
+                  <div class="col-xs-4 mb-3">
+                    <%= link_to image_tag("static_pages/front_page_she.png"), "resources/tags/women" %>
+                  </div>
+                  <div class="col-xs-4 mb-3">
+                    <%= link_to image_tag("static_pages/front_page_company.png"), "resources/tags/companies" %>
+                  </div>
+                  <div class="col-xs-4 mb-3">
                     <%= link_to image_tag("static_pages/front_page_supporter.png"), "resources/tags/supporters" %>
                   </div>
                 </div>
