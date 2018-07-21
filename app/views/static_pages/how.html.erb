@@ -19,8 +19,14 @@
     </p>
     <br>
     <p>
-      Want to learn more or be a part of the she’s coding team? <%= link_to "Connect with us", "/connect" %>, or check out our project management systems: <%= link_to "Github", "https://github.com/shescoding", target: "_blank" %>, <%= link_to "Google Group", "https://groups.google.com/forum/#!forum/shescoding", target: "_blank" %>, <%= link_to "Trello", "https://trello.com/shescoding", target: "_blank" %>, <%= link_to "Slack", "https://shescoding.slack.com/", target: "_blank" %>.
+      Want to learn more or be a part of the she’s coding team? <%= link_to "Connect with us", "/connect" %>, or check out our project management systems: 
     </p>
+  </div>
+  <div class="connect">
+     <ul class="connect_icons">
+      <li><%= link_to image_tag("static_pages/github_logo.png"), "https://github.com/shescoding",  title: 'Github', rel: 'tooltip', class: 'tooltips', target: "_blank" %><!-- <span>She's Coding on Github</span> --></li>
+      <li><%= link_to image_tag("static_pages/trello_logo.png"), "https://trello.com/shescoding", title: 'Trello', rel: 'tooltip', target: "_blank" %></li>
+      <li><%= link_to image_tag("static_pages/slack_logo.png"), "https://shescoding.typeform.com/to/fcSCQs", title: 'Slack', rel: 'tooltip', target: "_blank" %></li>
   </div>
   <div class='how-section-title'>
     Convert understanding into action - join the She's Coding team!

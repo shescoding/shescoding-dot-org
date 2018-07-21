@@ -2,10 +2,7 @@
 // Team page
 //
 
-$black: #1E2028;
-$red: #DB2C38;
-$green: #83C057;
-$blue: #00A0BE;
+@import "./_variables";
 
 .team-section {
     padding: 100px 0;
@@ -119,6 +116,10 @@ $blue: #00A0BE;
 div.tooltips {
     position: relative;
     display: inline;
+}
+
+div.tooltip-description a{
+    color: #83c057;    
 }
 
 div.member-container {
