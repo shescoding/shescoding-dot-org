@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
 
-  before_action :set_resource, only: [:show, :edit, :update, :like, :unlike, :destroy]
+  before_action :set_resource, only: [:show, :edit, :update, :like, :destroy]
 
   # GET /resources
   # GET /resources.json
