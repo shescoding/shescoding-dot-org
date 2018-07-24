@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
 
-  before_action :set_resource, only: [:show, :edit, :update, :like, :destroy]
+  before_action :set_resource, only: [:show, :edit, :update, :like, :unlike, :destroy]
 
   # GET /resources
   # GET /resources.json
@@ -58,13 +58,7 @@ class ResourcesController < ApplicationController
   end
 
   def like
-    @resource.likes += 1
-    @resource.save
-    redirect_to resources_path
-  end
-
-  def unlike
-    @resource.likes -= 1
+    @resource.likes += params[:count].to_i
     @resource.save
     redirect_to resources_path
   end

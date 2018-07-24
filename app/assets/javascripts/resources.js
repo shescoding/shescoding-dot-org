@@ -53,94 +53,68 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
+function createNewCookie(target, resourceID){
+  document.cookie = "_shescoding_likes = {}";
+  newValue = JSON.stringify({[resourceID]: true});
+  setCookie("_shescoding_likes", newValue, 365);
+  incrementLikeinDb(target);
+}
+
 function processLike(event, target){
   event.preventDefault();
   resourceID = target.parentNode.parentNode.action.split('/').slice(-2)[0]
- 
-  //create shescoding_likes cookie if it does not exist
   if (getCookie("_shescoding_likes") === ""){
-    document.cookie = "_shescoding_likes  = {}";
-    newValue = JSON.stringify({[resourceID]: true});
-    setCookie("_shescoding_likes", newValue, 365);
-    incrementLike(event, target); 
+    createNewCookie(target, resrouceID);
   } 
-
-  //if shescoding_likes cookie does exist
   else {
-    //check if resource id exists
-    var oldCookie = getCookie("_shescoding_likes");
-    console.log(resourceID)
-    var newCookie = JSON.parse(oldCookie);
-    // console.log("current cookie", newCookie);
-
-    //if it doesn't exist, then create it and increment the like
-    if (!(newCookie.hasOwnProperty(resourceID))){
-      newCookie[resourceID] = true;
-      newValue = JSON.stringify(newCookie);
-      console.log("doesn't exist so i'm adding", newValue)
-      setCookie("_shescoding_likes", newValue, 365);
-      incrementLike(event, target); 
-    } else {
-      //if it does exist
-      //remove resource id from cookie
-      delete newCookie[resourceID];
-      newValue = JSON.stringify(newCookie);
-      // console.log("does exist so i'm removing", newValue);
-      setCookie("_shescoding_likes", newValue, 365);
-      decrementLike(event, target, resourceID);
-    }
+    updateExistingCookie(target, resourceID);
   };
 };
 
-function incrementLike(event, target) {
-  event.preventDefault();
-  var form = $(target).parents('form');
-
-  var counterEl = form.find('span')[0];
-  var newCount = 1 + parseInt(counterEl.innerText, 10);
-  counterEl.innerText = newCount;
-
-  if (newCount === 1) {
-    var button = form.find('button');
-    button.addClass('filled-heart');
-  }
-
-  $.ajax(form.attr("action"), {
+function updateLikeInDb(target, direction) {
+  updateLikesHtmlNumber(target, direction);
+  let form = $(target).parents('form');
+  let incrementUrl = form.attr("action").substring(0, form.attr("action").length-1) + direction;
+  $.ajax(incrementUrl, {
     type: "POST"
   });
 }
 
-function decrementLike(event, target, resourceID){
-  console.log("decrementing like!");
-  event.preventDefault();
+function updateExistingCookie(target, resourceID){
+  let direction;
+  var oldCookie = getCookie("_shescoding_likes");
+  var newCookie = JSON.parse(oldCookie);
+  //if resourceId does not exist in the cookie (not liked yet) add it to the cookie and increment the like
+  if (!(newCookie.hasOwnProperty(resourceID))){
+    newCookie[resourceID] = true;
+    direction = 1;
+  } else {
+    //if resource id does exist in the cookie (liked), remove that resource id from cookie
+    delete newCookie[resourceID];
+    direction = -1;
+  }
+  newValue = JSON.stringify(newCookie);
+  setCookie("_shescoding_likes", newValue, 365);
+  updateLikeInDb(target, direction); 
+}
 
-  var form = $(target).parents('form');
-  console.log("form is", form)
-
+function updateLikesHtmlNumber(target, direction){
+  let form = $(target).parents('form');
   var counterEl = form.find('span')[0];
-  var newCount = parseInt(counterEl.innerText, 10) -1;
+  var button = form.find('button');
+  var newCount = parseInt(counterEl.innerText, 10) + direction;
+  
   if (newCount >= 0){
     counterEl.innerText = newCount;
   }
 
   if (newCount === 0) {
-    var button = form.find('button');
     button.removeClass('filled-heart');
     button.addClass('heart');
   }
 
-  // $.ajax(form.attr("action"), {
-  //   type: "POST"
-  // });
-  
-  var unlike = "resources/";
-  unlike += resourceID;
-  unlike += "/unlike";
-  // console.log(unlike);
-
-  $.ajax(form.attr("action", unlike), {
-    type: "POST"
-  });
-
+  if (newCount === 1) {
+    button.addClass('filled-heart');
+  } 
 }
 
