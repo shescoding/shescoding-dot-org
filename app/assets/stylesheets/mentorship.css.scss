@@ -1,0 +1,27 @@
+//
+// MENTORSHIP PAGE
+//
+@import "./_variables";
+
+.mentorship-section-title {
+  text-align: center;
+  font-size: 36px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.mentorship-body {
+  font-size: 18px;
+}
+
+p > a {
+  color: $green;
+}
+
+p > a:hover {
+  color: $green;
+}
+
+p > a:focus {
+  color: $green;
+}

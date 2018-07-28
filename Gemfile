@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Required for AWS Elastic Beanstalk deployment
+gem 'puma'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use postgresql as the database for Active Record
@@ -37,6 +38,13 @@ group :development do
   gem "binding_of_caller"
 end
 
+# Setting up rspec tests
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+
 # Tagging
 gem 'acts-as-taggable-on', '~> 3.4'
 
@@ -54,4 +62,4 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'rails_12factor', group: :production
 
 #Use Social-Share-Button for sharing to external social sites
-gem 'social-share-button', '~>0.1.9'
+gem 'social-share-button', '~>0.2.1'

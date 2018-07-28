@@ -1,6 +1,5 @@
 // connect page
-$black: #1E2028;
-$green: #83C057;
+@import "./_variables";
 
 .connect-section-title {
     text-align: center;
@@ -23,8 +22,4 @@ p > a:link {
 
 p > a:hover {
   color: $green;
-}
-
-.page {
-	width: 100%;
 }
