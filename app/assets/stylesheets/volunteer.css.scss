@@ -14,14 +14,41 @@
   font-size: 18px;
 }
 
-p > a {
+ul > li > a {
   color: $green;
 }
 
-p > a:hover {
+ul > li > a:hover {
   color: $green;
 }
 
-p > a:focus {
+ul > li > a:focus {
   color: $green;
+}
+
+.connect {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15px;
+}
+.connect_icons {
+  list-style: none;
+  display: inline;
+  padding: 0;
+}
+
+.connect_icons > li {
+   display: inline;
+}
+
+.connect img {
+  width: 45px;
+  margin: 5px 25px;
+}
+
+@media (max-width: 500px) {
+  .connect img {
+    width: 35px;
+    margin: 5px 10px;
+}
 }
