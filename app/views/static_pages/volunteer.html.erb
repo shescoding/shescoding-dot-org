@@ -1,0 +1,43 @@
+<%= render "layouts/navbar", page: "Volunteer" %>
+
+<div class="page header-img">
+    <%= image_tag("static_pages/volunteer.jpg") %>
+</div>
+
+<div class='container'>
+  <div class='volunteer-body page'>
+    <p>
+      She's Coding is a supportive, safe place for anyone identifying as woman or non-binary person in tech. As such, we currently have run a mix of events in our different locations, with lots of networking and talks by our community members, extended duration codeathons, weekly technical interview preparation meetups, as well as mock interview events with partnering companies. All our meetups are open to women and non-binary folk.
+    </p>
+    <p>
+      Additionally we are working on providing more and better services to the women in tech community via new features on our open-source website, new projects, a more formalized mentorship program, and more.
+    </p>
+    <div class='volunteer-section-title'>
+      It's all about YOU!
+    </div>
+    <p>
+      Volunteers are at the very core of She's Coding. We could not do what we do, build what we build, and support our community, without volunteers. Are you interested in helping out? Join our team - She’s Coding is built by the community, for the community!
+    </p>
+    <div class='volunteer-section-title'>
+      Volunteering with She's Coding
+    </div>
+    <p>
+      Details on specific volunteer opportunities coming soon...
+    </p>
+    <p> 
+      In the meantime - we would love to hear from you: <%= link_to "Connect with us", "/connect" %>, and check us out via:
+    </p>
+    <div class="connect">
+      <ul class="connect_icons">
+        <li><%= link_to image_tag("static_pages/github_logo.png"), "https://github.com/shescoding",  title: 'Github', rel: 'tooltip', class: 'tooltips', target: "_blank" %><!-- <span>She's Coding on Github</span> --></li>
+        <li><%= link_to image_tag("static_pages/trello_logo.png"), "https://trello.com/shescoding", title: 'Trello', rel: 'tooltip', target: "_blank" %></li>
+        <li><%= link_to image_tag("static_pages/slack_logo.png"), "https://shescoding.typeform.com/to/fcSCQs", title: 'Slack', rel: 'tooltip', target: "_blank" %></li>
+      </ul>
+    </div>
+    <div class='volunteer-section-title page'>
+      Convert understanding into action - join the She's Coding team!
+    </div>
+  </div>
+</div>
+
+<%= render :partial => "layouts/footer" %>
