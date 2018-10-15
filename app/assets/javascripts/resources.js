@@ -62,9 +62,9 @@ function createNewCookie(target, resourceID){
 
 function processLike(event, target){
   event.preventDefault();
-  resourceID = target.parentNode.parentNode.action.split('/').slice(-2)[0]
+  resourceID = target.parentNode.parentNode.action.split('/').slice(-3)[0]
   if (getCookie("_shescoding_likes") === ""){
-    createNewCookie(target, resrouceID);
+    createNewCookie(target, resourceID);
   } 
   else {
     updateExistingCookie(target, resourceID);
