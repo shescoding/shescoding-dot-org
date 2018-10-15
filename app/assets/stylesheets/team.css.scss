@@ -65,10 +65,6 @@ $past_cont_grey: #808080;
     color: black !important;
 }
 
-#footer {
-    margin-top: 0;
-}
-
 //tooltip related css is below
 div.tooltips {
     position: relative;
@@ -83,6 +79,10 @@ div.member-container {
 .tooltips .member-title {
     color: grey;
     padding-bottom: 10px;
+}
+
+.tooltip-description a {
+    color: $green !important;
 }
 
 div.tooltips .the-tooltip {
