@@ -204,29 +204,6 @@
 
   @media (max-width: 990px) {
     margin-top: 100px;
-
-    .resources-sidebar {
-      ul {
-        padding: 0;
-      }
-
-      li.selected a {
-        margin: 0;
-        width: inherit;
-      }
-
-      li, li.selected {
-        width: inherit;
-        margin: 0 5px 10px 0;
-        display: inline-block;
-        padding: 8px;
-        border: 1px solid $light_grey;
-      }
-
-      li.selected:after {
-        content: none;
-      }
-    }
     
     .resources-sidebar{
       display: none;
