@@ -4,7 +4,7 @@
   <div class="row">
     <div class="resources-sidebar col-md-3">
       <ul>
-        <li class="selected" data-category="*">
+        <li class="selected" data-category="*" >
           <%= link_to "All Resources", resources_path %>
         </li>
         <% @categories.each do |category| %>
@@ -14,6 +14,21 @@
         <% end %>
       </ul>
     </div>
+    
+    <div class="dropdown text-center">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="allResourcesButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        All Resources
+      </button>
+      <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
+      <% @categories.each do |category| %>
+        <li data-category="<%= create_filter(category.id) %>">
+          <%= link_to category.name, resources_path(anchor: category.id) %>
+        </li>
+      <% end %>
+   
+      </div>
+    </div>
+
     <div class="resources-grid col-md-9">
       <% @resources.each do |resource| %>
         <div class="panel panel-default <%= create_filter_targets(resource) %>">
@@ -69,6 +84,11 @@
 
     // Filter Selected Category
     $('.resources-sidebar li').click(function(e) {
+      filterSelectedCategory(e, currentUrl, this, $container);
+    });
+
+    // Filter Selected Category For Dropdown Button
+    $('.dropdown li').click(function(e) {
       filterSelectedCategory(e, currentUrl, this, $container);
     });
 

@@ -178,6 +178,17 @@
     }
   }
 
+  .dropdown {
+    display: none;
+  }
+
+  .dropdown-menu-center {
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-50%, 0) !important;
+  }
+
   @media (min-width: 1090px) and (max-width: 1200px) {
     .resources-sidebar {
       li.selected {
@@ -215,13 +226,30 @@
       li.selected:after {
         content: none;
       }
-    }    
+    }
+    
+    .resources-sidebar{
+      display: none;
+    }
+
+    .dropdown {
+      display:block;
+      margin: 0 auto; 
+    }
+
+    #allResourcesButton{
+      color: white;
+      background-color: $yellow;
+      font-size: 18px;
+      font-family: ArcherBook;
+      margin-bottom: 10px;
+    }
 
     .resources-grid {
       .panel {
         width: 48%;
       }
-
+      
       #return-to-top {
         display: block;
         position: absolute;
