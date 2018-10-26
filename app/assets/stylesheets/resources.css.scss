@@ -85,7 +85,6 @@
         color: $black;
         font-size: 12px;
         margin: 7px 0;
-
       }
     }
 
@@ -182,13 +181,6 @@
     display: none;
   }
 
-  .dropdown-menu-center {
-    left: 50% !important;
-    right: auto !important;
-    text-align: center !important;
-    transform: translate(-50%, 0) !important;
-  }
-
   @media (min-width: 1090px) and (max-width: 1200px) {
     .resources-sidebar {
       li.selected {
@@ -203,9 +195,9 @@
   }
 
   @media (max-width: 990px) {
-    margin-top: 100px;
-    
-    .resources-sidebar{
+    margin-top: 90px;
+
+    .resources-sidebar {
       display: none;
     }
 
@@ -214,12 +206,13 @@
       margin: 0 auto; 
     }
 
-    #allResourcesButton{
+    #allResourcesButton {
       color: white;
       background-color: $yellow;
       font-size: 18px;
       font-family: ArcherBook;
       margin-bottom: 10px;
+      margin-left: 5px;
     }
 
     .resources-grid {

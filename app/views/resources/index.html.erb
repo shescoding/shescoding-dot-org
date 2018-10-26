@@ -14,20 +14,20 @@
         <% end %>
       </ul>
     </div>
-    
-    <div class="dropdown text-center">
+
+    <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="allResourcesButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         All Resources
       </button>
-      <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <% @categories.each do |category| %>
         <li data-category="<%= create_filter(category.id) %>">
           <%= link_to category.name, resources_path(anchor: category.id) %>
         </li>
       <% end %>
-   
       </div>
-    </div>
+    </div> 
+    
 
     <div class="resources-grid col-md-9">
       <% @resources.each do |resource| %>
