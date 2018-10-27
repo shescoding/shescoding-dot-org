@@ -204,15 +204,36 @@
     .dropdown {
       display:block;
       margin: 0 auto; 
-    }
 
-    #allResourcesButton {
-      color: white;
-      background-color: $yellow;
-      font-size: 18px;
-      font-family: ArcherBook;
-      margin-bottom: 10px;
-      margin-left: 5px;
+      .yellow-button {
+        color: white;
+        background-color: $yellow;
+        font-size: 18px;
+        font-family: ArcherBook;
+        margin-bottom: 10px;
+        margin-left: 5px;
+      }
+
+      .dropdown-menu {
+        margin-left: 5px;
+
+        a {
+          display: block;
+          padding: 8px;
+          font-family: ArcherBook;
+          color: $black;
+
+          &.selected {
+            background-color: $yellow;
+            color: white;
+          }
+
+          &:hover{
+            background-color: $yellow;
+            text-decoration: none;
+          }
+        }
+      }
     }
 
     .resources-grid {
