@@ -1,4 +1,4 @@
-class CreateResourcesAndCategories < ActiveRecord::Migration
+class CreateResourcesAndCategories < ActiveRecord::Migration[5.2]
   def change
     create_table :resources do |t|
       t.string :title
@@ -7,7 +7,7 @@ class CreateResourcesAndCategories < ActiveRecord::Migration
       t.string :source
       t.datetime :date
       t.boolean :public
-      t.integer :likes  
+      t.integer :likes
 
       t.timestamps
     end
@@ -15,7 +15,7 @@ class CreateResourcesAndCategories < ActiveRecord::Migration
     create_table :categories do |t|
       t.string :name
       t.text :description
-      
+
       t.timestamps
     end
 
