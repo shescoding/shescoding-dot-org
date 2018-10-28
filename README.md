@@ -20,7 +20,7 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
   $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   ```
 
-+ Set the [Ruby](https://www.ruby-lang.org/en/) version to 2.3.1. In order to be able to pick the ruby version or to download ruby, we recommend using a ruby version manager. There are 2 ruby version management tools: [rvm](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv).
++ Set the [Ruby](https://www.ruby-lang.org/en/) version to 2.5.4. In order to be able to pick the ruby version or to download ruby, we recommend using a ruby version manager. There are 2 ruby version management tools: [rvm](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv).
 
     ##### **RVM**
     ##### Installing **rvm** from scratch:
@@ -32,19 +32,19 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
 
 	+ Install [Ruby](https://www.ruby-lang.org/en/):
       ```
-      $ rvm install 2.3.1
+      $ rvm install 2.5.3
       ```
 
 	+ Select this version of ruby for use in this project:
       ```
-      $ rvm use 2.3.1
+      $ rvm use 2.5.3
       ```
 
     ##### Set ruby version if you already have rvm installed:
     + Select this version for use:
 
       ```
-      $ rvm use 2.3.1
+      $ rvm use 2.5.3
       ```
 
     ##### **RBENV**
@@ -56,14 +56,14 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
 
 	+ Install [Ruby](https://www.ruby-lang.org/en/):
       ```
-      $ rbenv install 2.3.1
+      $ rbenv install 2.5.3
       ```
 
 	+ Check ruby version:
       ```
       $ ruby -v
       ```
-   	You should see ruby version printed as result: `ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]`
+   	You should see ruby version printed as result: `ruby 2.5.3p105 (2018-10-18 revision 65156) [x86_64-linux]`
     
       
    ##### Set ruby version if you already have rbenv installed:
@@ -71,7 +71,7 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
       
       ```
       $ cd shescoding-dot-org
-      $ rbenv local 2.3.1
+      $ rbenv local 2.5.3
       ```
 
 + Install [Postgresql](http://www.postgresql.org/)
