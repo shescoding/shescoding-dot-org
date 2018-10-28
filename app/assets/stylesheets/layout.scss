@@ -1,6 +1,4 @@
-#header{
-
-}
+@import "./_variables";
 
 #footer {
   margin-top: 70px;
@@ -10,18 +8,28 @@
   padding-right: 15px;
   font-size: 18px;
   font-family: ArcherLight;
-  color: #FFFFFF;     /* white text */
-  background: #1E2028; /* black background */
-}
-
-#footer a {
   color: white;
+  background: $green;
+
+  a, li {
+    color: white;
+  }
+
+  .ui-ul {
+    margin-bottom: 0px;
+  }
+
+  .code-logo {
+    margin-right: 15px;
+  }
+
+  @media (min-width: 768px) {
+    .pull-right-up-xs {
+        float: right;
+    }
+  }
 }
 
-.ui-ul {
-	margin-bottom: 0px;
-}
-
-.code-logo {
-  margin-right: 15px;
+.no-margin-top {
+  margin-top: 0 !important;
 }

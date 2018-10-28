@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Required for AWS Elastic Beanstalk deployment
+gem 'puma'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use postgresql as the database for Active Record
@@ -35,6 +36,7 @@ gem 'spring',        group: :development
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem "jshint"
 end
 
 # Setting up rspec tests

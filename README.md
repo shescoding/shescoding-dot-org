@@ -25,23 +25,23 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
     ##### **RVM**
     ##### Installing **rvm** from scratch:
 
-      + Install [rvm](https://rvm.io/):
+	+ Install [rvm](https://rvm.io/):
       ```
       $ \curl -sSL https://get.rvm.io | bash -s stable
       ```
 
-      + Install [Ruby](https://www.ruby-lang.org/en/):
+	+ Install [Ruby](https://www.ruby-lang.org/en/):
       ```
       $ rvm install 2.3.1
       ```
 
-      + Select this version of ruby for use in this project:
+	+ Select this version of ruby for use in this project:
       ```
       $ rvm use 2.3.1
       ```
 
     ##### Set ruby version if you already have rvm installed:
-      + Select this version for use:
+    + Select this version for use:
 
       ```
       $ rvm use 2.3.1
@@ -49,24 +49,25 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
 
     ##### **RBENV**
     ##### Installing **rbenv** from scratch:
-      + Install [rbenv](https://github.com/rbenv/rbenv):
+    + Install [rbenv](https://github.com/rbenv/rbenv):
       ```
       $ brew install rbenv
       ```
 
-      + Install [Ruby](https://www.ruby-lang.org/en/):
+	+ Install [Ruby](https://www.ruby-lang.org/en/):
       ```
       $ rbenv install 2.3.1
       ```
 
-      + Check ruby version:
+	+ Check ruby version:
       ```
       $ ruby -v
-      ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
       ```
+   	You should see ruby version printed as result: `ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]`
+    
       
-    ##### Set ruby version if you already have rbenv installed:
-      + Change your ruby version locally inside shescoding-dot-org repository:
+   ##### Set ruby version if you already have rbenv installed:
+   + Change your ruby version locally inside shescoding-dot-org repository:
       
       ```
       $ cd shescoding-dot-org
@@ -106,11 +107,11 @@ resource provided above.
   ```
 
 + Set up your local repo
-  + Fork the repository by hitting the "Fork" button on the shescoding github page
+  + Fork the repository by hitting the "Fork" button on the shescoding github page.
   + Clone the repository:
 
     ```
-    $ git clone https://github.com/<your_github_username>/shescoding-dot-org.git
+    $ git clone https://github.com/shescoding/shescoding-dot-org.git
     ```
   + Add the upstream repository:
 

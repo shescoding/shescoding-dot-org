@@ -1,13 +1,15 @@
-<div id="footer">
+<div id="footer" class="<%= class_Name if local_assigns[:class_Name]%>">
   <div class="container-fluid">
     <div class="clearfix">
       <ul class="ui-ul list-inline pull-left">
-        <li>&copy; 2015 JOLT Labs LLC and individual contributors
-        <li> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;</li>
-        <li><%= mail_to 'info@shescoding.org','info@shescoding.org' %></li>
+        <li>
+          &copy; <%= Time.current.year %> She's Coding
+          &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+          <%= mail_to 'info@shescoding.org','info@shescoding.org' %>
+        </li>
       </ul>
 
-      <ul class="ui-ul list-inline pull-right">
+      <ul class="ui-ul list-inline pull-right-up-xs">
         <li class="code-logo"><%= link_to image_tag("footer/code_logo_footer.png", size: "60x25"), "http://codedocumentary.com", target: "_blank" %></li>
         <!-- Add some space -->
         <li><%= link_to image_tag("footer/github.png"), "https://github.com/shescoding", target: "_blank" %></li>

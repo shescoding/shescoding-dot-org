@@ -1,9 +1,5 @@
 // resources page
-$black: #1E2028;
-$yellow: #FBCC3B;
-$light_grey: #F2F2F2;
-$dark_grey: #CCCCCC;
-$tag_grey: #808080;
+@import "./_variables";
 
 // This needs to be .resources-nav.navbar so it's more specific than the
 // default bootstrap rule and overrides it.

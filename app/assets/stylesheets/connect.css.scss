@@ -1,20 +1,12 @@
 // connect page
-$black: #1E2028;
-$green: #83C057;
-
-.connect-section-title {
-    text-align: center;
-    font-size: 36px;
-}
+@import "./_variables";
 
 .connect-section-body {
     font-size: 18px;
-    padding-top: 30px;
 }
 
 .connect-button{
   font-family: ArcherBook;
-
 }
 
 p > a:link {
@@ -23,8 +15,4 @@ p > a:link {
 
 p > a:hover {
   color: $green;
-}
-
-.page {
-	width: 100%;
 }

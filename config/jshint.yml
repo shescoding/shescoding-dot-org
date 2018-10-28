@@ -1,0 +1,8 @@
+files: ['**/*.js']
+exclude_paths: ['vendor']
+exclude_files: ['**/*.min.js']
+options:
+  browser: true
+  globals:
+    jQuery: true
+    $: true
