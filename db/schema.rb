@@ -18,13 +18,13 @@ ActiveRecord::Schema.define(version: 2018_10_28_045740) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "categories_resources", id: false, force: :cascade do |t|
-    t.integer "resource_id"
-    t.integer "category_id"
+    t.bigint "resource_id"
+    t.bigint "category_id"
     t.index ["category_id"], name: "index_categories_resources_on_category_id"
     t.index ["resource_id"], name: "index_categories_resources_on_resource_id"
   end
@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 2018_10_28_045740) do
     t.string "alias"
     t.string "description"
     t.integer "likes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "guides_steps", id: false, force: :cascade do |t|
-    t.integer "guide_id"
-    t.integer "step_id"
+    t.bigint "guide_id"
+    t.bigint "step_id"
     t.index ["guide_id"], name: "index_guides_steps_on_guide_id"
     t.index ["step_id"], name: "index_guides_steps_on_step_id"
   end
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 2018_10_28_045740) do
     t.string "color"
     t.text "description"
     t.json "questions"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "resources", force: :cascade do |t|
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(version: 2018_10_28_045740) do
     t.datetime "date"
     t.boolean "public"
     t.integer "likes", default: 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "steps", force: :cascade do |t|
@@ -71,16 +71,16 @@ ActiveRecord::Schema.define(version: 2018_10_28_045740) do
     t.text "content"
     t.string "level"
     t.integer "likes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "taggings", force: :cascade do |t|
-    t.integer "tag_id"
-    t.integer "taggable_id"
+    t.bigint "tag_id"
     t.string "taggable_type"
-    t.integer "tagger_id"
+    t.bigint "taggable_id"
     t.string "tagger_type"
+    t.bigint "tagger_id"
     t.string "context", limit: 128
     t.datetime "created_at"
     t.index ["context"], name: "index_taggings_on_context"
@@ -89,9 +89,11 @@ ActiveRecord::Schema.define(version: 2018_10_28_045740) do
     t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
     t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
     t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
+    t.index ["taggable_type", "taggable_id"], name: "index_taggings_on_taggable_type_and_taggable_id"
     t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
     t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
     t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
+    t.index ["tagger_type", "tagger_id"], name: "index_taggings_on_tagger_type_and_tagger_id"
   end
 
   create_table "tags", force: :cascade do |t|
