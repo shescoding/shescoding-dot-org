@@ -27,6 +27,15 @@
       color: $black;
     }
 
+    ul.breadcrumb {
+      margin-left: -75px;
+      width: 130%;
+    }
+
+    ul.breadcrumb li:first-child {
+        margin-left: 40px;
+    }
+
     li.selected {
       position: relative;
       background-color: $yellow;
@@ -180,6 +189,16 @@
 
   @media (min-width: 1090px) and (max-width: 1200px) {
     .resources-sidebar {
+
+      ul.breadcrumb {
+        width: 160%;
+        margin-left: -132px;
+      }
+
+      ul.breadcrumb li:first-child {
+        margin-left: 60px;
+      }
+
       li.selected {
         width: 132%;
         margin-left: -132px;
@@ -199,6 +218,23 @@
         padding: 0;
       }
 
+      li.breadcrumbs {
+        display: block;
+        padding: 0;
+      }
+
+      li.breadcrumbs,
+      ul.breadcrumb > li {
+        margin: 0;
+        border: 0;
+      }
+
+      ul.breadcrumb,
+      ul.breadcrumb li:first-child {
+        margin-left: 0;
+        width: unset;
+      }
+
       li.selected a {
         margin: 0;
         width: inherit;
@@ -215,7 +251,7 @@
       li.selected:after {
         content: none;
       }
-    }    
+    }
 
     .resources-grid {
       .panel {
@@ -243,10 +279,4 @@
 
 .resource-back {
   padding-left: 15px;
-}
-
-.breadcrumb {
-  @media (max-width: 990px) and (min-width: 768px) {
-    margin-top: 55px;
-  }
 }

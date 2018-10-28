@@ -2,21 +2,19 @@
 
 <div class="resources-section container">
   <div class="row">
-    <div class="breadcrumbs col-md-12">
-      <ul class="breadcrumb">
-        <li id="category-breadcrumb">All Resources</li>
-        <li id="tag-breadcrumb" class="active">All Tags</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
     <div class="resources-sidebar col-md-3">
       <ul>
-        <li class="selected" data-category="*">
+        <li class="breadcrumbs">
+          <ul class="breadcrumb">
+            <li id="breadcrumb-type">Category</li>
+            <li id="breadcrumb-value" class="active">All Resources</li>
+          </ul>
+        </li>
+        <li class="selected resource" data-category="*">
           <%= link_to "All Resources", resources_path %>
         </li>
         <% @categories.each do |category| %>
-          <li data-category="<%= create_filter(category.id) %>">
+          <li class="resource" data-category="<%= create_filter(category.id) %>">
             <%= link_to category.name, resources_path(anchor: category.id) %>
           </li>
         <% end %>
@@ -76,7 +74,7 @@
     initializeSelectedCategory(currentUrl, $container);
 
     // Filter Selected Category
-    $('.resources-sidebar li').click(function(e) {
+    $('.resources-sidebar li.resource').click(function(e) {
       filterSelectedCategory(e, currentUrl, this, $container);
     });
 

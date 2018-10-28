@@ -8,7 +8,7 @@ function initializeSelectedCategory(currentUrl, container) {
     var queryString = '*[data-category="' + newSelectedCategory + '"]';
     toggleSelectedClasses(queryString);
     container.isotope({filter: newSelectedCategory});
-    var categoryName = $(queryString + ' > a')[0].innerHTML;
+    var categoryName = $(queryString + ' > a').text();
     updateCategoryBreadCrumb(categoryName);
   }
 }
@@ -19,14 +19,16 @@ function initializeSelectedTagBreadcrumb(currentUrl) {
     tagNameIndex = indexOfTag + 'resources/tags'.length + 1;
     var encodedTagName = currentUrl.slice(tagNameIndex);
     var decodedTagName = decodeURIComponent(encodedTagName);
-    $('#tag-breadcrumb')[0].innerHTML = decodedTagName;
+    $('#breadcrumb-type').text('Tag');
+    $('#breadcrumb-value').text(decodedTagName);
     $('.panel-tags li .' + decodedTagName + '-tag-link').addClass('active-tag');
   }
 
 }
 
 function updateCategoryBreadCrumb(categoryName) {
-  $('#category-breadcrumb')[0].innerHTML = categoryName;
+    $('#breadcrumb-type').text('Category');
+    $('#breadcrumb-value').text(categoryName);
 }
 
 function toggleSelectedClasses(target) {
