@@ -8,7 +8,7 @@ This is the code for the [shescoding.org](http://shescoding.org) website.
 
 **Open-source?**
 
-Yes! *She's Coding* is build by the community, for the community. We currently have a small group of volunteers bootstrapping the project, and we are in the process of defining some simple rules on how to contribute for the wider community.
+Yes! *She's Coding* is built by the community, for the community. We currently have a small group of volunteers bootstrapping the project, and we are in the process of defining some simple rules on how to contribute for the wider community.
 
 [Let us know](mailto:info@shescoding.org) if you want to join our team!
 
