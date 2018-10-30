@@ -75,8 +75,15 @@ a {
   font-family: ArcherBold;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: ArcherLight;
+  position: relative;
+  padding-bottom: 5em;
+  min-height: 100%;
 }
 
 img {
