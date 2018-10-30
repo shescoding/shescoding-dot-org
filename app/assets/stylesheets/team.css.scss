@@ -142,3 +142,26 @@ div:hover.tooltips .the-tooltip {
   left: 15%;
   z-index: 999;
 }
+
+div.tooltips .the-tooltip.mobile{
+    position: relative;
+    visibility: visible;
+    padding: 1em;
+    margin: 1em auto;
+    width: 70%;
+    display: block;
+    opacity: 1;
+    transition: opacity .3s linear;
+  }
+
+  div:hover.tooltips .the-tooltip.mobile {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .the-tooltip.mobile .name, .the-tooltip.mobile .member-title {
+    display: none;
+  }
