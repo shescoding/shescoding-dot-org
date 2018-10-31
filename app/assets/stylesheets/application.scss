@@ -16,6 +16,7 @@
 
 // Include this here so the bootstrap variables that it contains are set before
 // we include bootstrap.
+$screen-sm: 835px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "./_variables";
