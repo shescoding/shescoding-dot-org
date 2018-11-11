@@ -20,6 +20,19 @@
         <% end %>
       </ul>
     </div>
+
+    <div class="dropdown">
+      <button class="btn yellow-button dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Resources Categories
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to "All Resources", resources_path, { "data-category": "*", class: "dropdown-item selected" } %>
+        <% @categories.each do |category| %>
+            <%= link_to category.name, resources_path(anchor: category.id), { "data-category": create_filter(category.id), class: "dropdown-item" }%>
+        <% end %>
+      </div>
+    </div> 
+
     <div class="resources-grid col-md-9">
       <% @resources.each do |resource| %>
         <div class="panel panel-default <%= create_filter_targets(resource) %>">
@@ -80,6 +93,11 @@
 
     // Initialize Selected Tag's breadcrumb
     initializeSelectedTagBreadcrumb(currentUrl);
+
+    // Filter Selected Category For Dropdown Button
+    $('.dropdown a').click(function(e) {
+      filterSelectedCategory(e, currentUrl, this, $container);
+    });
 
     // Return To Top
     $('#return-to-top').click(function(e) {

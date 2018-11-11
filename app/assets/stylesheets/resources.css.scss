@@ -94,7 +94,6 @@
         color: $black;
         font-size: 12px;
         margin: 7px 0;
-
       }
     }
 
@@ -187,6 +186,10 @@
     }
   }
 
+  .dropdown {
+    display: none;
+  }
+
   @media (min-width: 1090px) and (max-width: 1200px) {
     .resources-sidebar {
 
@@ -211,45 +214,66 @@
   }
 
   @media (max-width: 990px) {
-    margin-top: 100px;
+    margin-top: 90px;
 
     .resources-sidebar {
-      ul {
-        padding: 0;
+      display: none;
+    }
+
+    li.breadcrumbs {
+      display: block;
+      padding: 0;
+    }
+
+    li.breadcrumbs,
+    ul.breadcrumb > li {
+      margin: 0;
+      border: 0;
+    }
+
+    ul.breadcrumb,
+    ul.breadcrumb li:first-child {
+      margin-left: 0;
+      width: unset;
+    }
+
+    li.selected a {
+      margin: 0;
+      width: inherit;
+    }
+
+    .dropdown {
+      display:block;
+      margin: 0 auto; 
+
+      .yellow-button {
+        color: white;
+        background-color: $yellow;
+        font-size: 18px;
+        font-family: ArcherBook;
+        margin-bottom: 10px;
+        margin-left: 5px;
       }
 
-      li.breadcrumbs {
-        display: block;
-        padding: 0;
-      }
+      .dropdown-menu {
+        margin-left: 5px;
 
-      li.breadcrumbs,
-      ul.breadcrumb > li {
-        margin: 0;
-        border: 0;
-      }
+        a {
+          display: block;
+          padding: 8px;
+          font-family: ArcherBook;
+          color: $black;
 
-      ul.breadcrumb,
-      ul.breadcrumb li:first-child {
-        margin-left: 0;
-        width: unset;
-      }
+          &.selected {
+            background-color: $yellow;
+            color: white;
+          }
 
-      li.selected a {
-        margin: 0;
-        width: inherit;
-      }
-
-      li, li.selected {
-        width: inherit;
-        margin: 0 5px 10px 0;
-        display: inline-block;
-        padding: 8px;
-        border: 1px solid $light_grey;
-      }
-
-      li.selected:after {
-        content: none;
+          &:hover{
+            background-color: $yellow;
+            text-decoration: none;
+          }
+        }
       }
     }
 
@@ -257,7 +281,7 @@
       .panel {
         width: 48%;
       }
-
+      
       #return-to-top {
         display: block;
         position: absolute;
