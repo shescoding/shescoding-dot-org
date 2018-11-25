@@ -160,6 +160,86 @@ main {
 }
 
 //-------------------------------------------------------------
+// Testimonials Component | Homepage
+//-------------------------------------------------------------
+.testimonials {
+
+  blockquote {
+    border-left: none;
+    max-width: 91%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  p, cite {
+    font-size: px-to-rem(18px);
+  }
+
+  .testimonial {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  cite {
+    align-self: flex-start;
+  }
+
+
+  img {
+    margin: 0 0 1rem 0;
+  }
+
+  .carousel-control {
+    color: #333;
+    font-size: 3.5rem;
+  }
+
+  .carousel-control.left, .carousel-control.right {
+    background-image: none;
+  }
+
+  .carousel-control.right {
+    right: -2.5rem;
+  }
+
+  .carousel-control.left {
+    left: -2.5rem;
+  }
+
+  .carousel-inner {
+    position: relative;
+  }
+
+  @media(min-width: 48em) {
+    .testimonial {
+      flex-direction: row;
+    }
+
+    blockquote {
+      max-width: 76%;
+      padding: 0 1rem 0 0;
+    }
+
+    img {
+      padding: 0 1.5rem 0 1rem;
+    }
+
+    .carousel-control.right {
+      right: -4rem;
+    }
+
+    .carousel-control.left {
+      left: -4rem;
+    }
+  }
+}
+
+//-------------------------------------------------------------
 // As Seen On Component | Homepage
 //-------------------------------------------------------------
 .as-seen-on {
