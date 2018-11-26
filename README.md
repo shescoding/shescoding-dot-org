@@ -8,7 +8,7 @@ This is the code for the [shescoding.org](http://shescoding.org) website.
 
 **Open-source?**
 
-Yes! *She's Coding* is build by the community, for the community. We currently have a small group of volunteers bootstrapping the project, and we are in the process of defining some simple rules on how to contribute for the wider community.
+Yes! *She's Coding* is built by the community, for the community. We currently have a small group of volunteers bootstrapping the project, and we are in the process of defining some simple rules on how to contribute for the wider community.
 
 [Let us know](mailto:info@shescoding.org) if you want to join our team!
 
@@ -64,11 +64,11 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
       $ ruby -v
       ```
    	You should see ruby version printed as result: `ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]`
-    
-      
+
+
    ##### Set ruby version if you already have rbenv installed:
    + Change your ruby version locally inside shescoding-dot-org repository:
-      
+
       ```
       $ cd shescoding-dot-org
       $ rbenv local 2.3.1
@@ -151,7 +151,7 @@ $ chmod +x .git/hooks/pre-commit
 
 ### Running the tests
 
-In order to run the tests, make sure all the gems are installed and the test environment is set up properly with working database. 
+In order to run the tests, make sure all the gems are installed and the test environment is set up properly with working database.
 
 + Set up:
 
@@ -161,7 +161,7 @@ $ bundle exec rake db:create RAILS_ENV=test
 $ bundle exec rake db:schema:load RAILS_ENV=test
 ```
 
-+ Run the tests with [RSpec Rails](https://github.com/rspec/rspec-rails):
++ Run the Ruby/Rails unit tests with [RSpec Rails](https://github.com/rspec/rspec-rails):
 
 ```
 $ bundle exec rspec -fd
@@ -170,3 +170,16 @@ $ bundle exec rspec -fd
 Notes:
 + ```-fd``` stands for full details. You can also run tests by using commands ```bundle exec rspec``` or ```bundle exec rake``` to get an overview without details of each test.
 + If you are having trouble running bundle install, please make sure Nokogiri gem is installed on your machine. Full instructions can be found [here](http://www.nokogiri.org/tutorials/installing_nokogiri.html).
+
+### Running the linters
+
+This project uses a tool called JSHint for linting (quality-checking) Javascript code. If you want to see this tool in action, check out the creator's [interactive demo](https://jshint.com/).
+
++ Run the Javascript asset linting with [JSHint](https://github.com/damian/jshint):
+
+```
+$ bundle exec rake jshint
+```
+
+Note:
+Any contributor who makes changes to existing Javascript files or adds new ones, needs to run JSHint to make sure erroneous files don't get committed to the codebase.
