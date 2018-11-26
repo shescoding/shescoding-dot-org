@@ -188,29 +188,44 @@ main {
     align-self: flex-start;
   }
 
-  img {
-    margin: 0 0 1rem 0;
+  .photo {
+    padding: 0 0 px-to-rem(10px) 0;
   }
 
   .carousel-control {
     color: #333;
-    font-size: 3.5rem;
   }
 
   .carousel-control.left, .carousel-control.right {
     background-image: none;
+    font-size: px-to-rem(24px);
   }
 
   .carousel-control.right {
-    right: -2.5rem;
+    right: px-to-rem(-14px);
   }
 
   .carousel-control.left {
-    left: -2.5rem;
+    left: px-to-rem(-14px);
   }
 
   .carousel-inner {
     position: relative;
+  }
+
+  @media (min-width: 33.75em) {
+
+    .carousel-control.left, .carousel-control.right {
+      font-size: px-to-rem(28px);
+    }
+
+    .carousel-control.right {
+      right: px-to-rem(-26px);
+    }
+  
+    .carousel-control.left {
+      left: px-to-rem(-26px);
+    }
   }
 
   @media(min-width: 48em) {
@@ -220,19 +235,19 @@ main {
 
     blockquote {
       max-width: 76%;
-      padding: 0 1rem 0 0;
+      padding: 0 px-to-rem(10px) 0 0;
     }
 
-    img {
-      padding: 0 1.5rem 0 1rem;
+    .photo {
+      padding: 0 px-to-rem(15px) 0 px-to-rem(10px);
     }
 
     .carousel-control.right {
-      right: -4rem;
+      right: px-to-rem(-40px);
     }
 
     .carousel-control.left {
-      left: -4rem;
+      left: px-to-rem(-40px);
     }
   }
 }
