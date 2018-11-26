@@ -23,7 +23,7 @@
         clonedItem.css("visibility", "hidden");
         $('.carousel-inner').append(clonedItem);
         height = clonedItem.outerHeight();
-        clonedItem.remove()  
+        clonedItem.remove();
       }
 
       if (height > longestHeight) {
@@ -31,15 +31,15 @@
       }
     });
     return longestHeight;
-  } 
+  }
   
   // Set other testimonial heights to equal height of the longest one
   function setTestimonialHeights(height) {
     $('.item').each(function() {
-      if ($(this).height() < height) {      
+      if ($(this).height() < height) {   
           $(this).height(height);
       }
-    })
+    });
   }
   
   setTestimonialHeights(getLongestTestimonialHeight());
