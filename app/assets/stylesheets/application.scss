@@ -21,6 +21,10 @@ $screen-sm: 835px;
 @import "bootstrap";
 @import "./_variables";
 
+.container {
+  margin-bottom: 5em;
+}
+
 .page {
   padding-top: 70px;
   width: 100%;
