@@ -22,6 +22,10 @@ $screen-sm: 835px;
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
 @import "./_variables";
 
+.container {
+  margin-bottom: 5em;
+}
+
 .page {
   padding-top: 70px;
   width: 100%;
