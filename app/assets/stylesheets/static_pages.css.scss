@@ -256,14 +256,13 @@ main {
 // As Seen On Component | Homepage
 //-------------------------------------------------------------
 .as-seen-on {
-  margin-bottom: 0;
-
   .description {
     margin-bottom: px-to-rem(50px);
   }
 
   @media (min-width: 75em) {
     display: flex;
+    margin-bottom: 0;
 
     h2 {
       text-align: left;
