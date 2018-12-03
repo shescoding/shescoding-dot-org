@@ -62,6 +62,104 @@ class StaticPagesController < ApplicationController
           description: "Kelli has a BS degree in Computer Information Systems and comes to software development from a background working for HP in IT Services. She enjoys learning new technologies and sharing her knowledge with others."
       }
     ]
+    @pastContributors = [
+        {
+            name: "Staci Hartman",
+            title: "Advisor",
+            imageUrl: "team/staci.png",
+            linkedInUrl: "https://www.linkedin.com/in/staci-hartman-6a414712/",
+        },
+        {
+            name: "Kamila Stępniowska",
+            title: "Advisor",
+            imageUrl: "team/kamila.png",
+            linkedInUrl: "https://www.linkedin.com/in/kamilastepniowska/"
+        },
+        {
+            name: "Mark S. Lee",
+            title: "Advisor",
+            imageUrl: "team/mark.png",
+            linkedInUrl: "https://www.linkedin.com/in/markslee/"
+        },
+        {
+            name: "Paul Watts",
+            title: "Advisor",
+            imageUrl: "team/paul.png",
+            linkedInUrl: "https://www.linkedin.com/in/paulcwatts/"
+        },
+        {
+            name: "Britt Griffith",
+            title: "Initial project co-founder",
+            imageUrl: "team/britt.png",
+            linkedInUrl: "https://www.linkedin.com/in/brittrgriffith/"
+        },
+        {
+            name: "Bri Dotson",
+            title: "Contributor",
+            imageUrl: "team/bri.png",
+            linkedInUrl: "https://www.linkedin.com/in/bri-dotson/"
+        },
+        {
+            name: "Tina Kumar",
+            title: "Contributor",
+            imageUrl: "team/tina.png",
+            linkedInUrl: "https://www.linkedin.com/in/tinakumar/"
+        },
+        {
+            name: "Anna Billmaier",
+            title: "Contributor",
+            imageUrl: "team/anna.png",
+            linkedInUrl: "http://www.annabillmaier.com/about/"
+        },
+        {
+            name: "Steph Gentry",
+            title: "Contributor",
+            imageUrl: "team/steph.png",
+            linkedInUrl: "https://www.linkedin.com/in/sgent487/"
+        },
+        {
+            name: "Ben Demboski",
+            title: "Contributor",
+            imageUrl: "team/ben.png",
+            linkedInUrl: "https://www.linkedin.com/in/bendemboski/"
+        },
+        {
+            name: "Calla Patel",
+            title: "Contributor",
+            imageUrl: "team/calla.png",
+            linkedInUrl: "https://www.linkedin.com/in/callapatel/"
+        },
+        {
+            name: "Deirdre Allison",
+            title: "Contributor",
+            imageUrl: "team/deirdre.png",
+            linkedInUrl: "https://www.linkedin.com/in/deirdreallison/"
+        },
+        {
+            name: "Kavita Sachdeva",
+            title: "Contributor",
+            imageUrl: "team/kavita.png",
+            linkedInUrl: "https://www.linkedin.com/in/kavitasa/"
+        },
+        {
+            name: "Kristina Hjertberg",
+            title: "Contributor",
+            imageUrl: "team/kristina.png",
+            linkedInUrl: "https://www.linkedin.com/in/khjrtbrg/"
+        },
+        {
+            name: "Marge Rosen",
+            title: "Contributor",
+            imageUrl: "team/marge.png",
+            linkedInUrl: "https://www.linkedin.com/in/margerosen/"
+        },
+        {
+            name: "Rachel Adler",
+            title: "Contributor",
+            imageUrl: "team/rachel.png",
+            linkedInUrl: "https://www.linkedin.com/in/rmoshier/"
+        }
+    ]
   end
   
 end
