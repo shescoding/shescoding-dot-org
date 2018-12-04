@@ -143,6 +143,12 @@ div:hover.tooltips .the-tooltip {
   z-index: 999;
 }
 
+@keyframes accordian{
+    0%      {height: 0;}
+    1%      {height: auto; transform: scaleY(0);}
+    100%    {height: auto; transform: scaleY(1);}
+}
+
 div.tooltips .the-tooltip.mobile{
     position: relative;
     visibility: visible;
@@ -152,6 +158,7 @@ div.tooltips .the-tooltip.mobile{
     display: block;
     opacity: 1;
     transition: opacity .3s linear;
+    animation: accordian .5s ease-in-out;
   }
 
   div:hover.tooltips .the-tooltip.mobile {
