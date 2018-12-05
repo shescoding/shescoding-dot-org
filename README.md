@@ -8,13 +8,85 @@ This is the code for the [shescoding.org](http://shescoding.org) website.
 
 **Open-source?**
 
-Yes! *She's Coding* is build by the community, for the community. We currently have a small group of volunteers bootstrapping the project, and we are in the process of defining some simple rules on how to contribute for the wider community.
+Yes! *She's Coding* is built by the community, for the community. We currently have a small group of volunteers bootstrapping the project, and we are in the process of defining some simple rules on how to contribute for the wider community.
 
 [Let us know](mailto:info@shescoding.org) if you want to join our team!
 
 ### Installation
 
-+ Install [Homebrew](http://brew.sh/) (OSX):
++ **Ubuntu** for Windows 10 Users
+
+  Go to [Windows App Store](https://www.microsoft.com/store/productId/9PJN388HP8C9) and download the most stable version of Ubuntu, then
+
+    + Go to developer settings by searching "Developer"
+
+    + In the results under *Settings*, click  *For developer settings*
+
+    + Select *Developer Mode*
+
+  Open the Ubuntu app and complete setup (username, password, etc.), then run:
+
+  ```
+  $ sudo apt-get update
+  ```
++ Install Ruby
+
+  After update completes, install Ruby, your version manager, and Rails as you would for Ubuntu:
+
+  (NOTE: the below command also installs dependencies such as nodejs and yarn)
+
+  ```
+  $ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
+  ```
++ Install RVM or RBENV
+
+  #### RVM
+  ```
+  $ sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+
+  $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+  $ curl -sSL https://get.rvm.io | bash -s stable
+  $ source ~/.rvm/scripts/rvm
+
+  $ rvm install 2.3.1
+  $ rvm use 2.3.1 --default
+  $ ruby -v
+  ```
+  #### RBENV
+
+  ```
+  $ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+  $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+  $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+  $ exec $SHELL
+
+  $ git clone https://github.com/rbenv/ruby-build.git  ~/.rbenv/plugins/ruby-build
+  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+  exec $SHELL
+
+  $ rbenv install 2.3.1
+  $ rbenv global 2.3.1
+  $ ruby -v
+  ```
++ Upload SSH Key to Github
+
+  +  Generate an SSH key for your github account
+
+      ```
+      $ ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"
+      ```
+  + Open the file containing the key from your Windows folder below:
+
+    ```
+    C:\Users\YourWindowsUserName\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu16.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YourUbuntuUserName\.ssh
+    ```
+   + Open *id_rsa.pub* with either notepad or notepad++.
+
+   + Copy everything in that file and set up your key in your [github page](https://github.com/settings/keys).
+  ---
+
++ Mac OSX: Install [Homebrew](http://brew.sh/):
 
   ```
   $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -64,15 +136,17 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
       $ ruby -v
       ```
    	You should see ruby version printed as result: `ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]`
-    
-      
+
+
    ##### Set ruby version if you already have rbenv installed:
    + Change your ruby version locally inside shescoding-dot-org repository:
-      
+
       ```
       $ cd shescoding-dot-org
       $ rbenv local 2.3.1
       ```
+
+---
 
 + Install [Postgresql](http://www.postgresql.org/)
   + Mac:
@@ -96,17 +170,55 @@ Yes! *She's Coding* is build by the community, for the community. We currently h
 
     See [https://help.ubuntu.com/community/PostgreSQL]
 
-    For simple setup (local use only) follow the "Alternate Server Setup" of the
-resource provided above.
+    For simple setup (local use only) follow the "Alternate Server Setup" of the resource provided above.
 
-+ Set up the database:
-  ```
-  $ createdb shescoding_development
-  $ psql -d shescoding_development -c "CREATE USER shescoding WITH PASSWORD 'shescoding'"
-  $ psql -d shescoding_development -c "GRANT ALL PRIVILEGES ON DATABASE shescoding_development to shescoding"
-  ```
+  + Windows 10:
+
+      (NOTE: Google Chrome will block these downloads for security reasons. Please download using Firefox or Edge)
+
+      Install postgres from [EnterpriseDB](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+
+      Set up your username and password defaults. You will not need to set up a specialized name or password when developing in Windows
+
+      Install PGAdmin4 with postgres in the installer, or download manually from [PGAdmin for Windows](https://www.pgadmin.org/download/pgadmin-4-windows/)
+
+
+---
+
++ Set up the database
+
+  + Mac or Ubuntu
+    ```
+    $ createdb shescoding_development
+    $ psql -d shescoding_development -c "CREATE USER shescoding WITH PASSWORD 'shescoding'"
+    $ psql -d shescoding_development -c "GRANT ALL PRIVILEGES ON DATABASE shescoding_development to shescoding"
+    ```
+  + Windows 10 Users
+
+    Run PGAdmin4
+
+    +  If PGAdmin4 will not run, try the following:
+
+        Clear all Roaming Data:
+
+        ```
+        C:\Users\YourUserName\AppData\Roaming\pgAdmin
+        ```
+        Download [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Java and set up the [evironment variable path](https://www.addictivetips.com/windows-tips/set-path-environment-variables-in-windows-10/)
+
+        ```
+        C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+        ```
+
+    Once PGAdmin4 is running, click on your servers, right click on *PostreSQL*, hover over *Create*, and then click *Database*
+
+    Type *shescoding_development* in the *Database* field and select the owner. I recommend using your general postgres user
+
+---
 
 + Set up your local repo
+
+  #### Mac or Ubuntu
   + Fork the repository by hitting the "Fork" button on the shescoding github page.
   + Clone the repository:
 
@@ -118,6 +230,41 @@ resource provided above.
     ```
     $ git remote add upstream https://github.com/shescoding/shescoding-dot-org.git
     ```
+
+  #### Windows 10 Users
+
+  + Open your Ubuntu for Windows Application
+
+  + Change your directory to your Windows location, such as Desktop
+
+    ```
+    $ cd /mnt/c/users/YourWindowsUserName/desktop
+    ```
+
+  + You can see the Ubuntu file directory if you wish, but it is not necessary unless you need to copy your SSH Keys for Github or other repositories
+
+    ```
+    C:\Users\YourWindowsUserName\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu16.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YourUbuntuUserName
+    ```
+  + Now clone the repository
+
+    ```
+    $ git clone https://github.com/shescoding/shescoding-dot-org.git
+    ```
+  + Add the upstream repository:
+
+    ```
+    $ git remote add upstream https://github.com/shescoding/shescoding-dot-org.git
+    ```
+  + Change the directory to your development environment
+
+  ```
+  $ cd shescoding-dot-org
+  ```
+
+  ### **With PGAdmin4 still running**, run the steps below from your Ubuntu console
+---
+Mac, Ubuntu, and Windows
 
 + Load all the gems:
   ```
@@ -151,7 +298,7 @@ $ chmod +x .git/hooks/pre-commit
 
 ### Running the tests
 
-In order to run the tests, make sure all the gems are installed and the test environment is set up properly with working database. 
+In order to run the tests, make sure all the gems are installed and the test environment is set up properly with working database.
 
 + Set up:
 
