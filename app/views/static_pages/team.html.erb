@@ -5,104 +5,31 @@
 </div>
 
 <div class="text-center team-page">
-<!-- Active members of the team section begins-->
+   <!-- Active members of the team section begins-->
     <div class="team-page-section">
         <div class="row col mb-3">
             <div class="title">Meet the Team</div>
         </div>
         <div class="row mt-5">
-            <div class="team-member col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/nathalie.jpeg", class: "circle"), "https://www.linkedin.com/in/nathaliesteinmetz/", target: "_blank" %>
-                    <div class="name pt-2">Nathalie Steinmetz</div>
-                    <div class="member-title">Founder & CEO</div>
-                </div>
-            </div>
-            <div class="team-member col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/mikki.jpeg", class: "circle"), "https://www.linkedin.com/in/mikihobgood/", target: "_blank" %>
-                    <div class="name pt-2">Miki Hobgood</div>
-                    <div class="member-title">Leadership Team</div>
-                    <div class="the-tooltip">
-                        <div class="name pt-2">Miki Hobgood</div>
-                        <div class="member-title">Leadership Team</div>
-                        <div class="tooltip-description">
-                            Miki is a Software Engineer in the security space dedicated to bridging gaps - especially in communication and gender equality.
-                        </div>
+            <% @teamMembers.each do |member| -%>
+                <div class="col pt-3 col-sm-6 col-xs-12 col-md-3">
+                    <div class="member-container tooltips">
+                        <%= link_to image_tag(member[:imageUrl], class: "circle"), member[:linkedInUrl], target: "_blank" %>
+                        <div class="name pt-2"><%= member[:name] %></div>
+                        <div class="member-title pb-2"><%= member[:title] %></div>
+                        <% if member[:description] != nil %>
+                            <div class="the-tooltip">
+                                <div class="name pt-2"><%= member[:name] %></div>
+                                <div class="member-title"><%= member[:title] %></div>
+                                <div class="tooltip-description">
+                                    <%= member[:description] %>
+                                </div>
+                            </div>
+                        <% end %>
                     </div>
                 </div>
-            </div>
-            <div class="team-member col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/annak.jpeg", class: "circle"), "https://www.linkedin.com/in/anna-krupp/", target: "_blank" %>
-                    <div class="name pt-2">Anna Krupp</div>
-                    <div class="member-title">Lead Engineer</div>
-                    <div class="the-tooltip">
-                        <div class="name pt-2">Anna Krupp</div>
-                        <div class="member-title">Lead Engineer</div>
-                        <div class="tooltip-description">
-                            Anna loves writing code, dogs and good old French wine. Sommelier turned Software Engineer, she believes that diversity in tech is the key to a better future.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="team-member col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/brenda.jpeg", class: "circle"), "https://www.linkedin.com/in/brendastensland/", target: "_blank" %>
-                    <div class="name pt-2">Brenda Stensland</div>
-                    <div class="member-title">Project Quality Assurance</div>
-                    <div class="the-tooltip">
-                        <div class="name pt-2">Brenda Stensland</div>
-                        <div class="member-title">Project Quality Assurance</div>
-                        <div class="tooltip-description">
-                            Brenda is currently a Lead SDET at Starbucks. She has worked 25 years as SQA and her past lives inlcude QA Manager/QA Director @ HMH, Xerox, Nortel, Scholastic,Pearson, RoomsToGo, Outback, Boeing to small startups. She is also a Certified Scrum Master, long time ago ISQA certified, organizer of the Seattle SQA Meetup, and loves WWE and Performance Testing.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="team-member col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/aeone.jpeg", class: "circle"), "https://www.linkedin.com/in/aeone/", target: "_blank" %>
-                    <div class="name pt-2">Aeone Singson</div>
-                    <div class="member-title">Seattle Chapter Lead</div>
-                    <div class="the-tooltip">
-                        <div class="name pt-2">Aeone Singson</div>
-                        <div class="member-title">Seattle Chapter Lead</div>
-                        <div class="tooltip-description">
-                            Aeone is a Software engineer at Microsoft through the apprentice pathway. She is very passionate about spreading technology and education access.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="team-member col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/liya.jpeg", class: "circle"), "https://www.linkedin.com/in/liyakurkova/", target: "_blank" %>
-                    <div class="name pt-2">Liya Kurkov</div>
-                    <div class="member-title">Blogger</div>
-                    <div class="the-tooltip">
-                        <div class="name pt-2">Liya Kurkov</div>
-                        <div class="member-title">Blogger</div>
-                        <div class="tooltip-description">
-                            Liya is a QA Engineer by day and a book connoisseur by night. She is inspired by the many paths taken by women who build careers in tech, and is helping to share their stories on the She’s Coding blog.
-                        </div>
-                    </div>
-                </div>
-            </div>
-          <div class="team-member col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/kelli.jpeg", class: "circle"), "https://www.linkedin.com/in/kelliblalock/", target: "_blank" %>
-                    <div class="name pt-2">Kelli Blalock</div>
-                    <div class="member-title">Social Media & Contributor</div>
-                    <div class="the-tooltip">
-                        <div class="name pt-2">Kelli Blalock</div>
-                        <div class="member-title">Social Media & Contributor</div>
-                        <div class="tooltip-description">
-                            Kelli has a BS degree in Computer Information Systems and comes to software development from a background working for HP in IT Services. She enjoys learning new technologies and sharing her knowledge with others.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="team-member col pt-3 col-sm-6 col-xs-12 col-md-3 end">
+            <% end -%>
+            <div class="col pt-3 col-sm-6 col-xs-12 col-md-3 end">
                 <div class="member-container tooltips">
                     <%= image_tag("team/kitten.png", class: "circle") %>
                     <div class="name pt-2">YOU?</div>
@@ -126,7 +53,7 @@
             <div class="title white-color">Advisors</div>
         </div>
         <div class="row mt-5">
-            <div class="advisor col pt-3 col-sm-6 col-xs-12 col-md-3 end">
+            <div class="col pt-3 col-sm-6 col-xs-12 col-md-3 end">
                 <div class="member-container tooltips">
                     <%= link_to image_tag("team/robin.png", class: "circle"), "https://www.linkedin.com/in/robinhauser/", target: "_blank" %>
                     <div class="name pt-2">Robin Hauser Reynolds</div>
@@ -182,119 +109,13 @@
             <div class="title white-color">Past Advisors & Contributors</div>
         </div>
         <div class="row mt-5">
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/staci.png", class: "circle"), "https://www.linkedin.com/in/staci-hartman-6a414712/", target: "_blank" %>
-                    <div class="name pt-2">Staci Hartman</div>
-                    <div class="member-title">Advisor</div>
+            <% @pastContributors.each do |contributor| -%>
+                <div class="col pt-3 col-sm-6 col-xs-12 col-md-3">
+                    <%= link_to image_tag(contributor[:imageUrl], class: "circle"), contributor[:linkedInUrl], target: "_blank" %>
+                    <div class="name pt-2"><%= contributor[:name] %></div>
+                    <div class="member-title pb-2"><%= contributor[:title] %></div>
                 </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/kamila.png", class: "circle"), "https://www.linkedin.com/in/kamilastepniowska/", target: "_blank" %>
-                    <div class="name pt-2">Kamila Stępniowska</div>
-                    <div class="member-title">Advisor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/mark.png", class: "circle"), "https://www.linkedin.com/in/markslee/", target: "_blank" %>
-                    <div class="name pt-2">Mark S. Lee</div>
-                    <div class="member-title">Advisor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/paul.png", class: "circle"),
-                    "https://www.linkedin.com/in/paulcwatts", target: "_blank" %>
-                    <div class="name pt-2">Paul Watts</div>
-                    <div class="member-title">Advisor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/britt.png", class: "circle"), "https://www.linkedin.com/in/brittrgriffith/", target: "_blank" %>
-                    <div class="name pt-2">Britt Griffith</div>
-                    <div class="member-title">Initial project co-founder</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/bri.png", class: "circle"), "https://www.linkedin.com/in/bri-dotson/", target: "_blank" %>
-                    <div class="name pt-2">Bri Dotson</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/tina.png", class: "circle"), "https://www.linkedin.com/in/tinakumar/", target: "_blank" %>
-                    <div class="name pt-2">Tina Kumar</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/anna.png", class: "circle"), "http://www.annabillmaier.com/about/", target: "_blank" %>
-                    <div class="name pt-2">Anna Billmaier</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/steph.png", class: "circle"), "https://www.linkedin.com/in/sgent487/", target: "_blank" %>
-                    <div class="name pt-2">Steph Gentry</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/ben.png", class: "circle"), "https://www.linkedin.com/in/bendemboski/", target: "_blank" %>
-                    <div class="name pt-2">Ben Demboski</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/calla.png", class: "circle"), "https://www.linkedin.com/in/callapatel/", target: "_blank" %>
-                    <div class="name pt-2">Calla Patel</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/deirdre.png", class: "circle"), "https://www.linkedin.com/in/deirdreallison/", target: "_blank" %>
-                    <div class="name pt-2">Deirdre Allison</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/kavita.png", class: "circle"), "https://www.linkedin.com/in/kavitasa/", target: "_blank" %>
-                    <div class="name pt-2">Kavita Sachdeva</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col pt-3 col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/kristina.png", class: "circle"), "https://www.linkedin.com/in/khjrtbrg/", target: "_blank" %>
-                    <div class="name pt-2">Kristina Hjertberg</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col-sm-6 col-xs-12 col-md-3">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/marge.png", class: "circle"), "https://www.linkedin.com/in/margerosen/", target: "_blank" %>
-                    <div class="name pt-2">Marge Rosen</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
-            <div class="past-contributor col-sm-6 col-xs-12 col-md-3 end">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/rachel.png", class: "circle"), "https://www.linkedin.com/in/rmoshier/", target: "_blank" %>
-                    <div class="name pt-2">Rachel Adler</div>
-                    <div class="member-title">Contributor</div>
-                </div>
-            </div>
+            <% end -%>
         </div>
     </div>
 <!-- End of: Past Contributors section -->

@@ -71,16 +71,6 @@ div.tooltips {
     display: inline;
 }
 
-div.member-container {
-    display: table;
-    margin: auto;
-}
-
-.tooltips .member-title {
-    color: grey;
-    padding-bottom: 10px;
-}
-
 .tooltip-description a {
     color: $green !important;
 }
@@ -92,15 +82,11 @@ div.tooltips .the-tooltip {
   background: white;
   border: 3px solid $green;
   padding: 20px;
-  padding-top: 0;
+  text-align: center;
   visibility: hidden;
   border-radius: 2px;
-}
-
-div.advisor .the-tooltip {
-    color: $black;
-    background: white;
-    border: 3px solid $green;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 div.tooltips .the-tooltip:before {
@@ -108,15 +94,11 @@ div.tooltips .the-tooltip:before {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  margin-left: -104px;
+  margin-left: -12px;
   width: 0; height: 0;
   border-bottom: 12px solid $green;
   border-right: 12px solid transparent;
   border-left: 12px solid transparent;
-}
-
-div.advisor .the-tooltip:before {
-    border-bottom: 12px solid $green;
 }
 
 div.tooltips .the-tooltip:after {
@@ -124,21 +106,15 @@ div.tooltips .the-tooltip:after {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  margin-left: -101px;
+  margin-left: -8px;
   width: 0; height: 0;
   border-bottom: 8px solid white;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
 }
 
-div.advisor .the-tooltip:after {
-    border-bottom: 8px solid white;
-}
-
 div:hover.tooltips .the-tooltip {
   visibility: visible;
   opacity: 1;
-  top: 170px;
-  left: 15%;
   z-index: 999;
 }
