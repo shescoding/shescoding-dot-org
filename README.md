@@ -14,79 +14,7 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
 
 ### Installation
 
-+ **Ubuntu:** an App Windows 10 Users
-
-  Go to [Windows App Store](https://www.microsoft.com/store/productId/9PJN388HP8C9) and download the most stable version of Ubuntu, then
-
-    + Go to developer settings by searching "Developer"
-
-    + In the results under *Settings*, click  *For developer settings*
-
-    + Select *Developer Mode*
-
-  Open the Ubuntu app and complete setup (username, password, etc.), then run:
-
-  ```
-  $ sudo apt-get update
-  ```
-+ Install Ruby
-
-  After update completes, install Ruby, your version manager, and Rails as you would for Ubuntu:
-
-  (NOTE: the below command also installs dependencies such as nodejs and yarn)
-
-  ```
-  $ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
-  ```
-+ Install RVM or RBENV
-
-  #### RVM
-  ```
-  $ sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
-
-  $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-
-  $ curl -sSL https://get.rvm.io | bash -s stable
-  $ source ~/.rvm/scripts/rvm
-
-  $ rvm install 2.3.1
-  $ rvm use 2.3.1 --default
-  $ ruby -v
-  ```
-  #### RBENV
-
-  ```
-  $ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-  $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-  $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-  $ exec $SHELL
-
-  $ git clone https://github.com/rbenv/ruby-build.git  ~/.rbenv/plugins/ruby-build
-  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-  exec $SHELL
-
-  $ rbenv install 2.3.1
-  $ rbenv global 2.3.1
-  $ ruby -v
-  ```
-+ Upload SSH Key to Github
-
-  +  Generate an SSH key for your github account
-
-      ```
-      $ ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"
-      ```
-  + Open the file containing the key from your Windows folder below:
-
-    ```
-    C:\Users\YourWindowsUserName\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu16.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YourUbuntuUserName\.ssh
-    ```
-   + Open *id_rsa.pub* with either notepad or notepad++.
-
-   + Copy everything in that file and set up your key in your [github page](https://github.com/settings/keys).
-  ---
-
-+ Mac OSX: Install [Homebrew](http://brew.sh/):
+#### Mac OSX: Install [Homebrew](http://brew.sh/):
 
   ```
   $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -172,7 +100,106 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
 
     For simple setup (local use only) follow the "Alternate Server Setup" of the resource provided above.
 
-  + Windows 10:
+---
+
++ Set up the database
+
+    ```
+    $ createdb shescoding_development
+    $ psql -d shescoding_development -c "CREATE USER shescoding WITH PASSWORD 'shescoding'"
+    $ psql -d shescoding_development -c "GRANT ALL PRIVILEGES ON DATABASE shescoding_development to shescoding"
+    ```
+---
++ Set up your local repo
+
+  + Fork the repository by hitting the "Fork" button on the shescoding github page.
+  + Clone the repository:
+
+    ```
+    $ git clone https://github.com/shescoding/shescoding-dot-org.git
+    ```
+  + Add the upstream repository:
+
+    ```
+    $ git remote add upstream https://github.com/shescoding/shescoding-dot-org.git
+    ```
+
++ To complete installation, skip past the directions for Windows 10 [here](#mac,-ubuntu,-and-windows)
+---
+---
+---
+  #### Windows 10 Users: Using the Ubuntu: App
+
+  Go to [Windows App Store](https://www.microsoft.com/store/productId/9PJN388HP8C9) and download the most stable version of Ubuntu, then
+
+    + Go to developer settings by searching "Developer"
+
+    + In the results under *Settings*, click  *For developer settings*
+
+    + Select *Developer Mode*
+
+  Open the Ubuntu app and complete setup (username, password, etc.), then run:
+
+  ```
+  $ sudo apt-get update
+  ```
++ Install Ruby
+
+  After update completes, install Ruby, your version manager, and Rails as you would for Ubuntu:
+
+  (NOTE: the below command also installs dependencies such as nodejs and yarn)
+
+  ```
+  $ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
+  ```
++ Install RVM or RBENV
+
+  #### RVM
+  ```
+  $ sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+
+  $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+  $ curl -sSL https://get.rvm.io | bash -s stable
+  $ source ~/.rvm/scripts/rvm
+
+  $ rvm install 2.3.1
+  $ rvm use 2.3.1 --default
+  $ ruby -v
+  ```
+  #### RBENV
+
+  ```
+  $ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+  $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+  $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+  $ exec $SHELL
+
+  $ git clone https://github.com/rbenv/ruby-build.git  ~/.rbenv/plugins/ruby-build
+  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+  exec $SHELL
+
+  $ rbenv install 2.3.1
+  $ rbenv global 2.3.1
+  $ ruby -v
+  ```
++ Upload SSH Key to Github
+
+  +  Generate an SSH key for your github account
+
+      ```
+      $ ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"
+      ```
+  + Open the file containing the key from your Windows folder below:
+
+    ```
+    C:\Users\YourWindowsUserName\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu16.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YourUbuntuUserName\.ssh
+    ```
+   + Open *id_rsa.pub* with either notepad or notepad++.
+
+   + Copy everything in that file and set up your key in your [github page](https://github.com/settings/keys).
+---
+  + Install [Postgresql](http://www.postgresql.org/)
 
       (NOTE: Google Chrome will block these downloads for security reasons. Please download using Firefox or Edge)
 
@@ -181,19 +208,8 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
       Set up your **username** and **password** defaults. You will not need to set up a specialized name or password when developing in Windows, but you will need to add these to the **database.yml** file later.
 
       Install PGAdmin4 with postgres in the installer, or download manually from [PGAdmin for Windows](https://www.pgadmin.org/download/pgadmin-4-windows/)
-
-
 ---
-
-+ Set up the database
-
-  + Mac or Ubuntu
-    ```
-    $ createdb shescoding_development
-    $ psql -d shescoding_development -c "CREATE USER shescoding WITH PASSWORD 'shescoding'"
-    $ psql -d shescoding_development -c "GRANT ALL PRIVILEGES ON DATABASE shescoding_development to shescoding"
-    ```
-  + Windows 10 Users
++ Set up the Database
 
     Run PGAdmin4
 
@@ -214,24 +230,7 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
 
     Type *shescoding_development* in the *Database* field and select the owner. I recommend using your general postgres user
 
----
-
 + Set up your local repo
-
-  #### Mac or Ubuntu
-  + Fork the repository by hitting the "Fork" button on the shescoding github page.
-  + Clone the repository:
-
-    ```
-    $ git clone https://github.com/shescoding/shescoding-dot-org.git
-    ```
-  + Add the upstream repository:
-
-    ```
-    $ git remote add upstream https://github.com/shescoding/shescoding-dot-org.git
-    ```
-
-  #### Windows 10 Users
 
   + Open your Ubuntu for Windows Application
 
@@ -273,11 +272,13 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
     ```
     username: YourPostGresUserName
     password: YourPostGresPassword
-  ```
-
-  ### **With PGAdmin4 still running**, run the steps below from your Ubuntu console
+    ```
++ **With PGAdmin4 still running**, complete setup by following the steps [below](#mac,-ubuntu,-and-windows).
 ---
-Mac, Ubuntu, and Windows
+---
+---
+
+#### Mac, Ubuntu, and Windows
 
 + Load all the gems:
   ```
