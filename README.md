@@ -124,7 +124,7 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
     $ git remote add upstream https://github.com/shescoding/shescoding-dot-org.git
     ```
 
-+ To complete installation, skip past the directions for Windows 10 [here](#mac,-ubuntu,-and-windows)
++ To complete installation, skip past the directions for Windows 10 [here](#mac-ubuntu-and-windows)
 ---
 ---
 ---
