@@ -127,7 +127,6 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
 + To complete installation, skip past the directions for Windows 10 [here](#mac-ubuntu-and-windows)
 ---
 ---
----
   #### Windows 10 Users: Using the Ubuntu: App
 
   Go to [Windows App Store](https://www.microsoft.com/store/productId/9PJN388HP8C9) and download the most stable version of Ubuntu, then
@@ -274,7 +273,6 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
     password: YourPostGresPassword
     ```
 + **With PGAdmin4 still running**, complete setup by following the steps [below](#mac-ubuntu-and-windows).
----
 ---
 ---
 
