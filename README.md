@@ -273,7 +273,7 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
     username: YourPostGresUserName
     password: YourPostGresPassword
     ```
-+ **With PGAdmin4 still running**, complete setup by following the steps [below](#mac,-ubuntu,-and-windows).
++ **With PGAdmin4 still running**, complete setup by following the steps [below](#mac-ubuntu-and-windows).
 ---
 ---
 ---
