@@ -132,11 +132,11 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
 
   Go to [Windows App Store](https://www.microsoft.com/store/productId/9PJN388HP8C9) and download the most stable version of Ubuntu, then
 
-    + Go to developer settings by searching "Developer"
++ Go to developer settings by searching "Developer"
 
-    + In the results under *Settings*, click  *For developer settings*
++ In the results under *Settings*, click  *For developer settings*
 
-    + Select *Developer Mode*
++ Select *Developer Mode*
 
   Open the Ubuntu app and complete setup (username, password, etc.), then run:
 
@@ -331,3 +331,13 @@ $ bundle exec rspec -fd
 Notes:
 + ```-fd``` stands for full details. You can also run tests by using commands ```bundle exec rspec``` or ```bundle exec rake``` to get an overview without details of each test.
 + If you are having trouble running bundle install, please make sure Nokogiri gem is installed on your machine. Full instructions can be found [here](http://www.nokogiri.org/tutorials/installing_nokogiri.html).
+
+### Running the linters
+
+This project uses a tool called JSHint for linting (quality-checking) Javascript code. If you want to see this tool in action, check out the creator's interactive demo.
+
+  + Run the Javascript asset linting with JSHint:
+  ```
+  $ bundle exec rake jshint
+  ```
+Note: Any contributor who makes changes to existing Javascript files or adds new ones, needs to run JSHint to make sure erroneous files don't get committed to the codebase.
