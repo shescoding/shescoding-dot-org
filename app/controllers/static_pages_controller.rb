@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def front_page
   end
 
-  def about  
+  def about
   end
 
   def how
@@ -12,6 +12,20 @@ class StaticPagesController < ApplicationController
   end
 
   def team
+    @mobileUserAgents = [ #Add any new strings that are found in mobile user agents here
+        "Android",
+        "webOS",
+        "iPhone",
+        "iPad",
+        "iPod",
+        "BlackBerry",
+        "Windows Phone"
+    ]
+    @userAgentString = @mobileUserAgents.join("|")
+    @regex = Regexp.new @userAgentString
+    @userAgent = request.headers['User-Agent']
+    @isMobile = !!@userAgent.match(/#{@regex}/i)  #This will return true if user is on mobile device
+
     @teamMembers = [
         {
             name: "Nathalie Steinmetz",
@@ -182,5 +196,5 @@ class StaticPagesController < ApplicationController
         }
     ]
   end
-  
+
 end
