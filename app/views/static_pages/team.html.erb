@@ -10,39 +10,75 @@
         <div class="row col mb-3">
             <div class="title">Meet the Team</div>
         </div>
-        <div class="row mt-5">
-            <% @teamMembers.each do |member| -%>
-                <div class="col pt-3 col-sm-6 col-xs-12 col-md-3">
-                    <div class="member-container tooltips">
-                        <%= link_to image_tag(member[:imageUrl], class: "circle"), member[:linkedInUrl], target: "_blank" %>
-                        <div class="name pt-2"><%= member[:name] %></div>
-                        <div class="member-title pb-2"><%= member[:title] %></div>
-                        <% if member[:description] != nil %>
-                            <div class="the-tooltip">
-                                <div class="name pt-2"><%= member[:name] %></div>
-                                <div class="member-title"><%= member[:title] %></div>
-                                <div class="tooltip-description">
-                                    <%= member[:description] %>
+        <div class="flex-container" id="team-members">
+            <% if !@isMobile %>
+                <% @teamMembers.each do |member| -%>
+                    <div class="col pt-3 col-sm-6 col-xs-12 col-md-3">
+                        <div class="member-container tooltips">
+                            <%= link_to image_tag(member[:imageUrl], class: "circle"), member[:linkedInUrl], target: "_blank" %>
+                            <div class="name pt-2"><%= member[:name] %></div>
+                            <div class="member-title pb-2"><%= member[:title] %></div>
+                            <% if member[:description] != nil %>
+                                <div class="the-tooltip">
+                                    <div class="name pt-2"><%= member[:name] %></div>
+                                    <div class="member-title"><%= member[:title] %></div>
+                                    <div class="tooltip-description"><%= member[:description] %></div>
                                 </div>
-                            </div>
-                        <% end %>
+                            <% end %>
+                        </div>
                     </div>
-                </div>
-            <% end -%>
-            <div class="col pt-3 col-sm-6 col-xs-12 col-md-3 end">
-                <div class="member-container tooltips">
-                    <%= image_tag("team/kitten.png", class: "circle") %>
-                    <div class="name pt-2">YOU?</div>
-                    <div class="member-title">Awesomeness Provider</div>
-                    <div class="the-tooltip">
-                        <div class="name pt-2">The Placeholder Kitten</div>
+                <% end -%>
+                <div class="col pt-3 col-sm-6 col-xs-12 col-md-3 end">
+                    <div class="member-container tooltips">
+                        <%= image_tag("team/kitten.png", class: "circle") %>
+                        <div class="name pt-2">YOU?</div>
                         <div class="member-title">Awesomeness Provider</div>
-                        <div class="tooltip-description">
-                            Do you want to become part of the She's Coding team? We would love to have you on board - go ahead <%= link_to "connect with us", "/connect" %> or check out our <%= link_to "volunteer page", "/volunteer" %> for more information!
+                        <div class="the-tooltip">
+                            <div class="name pt-2">The Placeholder Kitten</div>
+                            <div class="member-title">Awesomeness Provider</div>
+                            <div class="tooltip-description">
+                                Do you want to become part of the She's Coding team? We would love to have you on board - go ahead <%= link_to "connect with us", "/connect" %> or check out our <%= link_to "volunteer page", "/volunteer" %> for more information!
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <% else %>
+                <% @teamMembers.each do |member| -%>
+                    <div class="col" role="tablist" aria-multiselectable="true">
+                        <div class="member-container">
+                            <a role="button" data-toggle="collapse" data-parent="#team-members" href="#<%= (member[:name]).gsub(/\s+/, "") %>" aria-expanded="false" aria-controls="<%= (member[:name]).gsub(/\s+/, "") %>" class="collapsed">
+                                <%= image_tag(member[:imageUrl], class: "circle", role: "tab") %>
+                                <div class="name pt-2"><%= link_to member[:name], member[:linkedInUrl], target: "_blank", class: "linkedin-link" %></div>
+                                <div class="member-title pb-2"><%= member[:title] %></div>
+                            </a>
+                            <div id="<%= (member[:name]).gsub(/\s+/, "") %>" class="panel-collapse collapse" role="tabpanel" aria-label="<%= member[:name] %>">
+                                <% if member[:description] != nil %>
+                                    <div class="the-tooltip">
+                                        <div class="tooltip-description"><%= member[:description] %></div>
+                                    </div>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                <% end -%>
+                <div class="col end">
+                    <div class="member-container">
+                        <a role="button" data-toggle="collapse" data-parent="#team-members" href="#kitty" aria-expanded="false" aria-controls="kitty" class="collapsed">
+                            <%= image_tag("team/kitten.png", class: "circle", role: "tab") %>
+                            <div class="name pt-2">YOU?</div>
+                            <div class="member-title">Awesomeness Provider</div>
+                        </a>
+                        <div id="kitty" class="panel-collapse collapse" role="tabpanel" aria-label="volunteer">
+                            <div class="the-tooltip">
+                                <div class="name pt-2">The Placeholder Kitten</div>
+                                <div class="tooltip-description">
+                                    Do you want to become part of the She's Coding team? We would love to have you on board - go ahead <%= link_to "connect with us", "/connect" %> or check out our <%= link_to "volunteer page", "/volunteer", class: "linkedin-link" %> for more information!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
         </div>
     </div>
 <!--- End of: Active members of the team section -->
@@ -52,21 +88,40 @@
         <div class="row col mb-3">
             <div class="title white-color">Advisors</div>
         </div>
-        <div class="row mt-5">
-            <div class="col pt-3 col-sm-6 col-xs-12 col-md-3 end">
-                <div class="member-container tooltips">
-                    <%= link_to image_tag("team/robin.png", class: "circle"), "https://www.linkedin.com/in/robinhauser/", target: "_blank" %>
-                    <div class="name pt-2">Robin Hauser Reynolds</div>
-                    <div class="member-title">Director/Producer, CODE: Debugging the Gender Gap</div>
-                    <div class="the-tooltip">
+        <div class="flex-container" id="advisors">
+            <% if !@isMobile %>
+                <div class="col end">
+                    <div class="member-container tooltips">
+                        <%= link_to image_tag("team/robin.png", class: "circle"), "https://www.linkedin.com/in/robinhauser/", target: "_blank" %>
                         <div class="name pt-2">Robin Hauser Reynolds</div>
                         <div class="member-title">Director/Producer, CODE: Debugging the Gender Gap</div>
-                        <div class="tooltip-description">
-                            As both a business woman and a longtime professional photographer, Robin brings her creative eye and leadership skills to the CODE documentary project. Her years in fine art photography give her a keen vision for the artistic design of CODE; her experience in the business world affords her a unique perspective on what it takes to change an industry. Previously, Robin co-directed and produced the documentary feature, Running for Jim, which won 14 awards at 16 film festivals in the U.S. and abroad.
+                        <div class="the-tooltip">
+                            <div class="name pt-2">Robin Hauser Reynolds</div>
+                            <div class="member-title">Director/Producer, CODE: Debugging the Gender Gap</div>
+                            <div class="tooltip-description">
+                                As both a business woman and a longtime professional photographer, Robin brings her creative eye and leadership skills to the CODE documentary project. Her years in fine art photography give her a keen vision for the artistic design of CODE; her experience in the business world affords her a unique perspective on what it takes to change an industry. Previously, Robin co-directed and produced the documentary feature, Running for Jim, which won 14 awards at 16 film festivals in the U.S. and abroad.
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <% else %>
+                <div class="col pt-3 col-sm-6 col-xs-12 col-md-3 end">
+                    <div class="member-container">
+                        <a role="button" data-toggle="collapse" data-parent="#advisors" href="#RobinHauserRenolds" aria-expanded="false" aria-controls="RobinHauserRenolds" class="collapsed">
+                        <%= image_tag("team/robin.png", class: "circle", role: "tab") %>
+                            <div class="name pt-2"><%= link_to "Robin Hauser Renolds", "https://www.linkedin.com/in/robinhauser/", target: "_blank", class: "linkedin-link" %></div>
+                            <div class="member-title">Director/Producer, CODE: Debugging the Gender Gap</div>
+                        </a>
+                        <div id="RobinHauserRenolds" class="panel-collapse collapse" role="tabpanel" aria-label="Robin Hauser Reynolds">
+                            <div class="the-tooltip">
+                                <div class="tooltip-description">
+                                    As both a business woman and a longtime professional photographer, Robin brings her creative eye and leadership skills to the CODE documentary project. Her years in fine art photography give her a keen vision for the artistic design of CODE; her experience in the business world affords her a unique perspective on what it takes to change an industry. Previously, Robin co-directed and produced the documentary feature, Running for Jim, which won 14 awards at 16 film festivals in the U.S. and abroad.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
         </div>
     </div>
 <!--- End of: Advisors section -->
