@@ -160,17 +160,109 @@ main {
 }
 
 //-------------------------------------------------------------
+// Testimonials Component | Homepage
+//-------------------------------------------------------------
+.testimonials {
+  blockquote {
+    border-left: none;
+    max-width: 91%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  p, cite {
+    font-size: px-to-rem(18px);
+  }
+
+  .testimonial {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  cite {
+    align-self: flex-start;
+  }
+
+  .photo {
+    padding: 0 0 px-to-rem(10px) 0;
+  }
+
+  .carousel-control {
+    color: $grey;
+  }
+
+  .carousel-control.left, .carousel-control.right {
+    background-image: none;
+    font-size: px-to-rem(24px);
+  }
+
+  .carousel-control.right {
+    right: px-to-rem(-14px);
+  }
+
+  .carousel-control.left {
+    left: px-to-rem(-14px);
+  }
+
+  .carousel-inner {
+    position: relative;
+  }
+
+  @media (min-width: 33.75em) {
+
+    .carousel-control.left, .carousel-control.right {
+      font-size: px-to-rem(28px);
+    }
+
+    .carousel-control.right {
+      right: px-to-rem(-26px);
+    }
+  
+    .carousel-control.left {
+      left: px-to-rem(-26px);
+    }
+  }
+
+  @media(min-width: 48em) {
+    .testimonial {
+      flex-direction: row;
+    }
+
+    blockquote {
+      max-width: 76%;
+      padding: 0 px-to-rem(10px) 0 0;
+    }
+
+    .photo {
+      padding: 0 px-to-rem(15px) 0 px-to-rem(10px);
+    }
+
+    .carousel-control.right {
+      right: px-to-rem(-40px);
+    }
+
+    .carousel-control.left {
+      left: px-to-rem(-40px);
+    }
+  }
+}
+
+//-------------------------------------------------------------
 // As Seen On Component | Homepage
 //-------------------------------------------------------------
 .as-seen-on {
-  margin-bottom: 0;
-
   .description {
     margin-bottom: px-to-rem(50px);
   }
 
   @media (min-width: 75em) {
     display: flex;
+    margin-bottom: 0;
 
     h2 {
       text-align: left;

@@ -16,9 +16,15 @@
 
 // Include this here so the bootstrap variables that it contains are set before
 // we include bootstrap.
+$screen-sm: 835px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
 @import "./_variables";
+
+.container {
+  margin-bottom: 5em;
+}
 
 .page {
   padding-top: 70px;
@@ -75,8 +81,15 @@ a {
   font-family: ArcherBold;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: ArcherLight;
+  position: relative;
+  padding-bottom: 5em;
+  min-height: 100%;
 }
 
 img {
