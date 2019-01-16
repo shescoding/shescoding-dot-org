@@ -40,6 +40,12 @@
         <li><%= link_to "Resources", "/resources" %></li>
       <% end %>
 
+      <% if page == "Volunteer" %>
+        <li class="active"><%= link_to "Volunteer", "/volunteer" %></li>
+      <% else %>
+        <li><%= link_to "Volunteer", "/volunteer" %></li>
+      <% end %>
+
       <% if page == "Team" %>
         <li class="active"><%= link_to "Team", "/team" %></li>
       <% else %>

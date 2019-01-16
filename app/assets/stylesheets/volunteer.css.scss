@@ -1,0 +1,47 @@
+//
+// VOLUNTEER PAGE
+//
+@import "./_variables";
+
+.volunteer-body {
+  font-size: 18px;
+}
+
+ul > li > a {
+  color: $green;
+}
+
+ul > li > a:hover {
+  color: $green;
+}
+
+ul > li > a:focus {
+  color: $green;
+}
+
+.connect {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15px;
+}
+.connect_icons {
+  list-style: none;
+  display: inline;
+  padding: 0;
+}
+
+.connect_icons > li {
+   display: inline;
+}
+
+.connect img {
+  width: 45px;
+  margin: 5px 25px;
+}
+
+@media (max-width: 500px) {
+  .connect img {
+    width: 35px;
+    margin: 5px 10px;
+}
+}

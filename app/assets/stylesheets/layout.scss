@@ -10,6 +10,9 @@
   font-family: ArcherLight;
   color: white;
   background: $green;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 
   a, li {
     color: white;
@@ -28,4 +31,8 @@
         float: right;
     }
   }
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
 }
