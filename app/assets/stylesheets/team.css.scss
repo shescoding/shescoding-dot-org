@@ -2,15 +2,14 @@
 // Team page
 //
 
-@import "./_variables";
+$black: #1E2028;
+$red: #DB2C38;
+$green: #83C057;
+$blue: #00A0BE;
+$past_cont_grey: #808080;
 
-.team-section {
-    padding: 100px 0;
-    background: white;
-}
-
-.team-member {
-    padding-top: 30px;
+.team-page-section {
+    padding: 30px 0;
     font-size: 18px;
 }
 
@@ -23,108 +22,57 @@
     margin: 0 auto;
 }
 
-.green {
-    border: 10px solid $green;
-}
-
-.team-member-name {
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 20px;
-}
-
-.team-member-title {
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    height: 50px;
-}
-
-.team-section-title {
-    font-size: 36px;
-    text-align: center;
-}
-
-.advisor {
-    font-size: 18px;
-    padding-top: 30px;
-}
-
-.advisor-section-title {
-    font-size: 36px;
-    text-align: center;
-    color: white;
-}
-
-.advisor-section {
-    padding: 100px 0;
-    background: $green;
-}
-
-.advisor-name {
-    color: $black;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 20px;
-}
-
-.advisor-title {
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    height: 50px;
-}
-
-.white {
-    border: 10px solid white;
-}
-
-.partner {
-  padding-top: 50px;
-}
-
-.partner-section {
-    padding: 100px 0;
-    background: white;
-}
-
-.partner-section-title {
-    font-size: 36px;
-    text-align: center;
-}
-
 .logo {
     display: block;
     margin: 0 auto;
-    width: 200px;
+    height: 100px;
 }
 
-.tooltips .team-member-title {
+.white-color {
+    color: white;
+}
+
+.white-border {
+    border: 10px solid white;
+}
+
+.green-border {
+    border: 10px solid $green;
+}
+
+.green-background-section {
+    background: $green;
+}
+
+.grey-background-section {
+    background: $past_cont_grey;
+}
+
+.name {
+    font-weight: bold;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.member-title {
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
     color: grey;
-    padding-bottom: 10px;
 }
 
-.tooltips .advisor-title {
-    color: grey;
-    padding-bottom: 10px;
+.grey-background-section .member-title {
+    color: black !important;
 }
 
+//tooltip related css is below
 div.tooltips {
     position: relative;
     display: inline;
 }
 
-div.tooltip-description a{
-    color: #83c057;    
-}
-
-div.member-container {
-    display: table;
-    margin: auto;
+.tooltip-description a {
+    color: $green !important;
 }
 
 div.tooltips .the-tooltip {
@@ -134,15 +82,11 @@ div.tooltips .the-tooltip {
   background: white;
   border: 3px solid $green;
   padding: 20px;
-  padding-top: 0;
+  text-align: center;
   visibility: hidden;
   border-radius: 2px;
-}
-
-div.advisor .the-tooltip {
-    color: $black;
-    background: white;
-    border: 3px solid $green;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 div.tooltips .the-tooltip:before {
@@ -150,15 +94,11 @@ div.tooltips .the-tooltip:before {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  margin-left: -104px;
+  margin-left: -12px;
   width: 0; height: 0;
   border-bottom: 12px solid $green;
   border-right: 12px solid transparent;
   border-left: 12px solid transparent;
-}
-
-div.advisor .the-tooltip:before {
-    border-bottom: 12px solid $green;
 }
 
 div.tooltips .the-tooltip:after {
@@ -166,25 +106,15 @@ div.tooltips .the-tooltip:after {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  margin-left: -101px;
+  margin-left: -8px;
   width: 0; height: 0;
   border-bottom: 8px solid white;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
 }
 
-div.advisor .the-tooltip:after {
-    border-bottom: 8px solid white;
-}
-
 div:hover.tooltips .the-tooltip {
   visibility: visible;
   opacity: 1;
-  top: 170px;
-  left: 15%;
   z-index: 999;
-}
-
-.team-page-image {
-    width: 100%;
 }

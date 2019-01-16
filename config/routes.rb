@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'how',              to: "static_pages#how"
   get 'team',             to: 'static_pages#team'
   get 'connect',          to: 'static_pages#connect'
+  get 'volunteer',        to: 'static_pages#volunteer'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
