@@ -75,16 +75,21 @@ div.tooltips {
     color: $green !important;
 }
 
-div.tooltips .the-tooltip {
-  position: absolute;
-  width: 300px;
+.the-tooltip{
+  max-width: 300px;
+  margin: 0 auto 10px auto;
   color: $black;
   background: white;
   border: 3px solid $green;
-  padding: 20px;
   text-align: center;
-  visibility: hidden;
   border-radius: 2px;
+  padding: 20px;
+}
+
+div.tooltips .the-tooltip {
+  width: 300px;
+  position: absolute;
+  visibility: hidden;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -92,29 +97,54 @@ div.tooltips .the-tooltip {
 div.tooltips .the-tooltip:before {
   content: '';
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -12px;
   width: 0; height: 0;
   border-bottom: 12px solid $green;
   border-right: 12px solid transparent;
   border-left: 12px solid transparent;
+  left: 50%;
+  margin-left: -12px;
+  bottom: 100%;
 }
 
 div.tooltips .the-tooltip:after {
   content: '';
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -8px;
   width: 0; height: 0;
   border-bottom: 8px solid white;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
+  left: 50%;
+  margin-left: -8px;
+  bottom: 100%;
 }
 
 div:hover.tooltips .the-tooltip {
   visibility: visible;
   opacity: 1;
   z-index: 999;
+}
+
+.member-container a.linkedin-link,
+.member-container a:hover,
+.member-container a:visited {
+  text-decoration: none;
+  color: #286cac;
+  font-weight: bold;
+}
+
+.flex-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.flex-container>div{
+  width: 25%;
+  padding: 10px;
+}
+@media screen and (max-width: 991px){
+  .flex-container>div{ width: 50%; }
+}
+@media screen and (max-width: 834px){
+  .flex-container>div{ width: 100%; }
 }
