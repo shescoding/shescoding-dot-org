@@ -175,6 +175,13 @@
     #return-to-top {
       display: none;
     }
+
+    .share-buttons {
+      a {
+        transform: scale(1.5, 1.5);
+        margin-right: 11px;
+      }
+    }
   }
 
   .dropdown {
