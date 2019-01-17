@@ -12,6 +12,11 @@ class StaticPagesController < ApplicationController
   end
 
   def team
+    # User Agents found at https://deviceatlas.com/blog/list-of-user-agent-strings
+    # For a general blog of user agents, refer to https://deviceatlas.com/blog/mobile-browser-user-agent-strings
+    # Please update any mobile-based user agents using this array.
+    # You do not need the complete user-agent, just the unique identifying name i.e. Android
+
     @mobileUserAgents = [ #Add any new strings that are found in mobile user agents here
         "Android",
         "webOS",
@@ -19,7 +24,8 @@ class StaticPagesController < ApplicationController
         "iPad",
         "iPod",
         "BlackBerry",
-        "Windows Phone"
+        "Windows Phone",
+        "Opera Mini"
     ]
     @userAgentString = @mobileUserAgents.join("|")
     @regex = Regexp.new @userAgentString
