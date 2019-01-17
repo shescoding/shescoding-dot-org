@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def front_page
   end
 
-  def about  
+  def about
   end
 
   def how
@@ -81,6 +81,13 @@ class StaticPagesController < ApplicationController
             imageUrl: "team/porsha.png",
             linkedInUrl: "https://www.linkedin.com/in/robinsonporsha/",
             description: "Porsha is a Software Engineer with a background in Computer Networking and Information Systems Security. Coding is her passion and she is an advocate for getting more women into STEM."
+        },
+        {
+            name: "Elle Pope",
+            title: "Contributor",
+            imageUrl: "team/elle.jpg",
+            linkedInUrl: "https://www.linkedin.com/in/elle-pope-dev/",
+            description: "Elle is self taught Software Developer with a background in Illustration and Design. After completing their certificate with Udacity under the Grow with Google scholarship, Elle went on to volunteer with NoSchoolViolence to develop the frontend interface for The Lantern. Currently, they are an instructor for NuCamp."
         }
     ]
     @pastContributors = [
@@ -182,5 +189,5 @@ class StaticPagesController < ApplicationController
         }
     ]
   end
-  
+
 end
