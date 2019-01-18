@@ -20,7 +20,7 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
   $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   ```
 
-+ Set the [Ruby](https://www.ruby-lang.org/en/) version to 2.5.4. In order to be able to pick the ruby version or to download ruby, we recommend using a ruby version manager. There are 2 ruby version management tools: [rvm](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv).
++ Set the [Ruby](https://www.ruby-lang.org/en/) version to 2.5.3. In order to be able to pick the ruby version or to download ruby, we recommend using a ruby version manager. There are 2 ruby version management tools: [rvm](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv).
 
     ##### **RVM**
     ##### Installing **rvm** from scratch:
@@ -64,7 +64,7 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
       $ ruby -v
       ```
 
-   	You should see ruby version printed as result: `ruby 2.5.3p105 (2018-10-18 revision 65156) [x86_64-linux]`
+   	You should see ruby version printed as result: `ruby 2.5.3xxx` and xxx represents the revision and the architecture of the installed version.
     
       
 
@@ -162,8 +162,8 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
   $ curl -sSL https://get.rvm.io | bash -s stable
   $ source ~/.rvm/scripts/rvm
 
-  $ rvm install 2.3.1
-  $ rvm use 2.3.1 --default
+  $ rvm install 2.5.3
+  $ rvm use 2.5.3 --default
   $ ruby -v
   ```
   #### RBENV
@@ -178,8 +178,8 @@ Yes! *She's Coding* is built by the community, for the community. We currently h
   echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
   exec $SHELL
 
-  $ rbenv install 2.3.1
-  $ rbenv global 2.3.1
+  $ rbenv install 2.5.3
+  $ rbenv global 2.5.3
   $ ruby -v
   ```
 + Upload SSH Key to Github
