@@ -41,7 +41,7 @@ describe ResourcesController do
       r1 = @resources[0]
       r1.tag_list.add('tag1')
       r1.save!
-      get :index, tag: 'tag1'
+      get :index, params: {tag: 'tag1'}
       expect(assigns(:resources)).to include(r1)
       expect(assigns(:resources)).not_to include(@resources[1])
       expect(assigns(:resources)).not_to include(@resources[2])
