@@ -45,3 +45,19 @@ ul > li > a:focus {
     margin: 5px 10px;
 }
 }
+
+.panel-group a:link {
+  color: $green;
+}
+
+.panel-group h3 {
+  font-size: 22px;
+}
+
+.panel-group h4 {
+  font-size: 20px;
+}
+
+.panel-group ul {
+  padding-left: 30px;
+}
