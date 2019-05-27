@@ -15,72 +15,72 @@ ActiveRecord::Schema.define(version: 2018_10_28_045740) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
+  create_table "categories", id: :serial, force: :cascade do |t|
+    t.string "name", limit: 255
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "categories_resources", id: false, force: :cascade do |t|
-    t.bigint "resource_id"
-    t.bigint "category_id"
+    t.integer "resource_id"
+    t.integer "category_id"
     t.index ["category_id"], name: "index_categories_resources_on_category_id"
     t.index ["resource_id"], name: "index_categories_resources_on_resource_id"
   end
 
-  create_table "guides", force: :cascade do |t|
-    t.string "title"
-    t.string "alias"
-    t.string "description"
+  create_table "guides", id: :serial, force: :cascade do |t|
+    t.string "title", limit: 255
+    t.string "alias", limit: 255
+    t.string "description", limit: 255
     t.integer "likes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "guides_steps", id: false, force: :cascade do |t|
-    t.bigint "guide_id"
-    t.bigint "step_id"
+    t.integer "guide_id"
+    t.integer "step_id"
     t.index ["guide_id"], name: "index_guides_steps_on_guide_id"
     t.index ["step_id"], name: "index_guides_steps_on_step_id"
   end
 
-  create_table "personas", force: :cascade do |t|
-    t.string "name"
-    t.string "color"
+  create_table "personas", id: :serial, force: :cascade do |t|
+    t.string "name", limit: 255
+    t.string "color", limit: 255
     t.text "description"
     t.json "questions"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "resources", force: :cascade do |t|
-    t.string "title"
-    t.string "url"
+  create_table "resources", id: :serial, force: :cascade do |t|
+    t.string "title", limit: 255
+    t.string "url", limit: 255
     t.text "description"
-    t.string "source"
+    t.string "source", limit: 255
     t.datetime "date"
     t.boolean "public"
     t.integer "likes", default: 0
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "steps", force: :cascade do |t|
-    t.string "type"
+  create_table "steps", id: :serial, force: :cascade do |t|
+    t.string "type", limit: 255
     t.text "content"
-    t.string "level"
+    t.string "level", limit: 255
     t.integer "likes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "taggings", force: :cascade do |t|
-    t.bigint "tag_id"
-    t.string "taggable_type"
-    t.bigint "taggable_id"
-    t.string "tagger_type"
-    t.bigint "tagger_id"
+  create_table "taggings", id: :serial, force: :cascade do |t|
+    t.integer "tag_id"
+    t.integer "taggable_id"
+    t.string "taggable_type", limit: 255
+    t.integer "tagger_id"
+    t.string "tagger_type", limit: 255
     t.string "context", limit: 128
     t.datetime "created_at"
     t.index ["context"], name: "index_taggings_on_context"
@@ -89,15 +89,13 @@ ActiveRecord::Schema.define(version: 2018_10_28_045740) do
     t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
     t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
     t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
-    t.index ["taggable_type", "taggable_id"], name: "index_taggings_on_taggable_type_and_taggable_id"
     t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
     t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
     t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
-    t.index ["tagger_type", "tagger_id"], name: "index_taggings_on_tagger_type_and_tagger_id"
   end
 
-  create_table "tags", force: :cascade do |t|
-    t.string "name"
+  create_table "tags", id: :serial, force: :cascade do |t|
+    t.string "name", limit: 255
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
