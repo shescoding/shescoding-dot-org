@@ -8,7 +8,7 @@ gem 'rails', '5.2.1'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails'
-gem 'bootstrap-sass', '~> 3.3.4'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 # Use Rails Bootstrap Forms. Read more: https://github.com/bootstrap-ruby/rails-bootstrap-forms
 gem 'bootstrap_form'
