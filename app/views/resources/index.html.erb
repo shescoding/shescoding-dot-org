@@ -4,11 +4,17 @@
   <div class="row">
     <div class="resources-sidebar col-md-3">
       <ul>
-        <li class="selected" data-category="*">
+        <li class="breadcrumbs">
+          <ul class="breadcrumb">
+            <li id="breadcrumb-type">Category</li>
+            <li id="breadcrumb-value" class="active">All Resources</li>
+          </ul>
+        </li>
+        <li class="selected resource" data-category="*">
           <%= link_to "All Resources", resources_path %>
         </li>
         <% @categories.each do |category| %>
-          <li data-category="<%= create_filter(category.id) %>">
+          <li class="resource" data-category="<%= create_filter(category.id) %>">
             <%= link_to category.name, resources_path(anchor: category.id) %>
           </li>
         <% end %>
@@ -42,7 +48,7 @@
             <div class="panel-tags">
               <ul>
                 <% resource.tag_list.each do |tag| %>
-                  <li><%= link_to tag, tag_path(tag) %></li>
+                  <li><%= link_to tag, tag_path(tag), class: "#{tag}-tag-link" %></li>
                 <% end %>
               </ul>
             </div>
@@ -81,9 +87,12 @@
     initializeSelectedCategory(currentUrl, $container);
 
     // Filter Selected Category
-    $('.resources-sidebar li').click(function(e) {
+    $('.resources-sidebar li.resource').click(function(e) {
       filterSelectedCategory(e, currentUrl, this, $container);
     });
+
+    // Initialize Selected Tag's breadcrumb
+    initializeSelectedTagBreadcrumb(currentUrl);
 
     // Filter Selected Category For Dropdown Button
     $('.dropdown a').click(function(e) {
