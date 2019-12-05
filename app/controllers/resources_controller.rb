@@ -58,7 +58,7 @@ class ResourcesController < ApplicationController
   end
 
   def like
-    @resource.likes += 1
+    @resource.likes += params[:count].to_i
     @resource.save
     redirect_to resources_path
   end

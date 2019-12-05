@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :resources,       only: [:index]
   get 'resources/tags/:tag',  to: 'resources#index',  as: :tag
-  post 'resources/:id/like',  to: 'resources#like',   as: :like
+  post 'resources/:id/like/:count', to: 'resources#like', as: :like
   
   # Static pages
   get 'about',            to: "static_pages#about"
